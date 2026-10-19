@@ -1,21 +1,67 @@
-# Data pack datasets
+# ---------------------------------------------------------------------------------------------------------------
+# Data pack: synthetic but treated as personal data (messaging_policy.md rule 7). Never commit it.
+# Evaluators already have the pack; the agent reads it from this folder at run time.
+# ---------------------------------------------------------------------------------------------------------------
 data/
 replay/
 pilot/
-*.pdf
 
-# Python caches and build artifacts
+# The assignment brief is the hiring team's document, not ours to publish.
+assignment_one_user_one_agent*.pdf
+
+# PDFs are ignored by default, except our own explainer documents.
+*.pdf
+!submission/docs/pdf/
+!submission/docs/pdf/*.pdf
+
+# ---------------------------------------------------------------------------------------------------------------
+# Generated runtime state and large regenerable outputs (`python -m oua run-all` recreates them)
+# ---------------------------------------------------------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db
+submission/viewer_state/
+submission/sample_run/sim/outcome_events.jsonl
+
+# ---------------------------------------------------------------------------------------------------------------
+# Python caches, builds and environments
+# ---------------------------------------------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
 *.egg-info/
 build/
 dist/
+.eggs/
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
 
-# Databases and runtime state
-*.sqlite
-*.sqlite3
-*.db
-submission/viewer_state/*.sqlite
+# ---------------------------------------------------------------------------------------------------------------
+# Secrets and local configuration (an ANTHROPIC_API_KEY must never be committed)
+# ---------------------------------------------------------------------------------------------------------------
+.env
+.env.*
+*.key
+*.pem
+
+# ---------------------------------------------------------------------------------------------------------------
+# Editors, OS files, logs, scratch
+# ---------------------------------------------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.claude/
+scratch/
+tmp/

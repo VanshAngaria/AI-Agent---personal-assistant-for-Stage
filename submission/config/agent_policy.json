@@ -1,0 +1,401 @@
+{
+  "version": "2026-10-20.1",
+  "about": "Business policy for the agent. Everything here is a reviewed, versioned decision, not code. Each decision cites this version. Change a value here, not in src/.",
+  "trigger": {
+    "stale_after_s": 600,
+    "why": "An open that waited on the phone longer than this is history, not a visit: a page published now would never be seen this session."
+  },
+  "history": {
+    "absence_requires_full_history": true,
+    "why": "Only ~30 days of events exist. 'Never did X' is provable only when the viewer's whole account life is inside that window."
+  },
+  "goal_priority": [
+    "G04",
+    "G01",
+    "G03",
+    "G02",
+    "G07",
+    "G12",
+    "G06",
+    "G09",
+    "G08",
+    "G05"
+  ],
+  "goal_priority_why": "Lifecycle order: time-critical conversion first, then activation, re-engagement, habit, monetisation. The model may choose another eligible goal; it can never add one.",
+  "goal_labels": {
+    "G01": "First play in 24h",
+    "G02": "First full episode in 3d",
+    "G03": "Return on a 2nd day",
+    "G04": "Trial to paid in 7d",
+    "G05": "First paid plan in 7d",
+    "G06": "Win back lapsed in 14d",
+    "G07": "Resume a series in 3d",
+    "G08": "Try a new release in 7d",
+    "G09": "Weekly habit in 14d",
+    "G10": "Meaningful engagement",
+    "G11": "TV activation",
+    "G12": "Return after absence in 7d"
+  },
+  "goal_interpretations": {
+    "G05": {
+      "extra_checks": [
+        {
+          "check": "never_paid"
+        }
+      ],
+      "assumption": "'Has never had a paid plan' also requires that no paid purchase or renewal event is observed, whatever the profile says."
+    },
+    "G06": {
+      "extra_checks": [
+        {
+          "check": "recent_event",
+          "event": "subscription_lapsed",
+          "within_days": 30
+        }
+      ],
+      "assumption": "'Recently lapsed' is underspecified; read as a subscription_lapsed event in the last 30 days (profile rows carry no lapse date)."
+    },
+    "G07": {
+      "extra_checks": [
+        {
+          "check": "unfinished_series",
+          "idle_days": 3,
+          "min_episode_reached": 2,
+          "content_types": [
+            "show",
+            "micro_drama"
+          ]
+        }
+      ],
+      "assumption": "'Unfinished series' read as a show/micro-drama the viewer was following (reached episode 2+, or completed one), last episode not reached, idle 3+ days, still available. Sampling one episode is not following."
+    },
+    "G09": {
+      "extra_checks": [
+        {
+          "check": "max_event_days",
+          "event": "play_started",
+          "window_days": 14,
+          "max_days": 1
+        }
+      ],
+      "assumption": "Play days are distinct IST dates of play_started (server time) in the last 14 days."
+    },
+    "G12": {
+      "extra_checks": [
+        {
+          "check": "account_min_age_days",
+          "days": 14
+        },
+        {
+          "check": "no_event_in_window",
+          "event": "app_open",
+          "window_days": 14
+        }
+      ],
+      "assumption": "The 14-day window excludes the current open and its session; a brand-new viewer is not 'returning'."
+    }
+  },
+  "text_only_eligibility_without_interpretation": "refuse",
+  "plans": {
+    "keep_while_open_without_recheck": [
+      "G01",
+      "G02",
+      "G07",
+      "G12"
+    ],
+    "why": "These goals' preconditions are consumed by progress toward the goal itself; only the success judge closes them.",
+    "failed_goal_cooldown_days": 7
+  },
+  "success_matchers": {
+    "G03": [
+      {
+        "match": "later_ist_day_than_start"
+      }
+    ],
+    "G04": [
+      {
+        "match": "property_not",
+        "property": "is_trial",
+        "value": true
+      }
+    ],
+    "G05": [
+      {
+        "match": "property_not",
+        "property": "is_trial",
+        "value": true
+      }
+    ],
+    "G06": [
+      {
+        "match": "property_not",
+        "property": "is_trial",
+        "value": true
+      }
+    ],
+    "G07": [
+      {
+        "match": "same_content_as_plan",
+        "param": "content_slug"
+      }
+    ],
+    "G08": [
+      {
+        "match": "title_released_within_days_before_start",
+        "days": 30
+      }
+    ],
+    "G09": [
+      {
+        "match": "distinct_ist_days",
+        "min_days": 3
+      }
+    ]
+  },
+  "page": {
+    "max_rows": 5,
+    "titles_per_row": 8,
+    "candidates_per_row": 14,
+    "refresh_margin_min": 30,
+    "ttl_min": 120,
+    "new_release_days": 30
+  },
+  "row_sources": {
+    "next_episode": {
+      "kind": "next_episode",
+      "row_type": "next_episode",
+      "why": "series the viewer started and has not finished"
+    },
+    "because_you_watched": {
+      "kind": "retrieved",
+      "row_type": "because_you_watched",
+      "why": "retrieved by similarity to what this viewer watched and searched for"
+    },
+    "popular": {
+      "kind": "popular",
+      "row_type": "popular_in_dialect",
+      "why": "most played in this dialect over the last 30 days"
+    },
+    "short_episodes": {
+      "kind": "popular",
+      "row_type": "popular_in_dialect",
+      "filter": {
+        "content_type": "micro_drama"
+      },
+      "why": "micro-dramas: 2-5 minute episodes make a first full episode easy"
+    },
+    "new_releases": {
+      "kind": "new_releases",
+      "row_type": "new_releases",
+      "why": "released in the last 30 days"
+    },
+    "second_genre": {
+      "kind": "second_genre",
+      "row_type": "genre",
+      "why": "the viewer's second most played genre"
+    }
+  },
+  "interventions": {
+    "default": {
+      "hero": [
+        "deeplink",
+        "retrieved",
+        "popular"
+      ],
+      "rows": [
+        "next_episode",
+        "because_you_watched",
+        "popular",
+        "new_releases",
+        "second_genre"
+      ],
+      "premium": "paying_only",
+      "follow_up": null
+    },
+    "G02": {
+      "hero": [
+        "deeplink",
+        "short_episodes",
+        "popular"
+      ],
+      "rows": [
+        "next_episode",
+        "short_episodes",
+        "because_you_watched",
+        "popular",
+        "new_releases"
+      ]
+    },
+    "G03": {
+      "follow_up": {
+        "day_offset": 1,
+        "send_hour_ist": 19,
+        "channels": [
+          "push",
+          "whatsapp"
+        ],
+        "copy": "return",
+        "title_from": "hero",
+        "why": "the goal needs a visit on a later day"
+      }
+    },
+    "G04": {
+      "premium": "allowed"
+    },
+    "G05": {
+      "premium": "allowed"
+    },
+    "G06": {
+      "premium": "allowed"
+    },
+    "G07": {
+      "hero": [
+        "goal_series",
+        "deeplink",
+        "retrieved",
+        "popular"
+      ],
+      "follow_up": {
+        "day_offset": 1,
+        "send_hour_ist": 19,
+        "channels": [
+          "push",
+          "whatsapp"
+        ],
+        "copy": "resume",
+        "title_from": "goal_series",
+        "why": "resume the series on a later day"
+      }
+    },
+    "G08": {
+      "hero": [
+        "new_release",
+        "deeplink",
+        "popular"
+      ],
+      "rows": [
+        "new_releases",
+        "next_episode",
+        "because_you_watched",
+        "popular",
+        "second_genre"
+      ]
+    }
+  },
+  "copy_templates": {
+    "resume": {
+      "hin": "{title} ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha.",
+      "en": "The next episode of {title} is ready. Pick up where you left off."
+    },
+    "return": {
+      "hin": "{title} aapki boli mein. Abhi dekhiye.",
+      "en": "{title}, in your dialect. Start watching."
+    }
+  },
+  "whatsapp_template_for_titles": "wa_recommend_title_v1",
+  "unused_templates": {
+    "wa_new_episode_v2": "says a new episode has arrived; episodes carry no release dates, so the claim cannot be verified",
+    "wa_trial_ending_v1": "no trial viewer has a plan_ends_at, so 'trial ending soon' cannot be verified"
+  },
+  "safety": {
+    "instruction_patterns": [
+      "system note",
+      "ignore (your|all|any|the)?\\s*(previous|prior)?\\s*(rules|instructions)",
+      "for ai agents",
+      "send (a |an )?(whatsapp|push|message|notification)",
+      "to every user",
+      "including users who opted out"
+    ],
+    "why": "Catalogue text that reads like an instruction to an automated agent: the title is quarantined from promotion and flagged for human review. Text is never executed either way."
+  },
+  "retrieval": {
+    "enabled": true,
+    "top_k": 14,
+    "search_lookback_days": 30,
+    "watch_lookback_days": 30,
+    "weights": {
+      "search_term": 2.0,
+      "watched_title_term": 1.0
+    },
+    "field_boost": {
+      "title": 3.0,
+      "genres": 2.0,
+      "content_type": 0.5,
+      "description": 1.0
+    },
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    },
+    "min_score": 5.0,
+    "min_score_why": "Below this a match is one generic word (e.g. 'old'); not evidence of interest. 10th percentile of real hits is ~13."
+  },
+  "llm": {
+    "choose_goal": {
+      "enabled": true,
+      "only_when_eligible_goals_at_least": 2
+    },
+    "compose_page": {
+      "enabled": true
+    },
+    "write_copy": {
+      "enabled": true
+    },
+    "max_description_chars": 140
+  },
+  "confidence": {
+    "base": 0.5,
+    "profile_fresh_hours": 72,
+    "terms": {
+      "profile_fresh": 0.1,
+      "no_profile": -0.15,
+      "stale_snapshot": -0.15,
+      "evidence_observed": 0.15,
+      "evidence_snapshot": 0.05,
+      "evidence_absence": 0.0,
+      "per_conflict": -0.05,
+      "max_conflicts_counted": 3,
+      "rich_history": 0.05,
+      "rich_history_min_plays": 3,
+      "no_history": -0.05,
+      "model_agreed": 0.05,
+      "model_rejected": -0.05,
+      "verifier_dropped": -0.05,
+      "retrieval_grounded": 0.03
+    },
+    "abstention": {
+      "holdout": [
+        0.99,
+        "policy: holdout viewers never receive actions"
+      ],
+      "stale_trigger": [
+        0.9,
+        "device buffer time shows the open happened long ago; nothing to show now"
+      ],
+      "no_arm": [
+        0.95,
+        "fail-closed rule for unassigned viewers"
+      ],
+      "no_dialect": [
+        0.9,
+        "no catalogue content exists for the app's dialect setting"
+      ],
+      "budget": [
+        0.6,
+        "call budget exhausted; abstention is the safe default"
+      ],
+      "data_store": [
+        0.6,
+        "facts unavailable; abstention is the safe default"
+      ],
+      "late": [
+        0.6,
+        "too late to act usefully"
+      ],
+      "page_already_live": [
+        0.85,
+        "this goal's page is already live; a duplicate adds nothing"
+      ]
+    }
+  }
+}

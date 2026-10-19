@@ -1,0 +1,329 @@
+{
+ "viewer_id": "U-02479",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-000519",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02479@2026-09-28T22:45:32.548Z",
+    "observed_at": "2026-09-28T22:45:32.548Z",
+    "freshness_s": 194507.3
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d6",
+    "source": "event",
+    "source_id": "2f5f9684-33f9-4f07-ba76-a161d8298870",
+    "observed_at": "2026-10-01T04:47:19.876Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d6",
+    "source": "profile_snapshot",
+    "source_id": "U-02479@2026-09-28T22:45:32.548Z",
+    "observed_at": "2026-09-28T22:45:32.548Z",
+    "freshness_s": 194507.3
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-02479@2026-09-28T22:45:32.548Z",
+    "observed_at": "2026-09-28T22:45:32.548Z",
+    "freshness_s": 194507.3
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02479@2026-09-28T22:45:32.548Z",
+    "observed_at": "2026-09-28T22:45:32.548Z",
+    "freshness_s": 194507.3
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-03-20T16:37:08.182Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02479@2026-09-28T22:45:32.548Z",
+    "observed_at": "2026-09-28T22:45:32.548Z",
+    "freshness_s": 194507.3
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02479@2026-09-28T22:45:32.548Z",
+    "observed_at": "2026-09-28T22:45:32.548Z",
+    "freshness_s": 194507.3
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02479@2026-09-28T22:45:32.548Z",
+    "observed_at": "2026-09-28T22:45:32.548Z",
+    "freshness_s": 194507.3
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T04:47:19.876Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "93e99680-7149-42d1-a5a7-948e1ebb2327",
+    "observed_at": "2026-09-26T18:20:58.717Z",
+    "freshness_s": 383181.2
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "7fc4b341-6a6f-4bab-a74d-8f887babfc5e",
+    "observed_at": "2026-09-24T13:37:29.628Z",
+    "freshness_s": 572990.2
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-24",
+     "2026-09-26"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 8,
+    "source": "event_stream",
+    "source_id": "8bd816b1-9d05-49b6-9b54-757f84db810a",
+    "observed_at": "2026-10-01T04:05:11.751Z",
+    "freshness_s": 2528.1
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "2f5f9684-33f9-4f07-ba76-a161d8298870",
+    "observed_at": "2026-10-01T04:47:19.876Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000288",
+   "deliver_at": "2026-10-01T04:05:11.751Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): rasuya-moni-d6: reached episode 3/9, last played 2026-09-26T18:20:58.717Z; 68 titles promotable in d6 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.88
+  },
+  {
+   "decision_id": "D-000519",
+   "deliver_at": "2026-10-01T04:47:19.876Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 265501s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000143",
+   "decision_id": "D-000288",
+   "user_id": "U-02479",
+   "trigger_event_id": "8bd816b1-9d05-49b6-9b54-757f84db810a",
+   "published_at": "2026-10-01T04:05:12.995Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d6",
+   "hero_title_id": "T1402",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T1416",
+      "T1979",
+      "T1456",
+      "T1436",
+      "T1414",
+      "T1433",
+      "T1482",
+      "T1475"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T1389",
+      "T1390",
+      "T1393",
+      "T1407",
+      "T1500",
+      "T1397",
+      "T1395",
+      "T1409"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T1486",
+      "T1421",
+      "T1468"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T1492",
+      "T1413",
+      "T1423",
+      "T1489",
+      "T1493"
+     ]
+    }
+   ],
+   "plan_id": 229,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000144",
+   "decision_id": "D-000288",
+   "user_id": "U-02479",
+   "trigger_event_id": "8bd816b1-9d05-49b6-9b54-757f84db810a",
+   "published_at": "2026-10-01T04:05:12.995Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T1976",
+   "dialect": "d6",
+   "text": {
+    "title": "Rasuya Moni (English)",
+    "body": "Rasuya Moni (English) ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T1976",
+   "plan_id": 229,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 229,
+   "viewer_id": "U-02479",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "rasuya-moni-d6",
+    "title_id": "T1976",
+    "next_episode_index": 3,
+    "total_episodes": 9
+   },
+   "started_at": "2026-10-01T04:05:12.192Z",
+   "deadline": "2026-10-04T04:05:12.192Z",
+   "decision_id": "D-000288",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 234,
+   "plan_id": 229,
+   "viewer_id": "U-02479",
+   "at": "2026-10-01T04:05:12.192Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000288"
+   }
+  },
+  {
+   "id": 1738,
+   "plan_id": 229,
+   "viewer_id": "U-02479",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 229,
+   "viewer_id": "U-02479",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 0,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000143",
+     "A-000144"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 260,
+   "viewer_id": "U-02479",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 0, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:229"
+   ]
+  },
+  {
+   "id": 261,
+   "viewer_id": "U-02479",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "page_not_seen",
+   "detail": "published page(s) were never shown (viewer did not reach home while live, or app dialect changed)",
+   "evidence": [
+    "plan:229"
+   ]
+  }
+ ]
+}

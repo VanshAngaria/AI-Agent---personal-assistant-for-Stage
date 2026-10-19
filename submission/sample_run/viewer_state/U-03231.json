@@ -1,0 +1,345 @@
+{
+ "viewer_id": "U-03231",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001175",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03231@2026-09-28T19:19:31.203Z",
+    "observed_at": "2026-09-28T19:19:31.203Z",
+    "freshness_s": 223730.4
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "0acade9f-d6cd-4fb8-a870-ba9ef68051e6",
+    "observed_at": "2026-10-01T09:28:21.570Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d5",
+    "source": "profile_snapshot",
+    "source_id": "U-03231@2026-09-28T19:19:31.203Z",
+    "observed_at": "2026-09-28T19:19:31.203Z",
+    "freshness_s": 223730.4
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-03231@2026-09-28T19:19:31.203Z",
+    "observed_at": "2026-09-28T19:19:31.203Z",
+    "freshness_s": 223730.4
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "e2d28aa4-1f2b-4388-a5fa-a25a2bbf4b7d",
+    "observed_at": "2026-09-17T16:55:58.474Z",
+    "freshness_s": 1182743.1
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-07-30T21:50:15.162Z",
+    "source": "profile_snapshot",
+    "source_id": "U-03231@2026-09-28T19:19:31.203Z",
+    "observed_at": "2026-09-28T19:19:31.203Z",
+    "freshness_s": 223730.4
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03231@2026-09-28T19:19:31.203Z",
+    "observed_at": "2026-09-28T19:19:31.203Z",
+    "freshness_s": 223730.4
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03231@2026-09-28T19:19:31.203Z",
+    "observed_at": "2026-09-28T19:19:31.203Z",
+    "freshness_s": 223730.4
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T09:28:21.570Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 9,
+    "source": "event_stream",
+    "source_id": "20397f88-b95b-48fc-90e5-7d01b23c702d",
+    "observed_at": "2026-09-28T01:10:18.728Z",
+    "freshness_s": 289082.8
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "4f9dc9b0-32bb-46a4-9f1c-8388f47d1642",
+    "observed_at": "2026-09-28T01:35:08.177Z",
+    "freshness_s": 287593.4
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-19",
+     "2026-09-28"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 12,
+    "source": "event_stream",
+    "source_id": "27e7829a-5791-42d5-bc1f-96f90c30a4a4",
+    "observed_at": "2026-10-01T09:23:16.463Z",
+    "freshness_s": 305.1
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "0acade9f-d6cd-4fb8-a870-ba9ef68051e6",
+    "observed_at": "2026-10-01T09:28:21.570Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d2",
+      "ref": "event:0acade9f-d6cd-4fb8-a870-ba9ef68051e6"
+     },
+     {
+      "source": "profile",
+      "value": "d5",
+      "ref": "profile:U-03231"
+     }
+    ],
+    "chosen": "app_setting:d2",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001160",
+   "deliver_at": "2026-10-01T09:23:16.463Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): molo-d2: reached episode 4/7, last played 2026-09-28T01:10:18.728Z; 470 titles promotable in d2 at publish time",
+   "confidence": 0.83
+  },
+  {
+   "decision_id": "D-001175",
+   "deliver_at": "2026-10-01T09:28:21.570Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": "G07",
+   "reason": "page A-000466 for this goal and dialect is live until 2026-10-01T11:23:17.712Z; republishing it would be a duplicate action, and no follow-up message is warranted (no message: this plan already scheduled its one follow-up)",
+   "confidence": 0.85
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000466",
+   "decision_id": "D-001160",
+   "user_id": "U-03231",
+   "trigger_event_id": "27e7829a-5791-42d5-bc1f-96f90c30a4a4",
+   "published_at": "2026-10-01T09:23:17.712Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d2",
+   "hero_title_id": "T0521",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0781",
+      "T0779",
+      "T0764",
+      "T0693",
+      "T0557",
+      "T0654",
+      "T0711",
+      "T0890"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0522",
+      "T0523",
+      "T0524",
+      "T0526",
+      "T0529",
+      "T0525",
+      "T0537",
+      "T0536"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0530",
+      "T0545",
+      "T0564",
+      "T0676",
+      "T0552",
+      "T0535",
+      "T0584",
+      "T0596"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0540",
+      "T0533",
+      "T0550",
+      "T0548",
+      "T0556",
+      "T0568",
+      "T0566",
+      "T0701"
+     ]
+    }
+   ],
+   "plan_id": 648,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000467",
+   "decision_id": "D-001160",
+   "user_id": "U-03231",
+   "trigger_event_id": "27e7829a-5791-42d5-bc1f-96f90c30a4a4",
+   "published_at": "2026-10-01T09:23:17.712Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0521",
+   "dialect": "d2",
+   "text": {
+    "title": "Molo",
+    "body": "Molo ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0521",
+   "plan_id": 648,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 648,
+   "viewer_id": "U-03231",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "molo-d2",
+    "title_id": "T0521",
+    "next_episode_index": 4,
+    "total_episodes": 7
+   },
+   "started_at": "2026-10-01T09:23:16.906Z",
+   "deadline": "2026-10-04T09:23:16.906Z",
+   "decision_id": "D-001160",
+   "status": "succeeded",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: play_started received 2026-10-01T09:29:06.570Z inside the window",
+   "signal_event_id": "oua-020538"
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 665,
+   "plan_id": 648,
+   "viewer_id": "U-03231",
+   "at": "2026-10-01T09:23:16.906Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-001160"
+   }
+  },
+  {
+   "id": 2148,
+   "plan_id": 648,
+   "viewer_id": "U-03231",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "succeeded",
+   "detail": {
+    "reason": "final judgment: play_started received 2026-10-01T09:29:06.570Z inside the window",
+    "signal_event_id": "oua-020538"
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 648,
+   "viewer_id": "U-03231",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "succeeded",
+   "reason": "play_started received 2026-10-01T09:29:06.570Z inside the window",
+   "signal_event_id": "oua-020538",
+   "signal_at": "2026-10-01T09:29:06.570Z",
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000466",
+     "A-000467"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 720,
+   "viewer_id": "U-03231",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_succeeded:G07",
+   "detail": "G07 reached; move to the next lifecycle goal",
+   "evidence": [
+    "plan:648"
+   ]
+  }
+ ]
+}

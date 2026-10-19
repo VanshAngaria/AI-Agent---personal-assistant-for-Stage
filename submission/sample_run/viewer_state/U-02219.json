@@ -1,0 +1,524 @@
+{
+ "viewer_id": "U-02219",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-002672",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02219@2026-09-29T09:25:12.282Z",
+    "observed_at": "2026-09-29T09:25:12.282Z",
+    "freshness_s": 204743.3
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "fc6974f2-0d84-49eb-bf34-636e97d8c1c8",
+    "observed_at": "2026-10-01T18:17:35.591Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d3",
+    "source": "profile_snapshot",
+    "source_id": "U-02219@2026-09-29T09:25:12.282Z",
+    "observed_at": "2026-09-29T09:25:12.282Z",
+    "freshness_s": 204743.3
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-02219@2026-09-29T09:25:12.282Z",
+    "observed_at": "2026-09-29T09:25:12.282Z",
+    "freshness_s": 204743.3
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "721b1263-0b58-4726-a45f-7af3ff572271",
+    "observed_at": "2026-09-26T22:02:34.609Z",
+    "freshness_s": 418501.0
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-08-12T10:10:19.315Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02219@2026-09-29T09:25:12.282Z",
+    "observed_at": "2026-09-29T09:25:12.282Z",
+    "freshness_s": 204743.3
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02219@2026-09-29T09:25:12.282Z",
+    "observed_at": "2026-09-29T09:25:12.282Z",
+    "freshness_s": 204743.3
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02219@2026-09-29T09:25:12.282Z",
+    "observed_at": "2026-09-29T09:25:12.282Z",
+    "freshness_s": 204743.3
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T18:17:35.591Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 22,
+    "source": "event_stream",
+    "source_id": "a7f6ff30-2433-4aea-a838-f67c6fb9e2ac",
+    "observed_at": "2026-09-30T14:33:16.435Z",
+    "freshness_s": 99859.2
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "4591b817-aa78-486e-8864-ca4b68b504d8",
+    "observed_at": "2026-09-30T14:36:56.907Z",
+    "freshness_s": 99638.7
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-20",
+     "2026-09-21",
+     "2026-09-26",
+     "2026-09-27",
+     "2026-09-28",
+     "2026-09-29",
+     "2026-09-30"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 17,
+    "source": "event_stream",
+    "source_id": "edde84b7-ebeb-4c2a-bb04-0ab8ed99ad5e",
+    "observed_at": "2026-10-01T12:47:33.994Z",
+    "freshness_s": 19801.6
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "fc6974f2-0d84-49eb-bf34-636e97d8c1c8",
+    "observed_at": "2026-10-01T18:17:35.591Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d2",
+      "ref": "event:fc6974f2-0d84-49eb-bf34-636e97d8c1c8"
+     },
+     {
+      "source": "profile",
+      "value": "d3",
+      "ref": "profile:U-02219"
+     }
+    ],
+    "chosen": "app_setting:d2",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000007",
+   "deliver_at": "2026-09-30T18:50:12.683Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): guka-kosusa-d2: reached episode 4/41, last played 2026-09-25T19:36:41.700Z; 470 titles promotable in d2 at publish time",
+   "confidence": 0.83
+  },
+  {
+   "decision_id": "D-000714",
+   "deliver_at": "2026-10-01T05:53:44.285Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 7 (G07) started 2026-09-30T18:50:13.126Z; 470 titles promotable in d2 at publish time",
+   "confidence": 0.78
+  },
+  {
+   "decision_id": "D-001568",
+   "deliver_at": "2026-10-01T12:47:33.994Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 7 (G07) started 2026-09-30T18:50:13.126Z; 468 titles promotable in d2 at publish time",
+   "confidence": 0.78
+  },
+  {
+   "decision_id": "D-002672",
+   "deliver_at": "2026-10-01T18:17:35.591Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 64386s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000007",
+   "decision_id": "D-000007",
+   "user_id": "U-02219",
+   "trigger_event_id": "35822cea-7a21-4591-9a47-07f549e1e1ed",
+   "published_at": "2026-09-30T18:50:13.938Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d2",
+   "hero_title_id": "T0522",
+   "rows": [
+    {
+     "row_type": "next_episode",
+     "title_ids": [
+      "T0521",
+      "T1677",
+      "T0526"
+     ]
+    },
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0764",
+      "T0590",
+      "T0779",
+      "T0810",
+      "T0781",
+      "T0693",
+      "T0711",
+      "T0740"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0524",
+      "T0529",
+      "T0525",
+      "T0537",
+      "T0536",
+      "T0531"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0530",
+      "T0545",
+      "T0564",
+      "T0676",
+      "T0552",
+      "T0535",
+      "T0584",
+      "T0596"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0528",
+      "T0540",
+      "T0534",
+      "T0620",
+      "T0565",
+      "T0547",
+      "T0567",
+      "T0899"
+     ]
+    }
+   ],
+   "plan_id": 7,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000008",
+   "decision_id": "D-000007",
+   "user_id": "U-02219",
+   "trigger_event_id": "35822cea-7a21-4591-9a47-07f549e1e1ed",
+   "published_at": "2026-09-30T18:50:13.938Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0522",
+   "dialect": "d2",
+   "text": {
+    "title": "Guka Kosusa",
+    "body": "The next episode of Guka Kosusa is ready. Pick up where you left off."
+   },
+   "deeplink": "ott://title/T0522",
+   "plan_id": 7,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000242",
+   "decision_id": "D-000714",
+   "user_id": "U-02219",
+   "trigger_event_id": "11212264-75b9-4a6e-8e8d-19e190cb63ca",
+   "published_at": "2026-10-01T05:53:44.741Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d2",
+   "hero_title_id": "T0522",
+   "rows": [
+    {
+     "row_type": "next_episode",
+     "title_ids": [
+      "T0521",
+      "T1677",
+      "T0526"
+     ]
+    },
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0764",
+      "T0590",
+      "T0779",
+      "T0810",
+      "T0781",
+      "T0693",
+      "T0711",
+      "T0740"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0524",
+      "T0529",
+      "T0525",
+      "T0537",
+      "T0536",
+      "T0531"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0530",
+      "T0545",
+      "T0564",
+      "T0676",
+      "T0552",
+      "T0535",
+      "T0584",
+      "T0596"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0528",
+      "T0540",
+      "T0534",
+      "T0620",
+      "T0565",
+      "T0547",
+      "T0567",
+      "T0899"
+     ]
+    }
+   ],
+   "plan_id": 7,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000664",
+   "decision_id": "D-001568",
+   "user_id": "U-02219",
+   "trigger_event_id": "edde84b7-ebeb-4c2a-bb04-0ab8ed99ad5e",
+   "published_at": "2026-10-01T12:47:34.449Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d2",
+   "hero_title_id": "T0522",
+   "rows": [
+    {
+     "row_type": "next_episode",
+     "title_ids": [
+      "T0521",
+      "T1677",
+      "T0526"
+     ]
+    },
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0764",
+      "T0590",
+      "T0779",
+      "T0781",
+      "T0810",
+      "T0693",
+      "T0711",
+      "T0740"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0524",
+      "T0529",
+      "T0525",
+      "T0537",
+      "T0536",
+      "T0531"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0545",
+      "T0564",
+      "T0676",
+      "T0552",
+      "T0535",
+      "T0584",
+      "T0596",
+      "T0616"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0528",
+      "T0540",
+      "T0534",
+      "T0620",
+      "T0565",
+      "T0547",
+      "T0567",
+      "T0899"
+     ]
+    }
+   ],
+   "plan_id": 7,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 7,
+   "viewer_id": "U-02219",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "guka-kosusa-d2",
+    "title_id": "T0522",
+    "next_episode_index": 4,
+    "total_episodes": 41
+   },
+   "started_at": "2026-09-30T18:50:13.126Z",
+   "deadline": "2026-10-03T18:50:13.126Z",
+   "decision_id": "D-000007",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 7,
+   "plan_id": 7,
+   "viewer_id": "U-02219",
+   "at": "2026-09-30T18:50:13.126Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000007"
+   }
+  },
+  {
+   "id": 1518,
+   "plan_id": 7,
+   "viewer_id": "U-02219",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 7,
+   "viewer_id": "U-02219",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 3,
+    "pages_shown": 3,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000007",
+     "A-000008",
+     "A-000242",
+     "A-000664"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 23,
+   "viewer_id": "U-02219",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 3, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:7"
+   ]
+  }
+ ]
+}

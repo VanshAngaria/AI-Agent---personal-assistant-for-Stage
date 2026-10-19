@@ -1,148 +1,139 @@
-# One User, One Agent: data pack
+# One User, One Agent
 
-Synthetic data for the take-home assignment "One User, One Agent". Every user, event and title is generated; no real
-person or title appears. The data is deliberately imperfect in the ways real product data is imperfect. Finding and
-handling those imperfections is part of the assignment.
+**A per-viewer AI lifecycle agent for a regional-dialect OTT platform.** On every app open it decides one measurable
+goal for that viewer and one proportionate action (a personalised home page, one follow-up message, or nothing). It
+cites evidence for every step, stays within a strict latency budget, and afterwards measures honestly, against a
+randomized holdout, whether it helped.
 
-Only this pack is valid evidence about users and titles.
+Built for the *One User, One Agent* Agentic AI Engineering assignment.
 
-## Contents
+---
 
-| Path | What it is |
+## What it does
+
+```
+App open ─► understand the viewer ─► pick ONE goal ─► retrieve content ─► model composes ─► independent verifier ─► publish
+             facts + source + age     12 goals,         BM25 over the       within retrieved    23+ checks; holdout,     within
+             conflicts kept visible   rules decide      viewer's searches   candidates only     dialect, consent, caps,  ~1 s
+                                      eligibility       and plays           (grounded)          quiet hours, injection
+                                   … 14 days later …
+         ─► judge each goal from attributable signals ─► store a lesson for the viewer ─► impact vs randomized holdout (ITT)
+```
+
+* **Code decides what is allowed; the model judges within it.** Eligibility, consent, dialect and availability come
+  from data and versioned config. The model (Claude, or a deterministic local mock) only chooses among eligible goals,
+  composes the page from retrieved candidates, and writes copy. Its output is grounding-checked and verified.
+* **Evidence or nothing.** Every decision cites events, profile rows, catalogue rows, rule versions and the policy
+  version, each with its age. Model text is never evidence.
+* **Do nothing when that's right.** Holdout, stale (buffered) opens, no eligible goal, a dialect with no content, and a
+  page that's already live are all recorded decisions with reasons.
+* **Behaviour lives in config, not code.** Goal rules come from `goals.json` plus a versioned policy file.
+* **Real-time and fail-safe.**
+  * Idempotent on duplicate triggers.
+  * Deadline-aware model calls and load shedding.
+  * Circuit breaker on model failures.
+  * A cached snapshot when the data store is degraded, and fail-closed when the agent can't act safely.
+* **Honest measurement.** Intent-to-treat on randomized arms, with "shadow goals" for the holdout. Served-vs-unserved
+  comparisons are shown only to explain why they mislead.
+
+## Results of the sample run
+
+| | |
 |---|---|
-| `data/events.jsonl` | 30 days of app events (2026-09-01 to 2026-09-30 IST) for 5000 users: 142,906 lines |
-| `data/profiles_snapshot.csv` | Daily warehouse export taken 2026-09-30 05:30 IST: 4,888 rows |
-| `data/catalogue.csv` | 2,014 title records across six dialects (`d1`-`d6`) |
-| `data/episodes.csv` | Episodes for every title: 26,986 rows |
-| `config/goals.json` | The 12 candidate goals, with eligibility and success conditions |
-| `config/interventions.json` | What the agent can change (home page, push, WhatsApp, in-app message) and the rules |
-| `config/pricing.json` | The only prices that exist |
-| `config/messaging_policy.md` | Consent, quiet hours, frequency, honesty and holdout rules |
-| `pilot/pilot_assignment.csv` | Randomized arms of an earlier pilot (days 1-14) and whether each user was served |
-| `pilot/pilot_outcomes.csv` | Each pilot user's goal and whether it succeeded |
-| `pilot/pilot_summary_report.md` | The internal summary report written after the pilot |
-| `replay/triggers.jsonl` | The replay day (2026-10-01 IST): 2,769 app-open and login triggers, in delivery order |
-| `replay/live_events.jsonl` | Other events that arrive during the replay day, in delivery order |
-| `replay/control_events.jsonl` | Operational events during the replay day (corrections, outages, catalogue changes) |
-| `replay/model_faults.jsonl` | Faults your mock model provider must reproduce at the given triggers |
-| `replay/arms.csv` | Randomized arm of every user for the replay: `agent` or `holdout` |
-| `simulator/simulate_outcomes.py` | Plays the users and the app after your agent acts (standard-library Python) |
+| Decisions | 2,687 (90 duplicate deliveries answered idempotently) |
+| Actions | 920 home pages, 223 push, 11 WhatsApp |
+| Policy problems found by the simulator | **0** |
+| Latency | p50 0.44 s · p95 1.25 s · max 6.9 s · **0** over the 60 s budget |
+| Surprise events handled | buffered opens, three-way dialect conflicts, mid-run rule correction, title withdrawal, model false claim / malformed output / timeout, model and data-store outages |
+| Impact (ITT, first goal) | agent 13.3% vs holdout 12.3%, **+1.0 pt (95% CI −2.4 to +4.4)**: no detectable effect, reported as such |
+| Evaluation check against the brief | **48 / 48 pass** (`submission/sample_run/evaluation_check.md`) |
+| Tests | **75 passing** |
 
-## Conventions
+## Quick start
 
-- Timestamps are ISO-8601 UTC (`...Z`). IST is UTC+05:30. All users are in India.
-- `received_at` is set by our servers and is trustworthy. `occurred_at` and `sent_at` come from the phone's clock,
-  which can be wrong. Some phones buffer events offline and send them much later.
-- `app_dialect` and `app_language` on every event are the app's current settings (the "app settings feed").
-- An event can be delivered more than once with the same `event_id`.
-- `content_slug` identifies the content; a title can have more than one `title_id` (language variants).
+**Requirements:** Python 3.11+. The only runtime dependency is `pydantic`.
 
-## data/events.jsonl
+**1. Add the data pack.** The pack's viewer data is personal data and is **not** in this repository. Copy its `data/`,
+`replay/` and `pilot/` folders into the repository root, next to `config/` and `simulator/`.
 
-One JSON object per line:
+**2. Install and run:**
 
-```
-{"event_id": "uuid", "user_id": "U-00042", "event": "app_open",
- "occurred_at": "...Z", "sent_at": "...Z", "received_at": "...Z", "session_id": "uuid",
- "app_dialect": "d2", "app_language": "hin", "platform": "android", "app_version": "6.1.4",
- "properties": {}}
+```bash
+cd submission
+python -m pip install -e ".[dev]"
+
+python -m oua run-all            # replay → simulator → judge → reports   (~40 s, writes sample_run/)
+python -m oua check --run-tests  # verify everything against the brief  (48 checks + the 75 tests)
+python -m pytest                 # tests alone (run without the pack; 4 pack-only tests skip)
 ```
 
-| event | properties |
+**3. Look at the results** in `submission/sample_run/`:
+
+| File | What it shows |
 |---|---|
-| `signup_completed` | `method` |
-| `login_success` | none |
-| `app_open` | `deeplink` (optional): `ott://c/<campaign>/<dialect>/title/<title_id>` |
-| `app_dialect_changed` | `from`, `to` |
-| `home_viewed` | `layout`: `default` or `personalised` |
-| `title_viewed` | `title_id` |
-| `search` | `query` |
-| `play_started` | `title_id`, `episode_id` |
-| `play_progress` | `title_id`, `episode_id`, `percent` (25, 50, 75) |
-| `episode_completed` | `title_id`, `episode_id` (90% or more watched) |
-| `paywall_viewed` | `title_id` (optional) |
-| `purchase_completed` | `plan_id`, `price_inr`, `is_trial` |
-| `subscription_renewed` | `plan_id`, `price_inr` |
-| `subscription_lapsed` | none |
-| `message_delivered`, `message_clicked` | `channel`, `campaign_id`, `title_id` |
-| `notification_opt_out` | `channel` |
+| `final_report.md` | Start here: what happened, latency, every surprise with example decision IDs, outcomes, impact |
+| `impact_report.md` | Agent vs holdout, per-goal effects, and why the pilot's "2.3× uplift" was misleading |
+| `evaluation_check.md` | Every requirement of the brief, checked against the outputs |
+| `decisions.jsonl` | Every decision: goal, action or reason for none, evidence with freshness, checks, model tasks, timing |
+| `viewer_state/U-xxxxx.json` | One viewer's full durable state |
 
-## data/profiles_snapshot.csv
+Follow one viewer through time (what the agent knew, decided and observed):
 
-`user_id, signup_at, subscription_status (never | trial_active | active | lapsed), plan_started_at, plan_ends_at,
-preferred_dialect, preferred_language, notifications_opt_in, whatsapp_opt_in, platform, updated_at, snapshot_at`
-
-## data/catalogue.csv and data/episodes.csv
-
-`title_id, content_slug, title, dialect, language, content_type (film | show | micro_drama), genres (| separated),
-release_date, available_from, available_until (empty = no end), is_premium, description`
-
-`episode_id, content_slug, season, episode, minutes`
-
-## The replay day
-
-`replay/triggers.jsonl` has the same schema as `events.jsonl` plus `deliver_at`, the moment the trigger reaches your
-agent. Feed triggers to your agent in `deliver_at` order, together with `live_events.jsonl` and
-`control_events.jsonl`. You may run faster than real time, but measure your own processing time per decision and
-record each action's `published_at` as `deliver_at + your measured processing time`.
-
-`control_events.jsonl` lines have `at` and `type` (`title_withdrawn`, `goal_rule_corrected`,
-`dependency_unavailable`, `dependency_degraded`). Your harness should make the named dependency fail or slow down
-for the stated window.
-
-`model_faults.jsonl`: when your agent handles the named trigger, your mock or replay model provider must return the
-given `model_output` (or time out, for `fault: timeout`) instead of a normal answer.
-
-## Actions (input to the simulator)
-
-Write every action your agent publishes to a JSONL file, one object per line:
-
-```
-{"action_id": "A-0001", "decision_id": "D-0001", "user_id": "U-00042", "trigger_event_id": "uuid",
- "type": "home_page", "published_at": "...Z", "dialect": "d2", "hero_title_id": "T0042",
- "rows": [{"row_type": "popular_in_dialect", "title_ids": ["T0101", "T0102", "T0103"]}]}
-
-{"action_id": "A-0002", "decision_id": "D-0001", "user_id": "U-00042", "trigger_event_id": "uuid",
- "type": "push", "published_at": "...Z", "send_at": "...Z", "title_id": "T0101",
- "text": {"title": "...", "body": "..."}, "deeplink": "ott://title/T0101"}
-
-{"action_id": "A-0003", ..., "type": "whatsapp", "send_at": "...Z", "template_id": "wa_recommend_title_v1",
- "variables": {"title_name": "...", "dialect_name": "..."}, "title_id": "T0101"}
+```bash
+python -m oua audit --viewer U-02344
+python -m oua audit --viewer U-02344 --at 2026-10-01T06:00:00Z
 ```
 
-`type` is one of `home_page`, `push`, `whatsapp`, `in_app_message`. Doing nothing is not an action; record it in your
-decision output.
+**Optional: use Claude instead of the mock.** No key is needed otherwise.
 
-## Running the simulator
-
-```
-python simulator/simulate_outcomes.py --pack . --actions sample_run/actions.jsonl --out sample_run/sim
-```
-
-It writes `outcome_events.jsonl` (what the triggered users do in the 14 days after the replay day, in the
-`events.jsonl` schema, plus `home_page_shown` and `message_failed` events) and `simulator_report.json`. Use these
-events to judge your goals and to measure impact against the holdout. Our evaluators run the same simulator with a
-different seed and a second, unseen replay day.
-
-## Interactive Frontend (Single-Viewer Agent Runner)
-
-A minimal Streamlit interface is provided to test the live agent against any real viewer in the dataset:
-
-```powershell
-streamlit run frontend/app.py
+```bash
+python -m pip install -e ".[llm]"
+export ANTHROPIC_API_KEY=...          # PowerShell: $env:ANTHROPIC_API_KEY = "..."
+python -m oua run-all --llm anthropic --out ../claude_run
 ```
 
-Features:
-- Look up any of the 5,000 real viewers (`U-00001` to `U-05000`) or pick an example viewer.
-- Real-time execution of the authentic 11-step agent workflow (using `MockLLMProvider` by default).
-- Displays Viewer Information, Reconciled vs Conflicting Facts, Goal Selection, Agent Decision & Justification, 17-point Independent Verification Gate, Execution Latency/Budgets, and Goal Lifecycle Outcomes.
-- Prevents synthetic viewers and enforces holdout controls, consent, quiet hours, and idempotency.
+This sends derived features and candidate titles (never raw rows) to Anthropic's API. Use it only where that's
+allowed.
 
-## Running Tests
+## Documentation
 
-Run the full automated test suite (66 core tests + 7 single-viewer service tests):
+| Document | For |
+|---|---|
+| [`submission/docs/1_HIGH_LEVEL_DESIGN.md`](submission/docs/1_HIGH_LEVEL_DESIGN.md) ([PDF](submission/docs/pdf/1_HIGH_LEVEL_DESIGN.pdf)) | The why: principles, components, decision life cycle, trade-offs, interview answers |
+| [`submission/docs/2_LOW_LEVEL_DESIGN.md`](submission/docs/2_LOW_LEVEL_DESIGN.md) ([PDF](submission/docs/pdf/2_LOW_LEVEL_DESIGN.pdf)) | The how: tech stack, data flow, step-by-step pipeline, algorithms, data model |
+| [`submission/docs/3_FILE_GUIDE.md`](submission/docs/3_FILE_GUIDE.md) ([PDF](submission/docs/pdf/3_FILE_GUIDE.pdf)) | Every file and folder, plus a 10-minute walkthrough |
+| [`submission/README.md`](submission/README.md) | Detailed usage, configuration, tests, how to read a decision |
+| [`submission/ARCHITECTURE.md`](submission/ARCHITECTURE.md) | Architecture note: ownership, planning, memory, verification, latency, failure recovery, trust boundaries |
+| [`submission/AI_COLLABORATION.md`](submission/AI_COLLABORATION.md) | How AI tools were directed, checked and sometimes overruled |
+| [`submission/KNOWN_LIMITATIONS.md`](submission/KNOWN_LIMITATIONS.md) | What is intentionally incomplete |
+| [`docs/DATA_PACK_README.md`](docs/DATA_PACK_README.md) | The supplied data pack's formats and conventions |
 
-```powershell
-python -m pytest -v
+## Repository layout
+
+```
+├── README.md                 this file
+├── config/                   platform rules supplied with the data pack (goals, interventions, pricing, policy)
+├── simulator/                supplied outcome simulator (unmodified)
+├── docs/                     data-pack guide + reconnaissance notes written before the build
+├── data/ replay/ pilot/      the data pack (NOT committed; add locally)
+└── submission/               the deliverable
+    ├── README.md  ARCHITECTURE.md  AI_COLLABORATION.md  KNOWN_LIMITATIONS.md
+    ├── config/               agent_policy.json (versioned business policy) · agent.json (runtime settings)
+    ├── docs/                 explainer documents (+ PDFs)
+    ├── src/oua/              the agent (Python package)
+    ├── tests/                75 tests on a synthetic fixture pack
+    └── sample_run/           decisions, actions, outcomes, latency & impact reports, per-viewer state, evaluation check
 ```
 
+## Tech stack
+
+Python · Pydantic v2 · SQLite · BM25 retrieval (pure Python) · Anthropic SDK with Claude (optional) · pytest
+
+## A note on data
+
+The viewer data in the pack is synthetic but handled as personal data, as the brief requires:
+
+* The raw pack (`data/`, `replay/`, `pilot/`) is git-ignored and not published.
+* The required sample run in `submission/sample_run/` contains the agent's outputs for that synthetic data (viewer IDs,
+  decisions, per-viewer state).
+* By default no model provider receives any of it; the mock runs locally.

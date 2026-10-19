@@ -1,0 +1,182 @@
+{
+  "budget_s": 60,
+  "failure_after_s": 300,
+  "page_target_s": 3.0,
+  "workers": 4,
+  "decisions": 2679,
+  "redeliveries_answered_idempotently": 90,
+  "status_counts": {
+    "PUBLISHED": 912,
+    "NO_ACTION": 1760,
+    "FAILED_SAFE": 7
+  },
+  "latency_s": {
+    "p50": 0.441,
+    "p95": 1.246,
+    "p99": 1.257,
+    "max": 6.947,
+    "mean": 0.373
+  },
+  "queue_wait_s": {
+    "p95": 0.0,
+    "max": 0.774
+  },
+  "cpu_ms": {
+    "p50": 1.96,
+    "p95": 12.42
+  },
+  "over_budget_60s": 0,
+  "over_failure_300s": 0,
+  "pages_published": 912,
+  "pages_within_page_target": 910,
+  "tool_calls": {
+    "max": 9,
+    "limit": 20
+  },
+  "model_calls": {
+    "max": 3,
+    "total": 2034,
+    "limit": 8
+  },
+  "peak_hour": {
+    "hour": "2026-10-01 10:00 IST",
+    "triggers": 336,
+    "p95_latency_s": 0.848
+  },
+  "by_hour": {
+    "2026-10-01 00:00 IST": {
+      "triggers": 28,
+      "p95_latency_s": 1.245
+    },
+    "2026-10-01 01:00 IST": {
+      "triggers": 8,
+      "p95_latency_s": 1.251
+    },
+    "2026-10-01 02:00 IST": {
+      "triggers": 11,
+      "p95_latency_s": 1.246
+    },
+    "2026-10-01 03:00 IST": {
+      "triggers": 9,
+      "p95_latency_s": 0.442
+    },
+    "2026-10-01 04:00 IST": {
+      "triggers": 6,
+      "p95_latency_s": 1.249
+    },
+    "2026-10-01 05:00 IST": {
+      "triggers": 17,
+      "p95_latency_s": 1.248
+    },
+    "2026-10-01 06:00 IST": {
+      "triggers": 25,
+      "p95_latency_s": 0.849
+    },
+    "2026-10-01 07:00 IST": {
+      "triggers": 55,
+      "p95_latency_s": 1.247
+    },
+    "2026-10-01 08:00 IST": {
+      "triggers": 84,
+      "p95_latency_s": 1.251
+    },
+    "2026-10-01 09:00 IST": {
+      "triggers": 78,
+      "p95_latency_s": 1.246
+    },
+    "2026-10-01 10:00 IST": {
+      "triggers": 336,
+      "p95_latency_s": 0.848
+    },
+    "2026-10-01 11:00 IST": {
+      "triggers": 124,
+      "p95_latency_s": 1.249
+    },
+    "2026-10-01 12:00 IST": {
+      "triggers": 119,
+      "p95_latency_s": 1.249
+    },
+    "2026-10-01 13:00 IST": {
+      "triggers": 141,
+      "p95_latency_s": 1.243
+    },
+    "2026-10-01 14:00 IST": {
+      "triggers": 129,
+      "p95_latency_s": 1.245
+    },
+    "2026-10-01 15:00 IST": {
+      "triggers": 98,
+      "p95_latency_s": 1.246
+    },
+    "2026-10-01 16:00 IST": {
+      "triggers": 117,
+      "p95_latency_s": 1.243
+    },
+    "2026-10-01 17:00 IST": {
+      "triggers": 140,
+      "p95_latency_s": 1.246
+    },
+    "2026-10-01 18:00 IST": {
+      "triggers": 128,
+      "p95_latency_s": 4.239
+    },
+    "2026-10-01 19:00 IST": {
+      "triggers": 207,
+      "p95_latency_s": 1.245
+    },
+    "2026-10-01 20:00 IST": {
+      "triggers": 335,
+      "p95_latency_s": 1.244
+    },
+    "2026-10-01 21:00 IST": {
+      "triggers": 196,
+      "p95_latency_s": 1.245
+    },
+    "2026-10-01 22:00 IST": {
+      "triggers": 191,
+      "p95_latency_s": 1.245
+    },
+    "2026-10-01 23:00 IST": {
+      "triggers": 97,
+      "p95_latency_s": 0.46
+    }
+  },
+  "dependency_windows": [
+    {
+      "dependency": "model_provider",
+      "mode": "unavailable",
+      "from": "2026-10-01T10:35:00.000Z",
+      "until": "2026-10-01T10:42:00.000Z",
+      "decisions": 21,
+      "status": {
+        "PUBLISHED": 10,
+        "NO_ACTION": 11
+      },
+      "model_outcomes": {
+        "skipped": 10,
+        "unavailable": 11
+      },
+      "p95_latency_s": 0.096,
+      "max_latency_s": 0.099
+    },
+    {
+      "dependency": "user_data_store",
+      "mode": "degraded",
+      "from": "2026-10-01T13:10:00.000Z",
+      "until": "2026-10-01T13:17:00.000Z",
+      "decisions": 16,
+      "status": {
+        "FAILED_SAFE": 7,
+        "PUBLISHED": 3,
+        "NO_ACTION": 6
+      },
+      "model_outcomes": {
+        "skipped": 12,
+        "skipped_for_latency": 3,
+        "agreed": 1
+      },
+      "p95_latency_s": 6.447,
+      "max_latency_s": 6.947
+    }
+  ]
+}

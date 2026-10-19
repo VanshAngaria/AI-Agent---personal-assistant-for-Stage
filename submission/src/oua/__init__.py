@@ -1,7 +1,4 @@
-"""One User, One Agent — foundation package.
+"""One User, One Agent: a per-viewer lifecycle agent (decide, act, measure)."""
 
-Ingestion, planning, verification and replay are not implemented in this stage.
-"""
-
-__version__ = "0.1.0"
-SCHEMA_VERSION = "1.0.0"
+__version__ = "1.0.0"
+SCHEMA_VERSION = "2.0.0"

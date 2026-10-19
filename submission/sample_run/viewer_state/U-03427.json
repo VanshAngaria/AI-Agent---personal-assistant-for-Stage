@@ -1,0 +1,387 @@
+{
+ "viewer_id": "U-03427",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001777",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03427@2026-09-29T14:10:24.949Z",
+    "observed_at": "2026-09-29T14:10:24.949Z",
+    "freshness_s": 172525.9
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d1",
+    "source": "event",
+    "source_id": "29154dab-4166-4b28-9b71-56a0235d5699",
+    "observed_at": "2026-10-01T14:05:50.874Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d1",
+    "source": "profile_snapshot",
+    "source_id": "U-03427@2026-09-29T14:10:24.949Z",
+    "observed_at": "2026-09-29T14:10:24.949Z",
+    "freshness_s": 172525.9
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-03427@2026-09-29T14:10:24.949Z",
+    "observed_at": "2026-09-29T14:10:24.949Z",
+    "freshness_s": 172525.9
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "b4b078ce-123b-49a8-b1a6-12cd0ff68c32",
+    "observed_at": "2026-09-04T05:56:11.247Z",
+    "freshness_s": 2362179.6
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-02-05T23:57:22.019Z",
+    "source": "profile_snapshot",
+    "source_id": "U-03427@2026-09-29T14:10:24.949Z",
+    "observed_at": "2026-09-29T14:10:24.949Z",
+    "freshness_s": 172525.9
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03427@2026-09-29T14:10:24.949Z",
+    "observed_at": "2026-09-29T14:10:24.949Z",
+    "freshness_s": 172525.9
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03427@2026-09-29T14:10:24.949Z",
+    "observed_at": "2026-09-29T14:10:24.949Z",
+    "freshness_s": 172525.9
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T14:05:50.874Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 11,
+    "source": "event_stream",
+    "source_id": "28fb52fc-38ef-428c-b17c-bf5ad51bd4f0",
+    "observed_at": "2026-09-16T02:25:15.954Z",
+    "freshness_s": 1338034.9
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "08596cac-9beb-475f-910b-2240f57eb786",
+    "observed_at": "2026-09-10T16:01:10.258Z",
+    "freshness_s": 1807480.6
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "09d759dc-8be1-4885-8e38-2850a4f7b6b6",
+    "observed_at": "2026-10-01T04:11:53.815Z",
+    "freshness_s": 35637.1
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "29154dab-4166-4b28-9b71-56a0235d5699",
+    "observed_at": "2026-10-01T14:05:50.874Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000293",
+   "deliver_at": "2026-10-01T04:11:53.815Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): hate-d1: reached episode 3/34, last played 2026-09-16T02:25:15.954Z; 659 titles promotable in d1 at publish time",
+   "confidence": 0.88
+  },
+  {
+   "decision_id": "D-001777",
+   "deliver_at": "2026-10-01T14:05:50.874Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 231 (G07) started 2026-10-01T04:11:54.259Z; 651 titles promotable in d1 at publish time",
+   "confidence": 0.83
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000145",
+   "decision_id": "D-000293",
+   "user_id": "U-03427",
+   "trigger_event_id": "09d759dc-8be1-4885-8e38-2850a4f7b6b6",
+   "published_at": "2026-10-01T04:11:55.072Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d1",
+   "hero_title_id": "T1503",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0211",
+      "T0100",
+      "T1580",
+      "T1633",
+      "T1562",
+      "T0388",
+      "T1652",
+      "T0267"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0003",
+      "T0005",
+      "T0009",
+      "T0004",
+      "T0006",
+      "T0010",
+      "T0014"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0007",
+      "T0070",
+      "T0127",
+      "T0060",
+      "T0028",
+      "T0031",
+      "T0047",
+      "T0063"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0015",
+      "T0029",
+      "T0034",
+      "T0017",
+      "T0024",
+      "T0018",
+      "T0228"
+     ]
+    }
+   ],
+   "plan_id": 231,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000146",
+   "decision_id": "D-000293",
+   "user_id": "U-03427",
+   "trigger_event_id": "09d759dc-8be1-4885-8e38-2850a4f7b6b6",
+   "published_at": "2026-10-01T04:11:55.072Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T1503",
+   "dialect": "d1",
+   "text": {
+    "title": "Hate (English)",
+    "body": "The next episode of Hate (English) is ready. Pick up where you left off."
+   },
+   "deeplink": "ott://title/T1503",
+   "plan_id": 231,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000751",
+   "decision_id": "D-001777",
+   "user_id": "U-03427",
+   "trigger_event_id": "29154dab-4166-4b28-9b71-56a0235d5699",
+   "published_at": "2026-10-01T14:05:51.328Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d1",
+   "hero_title_id": "T1503",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0388",
+      "T1580",
+      "T0100",
+      "T0211",
+      "T1501",
+      "T1633",
+      "T1646",
+      "T0245"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0005",
+      "T0009",
+      "T0004",
+      "T0006",
+      "T0010",
+      "T0014"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0007",
+      "T0070",
+      "T0127",
+      "T0060",
+      "T0028",
+      "T0031",
+      "T0047",
+      "T0063"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0015",
+      "T0029",
+      "T0034",
+      "T0017",
+      "T0024",
+      "T0018",
+      "T0228"
+     ]
+    }
+   ],
+   "plan_id": 231,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 231,
+   "viewer_id": "U-03427",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "hate-d1",
+    "title_id": "T1503",
+    "next_episode_index": 3,
+    "total_episodes": 34
+   },
+   "started_at": "2026-10-01T04:11:54.259Z",
+   "deadline": "2026-10-04T04:11:54.259Z",
+   "decision_id": "D-000293",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 236,
+   "plan_id": 231,
+   "viewer_id": "U-03427",
+   "at": "2026-10-01T04:11:54.259Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000293"
+   }
+  },
+  {
+   "id": 1740,
+   "plan_id": 231,
+   "viewer_id": "U-03427",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 231,
+   "viewer_id": "U-03427",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 2,
+    "pages_shown": 2,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000145",
+     "A-000146",
+     "A-000751"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 263,
+   "viewer_id": "U-03427",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 2, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:231"
+   ]
+  }
+ ]
+}

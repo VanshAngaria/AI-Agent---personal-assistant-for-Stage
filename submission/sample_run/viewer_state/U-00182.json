@@ -1,0 +1,135 @@
+{
+ "viewer_id": "U-00182",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-002089",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00182@2026-09-28T23:07:59.341Z",
+    "observed_at": "2026-09-28T23:07:59.341Z",
+    "freshness_s": 230389.8
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": null,
+    "source": "event",
+    "source_id": "1bb64d38-a717-4a9d-b93b-08b1ad2d5b14",
+    "observed_at": "2026-10-01T15:07:49.188Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "lapsed",
+    "source": "profile_snapshot",
+    "source_id": "U-00182@2026-09-28T23:07:59.341Z",
+    "observed_at": "2026-09-28T23:07:59.341Z",
+    "freshness_s": 230389.8
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00182@2026-09-28T23:07:59.341Z",
+    "observed_at": "2026-09-28T23:07:59.341Z",
+    "freshness_s": 230389.8
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-08-21T11:55:14.987Z",
+    "source": "profile_snapshot",
+    "source_id": "U-00182@2026-09-28T23:07:59.341Z",
+    "observed_at": "2026-09-28T23:07:59.341Z",
+    "freshness_s": 230389.8
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00182@2026-09-28T23:07:59.341Z",
+    "observed_at": "2026-09-28T23:07:59.341Z",
+    "freshness_s": 230389.8
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00182@2026-09-28T23:07:59.341Z",
+    "observed_at": "2026-09-28T23:07:59.341Z",
+    "freshness_s": 230389.8
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T15:07:49.188Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "ec80cf9f-e529-4995-bfc0-14d1c3cab86c",
+    "observed_at": "2026-09-30T21:56:25.031Z",
+    "freshness_s": 61884.2
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "1bb64d38-a717-4a9d-b93b-08b1ad2d5b14",
+    "observed_at": "2026-10-01T15:07:49.188Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-002089",
+   "deliver_at": "2026-10-01T15:07:49.188Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "no measurable goal the viewer is eligible for yet: G01 signed up 406.1d ago (limit 7d); G02 cannot prove 'never episode_completed': signup predates the event history (or is unknown); G03 signed up 406.1d ago (limit 2d); G04 status 'lapsed' not in ['trial_active']; G05 status 'lapsed' not in ['never']; G06 no subscription_lapsed in the last 30 days: recency unprovable; G07 no followed, unfinished series idle for 3+ days; G08 status 'lapsed' not in ['active']; G09 status 'lapsed' not in ['active']; G10 unmeasurable: success event is null / its condition is not an observable signal; never committed, no proxy invented; G11 unmeasurable: success event 'tv_app_open' never appears in the event stream or simulator output; never committed, no proxy invented; G12 app_open within the 14 days before this trigger",
+   "confidence": 0.55
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

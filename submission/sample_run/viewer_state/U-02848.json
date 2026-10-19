@@ -1,0 +1,145 @@
+{
+ "viewer_id": "U-02848",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-000468",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02848@2026-09-29T02:14:25.222Z",
+    "observed_at": "2026-09-29T02:14:25.222Z",
+    "freshness_s": 181926.6
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "63ab2a0a-2207-476e-8cd7-5caf8b5912f1",
+    "observed_at": "2026-10-01T04:46:31.774Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d2",
+    "source": "profile_snapshot",
+    "source_id": "U-02848@2026-09-29T02:14:25.222Z",
+    "observed_at": "2026-09-29T02:14:25.222Z",
+    "freshness_s": 181926.6
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-02848@2026-09-29T02:14:25.222Z",
+    "observed_at": "2026-09-29T02:14:25.222Z",
+    "freshness_s": 181926.6
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "f6b2e9f2-a43b-4908-ae60-3cecc895b642",
+    "observed_at": "2026-09-04T05:00:26.002Z",
+    "freshness_s": 2331965.8
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-05-27T10:36:18.503Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02848@2026-09-29T02:14:25.222Z",
+    "observed_at": "2026-09-29T02:14:25.222Z",
+    "freshness_s": 181926.6
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02848@2026-09-29T02:14:25.222Z",
+    "observed_at": "2026-09-29T02:14:25.222Z",
+    "freshness_s": 181926.6
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02848@2026-09-29T02:14:25.222Z",
+    "observed_at": "2026-09-29T02:14:25.222Z",
+    "freshness_s": 181926.6
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T04:46:31.774Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "353e8a89-4227-4c98-9551-6e7b0dd70aa6",
+    "observed_at": "2026-09-18T17:08:03.747Z",
+    "freshness_s": 1078708.0
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "baab6ab5-4691-4833-afb6-6f1210886c05",
+    "observed_at": "2026-09-18T17:10:48.891Z",
+    "freshness_s": 1078542.9
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-18"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 6,
+    "source": "event_stream",
+    "source_id": "aabb66cc-25a8-4516-bb7e-d4f1995e0350",
+    "observed_at": "2026-09-29T11:16:55.838Z",
+    "freshness_s": 149375.9
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "63ab2a0a-2207-476e-8cd7-5caf8b5912f1",
+    "observed_at": "2026-10-01T04:46:31.774Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000468",
+   "deliver_at": "2026-10-01T04:46:31.774Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 71759s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

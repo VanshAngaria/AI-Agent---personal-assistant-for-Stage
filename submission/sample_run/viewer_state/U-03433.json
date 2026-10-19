@@ -1,0 +1,231 @@
+{
+ "viewer_id": "U-03433",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-002016",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03433@2026-09-28T23:04:57.299Z",
+    "observed_at": "2026-09-28T23:04:57.299Z",
+    "freshness_s": 230291.8
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d4",
+    "source": "event",
+    "source_id": "357c3437-b8dd-4f4f-9732-21363246a07d",
+    "observed_at": "2026-10-01T15:03:09.053Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d4",
+    "source": "profile_snapshot",
+    "source_id": "U-03433@2026-09-28T23:04:57.299Z",
+    "observed_at": "2026-09-28T23:04:57.299Z",
+    "freshness_s": 230291.8
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-03433@2026-09-28T23:04:57.299Z",
+    "observed_at": "2026-09-28T23:04:57.299Z",
+    "freshness_s": 230291.8
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-03433@2026-09-28T23:04:57.299Z",
+    "observed_at": "2026-09-28T23:04:57.299Z",
+    "freshness_s": 230291.8
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-05-29T18:08:02.220Z",
+    "source": "profile_snapshot",
+    "source_id": "U-03433@2026-09-28T23:04:57.299Z",
+    "observed_at": "2026-09-28T23:04:57.299Z",
+    "freshness_s": 230291.8
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03433@2026-09-28T23:04:57.299Z",
+    "observed_at": "2026-09-28T23:04:57.299Z",
+    "freshness_s": 230291.8
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-03433@2026-09-28T23:04:57.299Z",
+    "observed_at": "2026-09-28T23:04:57.299Z",
+    "freshness_s": 230291.8
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T15:03:09.053Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "017b31a3-c280-48e2-9d37-f9a001cef154",
+    "observed_at": "2026-09-20T16:21:21.988Z",
+    "freshness_s": 945707.1
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-20"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "dc12a41d-ccb4-49d9-bda1-59c66646d13f",
+    "observed_at": "2026-09-30T14:04:26.247Z",
+    "freshness_s": 89922.8
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "357c3437-b8dd-4f4f-9732-21363246a07d",
+    "observed_at": "2026-10-01T15:03:09.053Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-002016",
+   "deliver_at": "2026-10-01T15:03:09.053Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": "G05",
+   "reason": "holdout arm: no action of any kind (messaging policy rule 5); the goal is recorded as a shadow goal so both arms are judged the same way",
+   "confidence": 0.99
+  }
+ ],
+ "actions": [],
+ "plans": [
+  {
+   "plan_id": 1137,
+   "viewer_id": "U-03433",
+   "arm": "holdout",
+   "goal_id": "G05",
+   "rule_version": "G05@2026-09-30",
+   "success_event": "purchase_completed",
+   "success_condition": "is_trial = false",
+   "window_hours": 168,
+   "params": {},
+   "started_at": "2026-10-01T15:03:09.093Z",
+   "deadline": "2026-10-08T15:03:09.093Z",
+   "decision_id": "D-002016",
+   "status": "succeeded",
+   "closed_at": "2026-10-01T15:04:57.248Z",
+   "close_reason": "live purchase_completed received inside the goal window",
+   "signal_event_id": "daafd794-3159-470b-931f-1ecec5318870"
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1162,
+   "plan_id": 1137,
+   "viewer_id": "U-03433",
+   "at": "2026-10-01T15:03:09.093Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G05",
+    "decision_id": "D-002016"
+   }
+  },
+  {
+   "id": 1180,
+   "plan_id": 1137,
+   "viewer_id": "U-03433",
+   "at": "2026-10-01T15:04:57.248Z",
+   "change": "succeeded",
+   "detail": {
+    "reason": "live purchase_completed received inside the goal window",
+    "signal_event_id": "daafd794-3159-470b-931f-1ecec5318870"
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1137,
+   "viewer_id": "U-03433",
+   "arm": "holdout",
+   "goal_id": "G05",
+   "rule_version": "G05@2026-09-30",
+   "status": "succeeded",
+   "reason": "purchase_completed received 2026-10-01T15:04:57.248Z inside the window",
+   "signal_event_id": "daafd794-3159-470b-931f-1ecec5318870",
+   "signal_at": "2026-10-01T15:04:57.248Z",
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 0,
+    "pages_shown": 0,
+    "messages_sent": 0,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": []
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 13,
+   "viewer_id": "U-03433",
+   "at": "2026-10-01T15:04:57.248Z",
+   "kind": "goal_succeeded:G05",
+   "detail": "G05 closed by live event purchase_completed",
+   "evidence": [
+    "event:daafd794-3159-470b-931f-1ecec5318870"
+   ]
+  },
+  {
+   "id": 1246,
+   "viewer_id": "U-03433",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_succeeded:G05",
+   "detail": "G05 reached; move to the next lifecycle goal",
+   "evidence": [
+    "plan:1137"
+   ]
+  }
+ ]
+}

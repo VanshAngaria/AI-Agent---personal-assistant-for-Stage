@@ -1,0 +1,395 @@
+{
+ "viewer_id": "U-03796",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001365",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03796@2026-09-29T04:23:36.041Z",
+    "observed_at": "2026-09-29T04:23:36.041Z",
+    "freshness_s": 197180.9
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "33328c60-188d-48ed-b07d-f6f81587419b",
+    "observed_at": "2026-10-01T11:09:56.920Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d2",
+    "source": "profile_snapshot",
+    "source_id": "U-03796@2026-09-29T04:23:36.041Z",
+    "observed_at": "2026-09-29T04:23:36.041Z",
+    "freshness_s": 197180.9
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-03796@2026-09-29T04:23:36.041Z",
+    "observed_at": "2026-09-29T04:23:36.041Z",
+    "freshness_s": 197180.9
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "f2cb5434-216a-41f3-adf9-64c1d64032e4",
+    "observed_at": "2026-09-03T20:04:34.652Z",
+    "freshness_s": 2387122.3
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-04-22T09:19:05.632Z",
+    "source": "profile_snapshot",
+    "source_id": "U-03796@2026-09-29T04:23:36.041Z",
+    "observed_at": "2026-09-29T04:23:36.041Z",
+    "freshness_s": 197180.9
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03796@2026-09-29T04:23:36.041Z",
+    "observed_at": "2026-09-29T04:23:36.041Z",
+    "freshness_s": 197180.9
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-03796@2026-09-29T04:23:36.041Z",
+    "observed_at": "2026-09-29T04:23:36.041Z",
+    "freshness_s": 197180.9
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T11:09:56.920Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "5dc40881-8d28-4818-9f9d-2ff4a56f30b2",
+    "observed_at": "2026-09-30T13:07:54.424Z",
+    "freshness_s": 79322.5
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 5,
+    "source": "event_stream",
+    "source_id": "95b10d22-2d06-4cfb-a43d-97c4e70a52dc",
+    "observed_at": "2026-09-28T07:15:16.655Z",
+    "freshness_s": 273280.3
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-28",
+     "2026-09-30"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "06c96bf4-8724-422a-9154-a6830be9163d",
+    "observed_at": "2026-10-01T04:47:55.086Z",
+    "freshness_s": 22921.8
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "33328c60-188d-48ed-b07d-f6f81587419b",
+    "observed_at": "2026-10-01T11:09:56.920Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000567",
+   "deliver_at": "2026-10-01T04:47:55.086Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): lola-rodira-d2: reached episode 1/9, last played 2026-09-05T15:47:07.046Z; 469 titles promotable in d2 at publish time",
+   "confidence": 0.88
+  },
+  {
+   "decision_id": "D-001365",
+   "deliver_at": "2026-10-01T11:09:56.920Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 270 (G07) started 2026-10-01T04:47:55.528Z; 469 titles promotable in d2 at publish time",
+   "confidence": 0.83
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000174",
+   "decision_id": "D-000567",
+   "user_id": "U-03796",
+   "trigger_event_id": "06c96bf4-8724-422a-9154-a6830be9163d",
+   "published_at": "2026-10-01T04:47:56.339Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d2",
+   "hero_title_id": "T0569",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0614",
+      "T0874",
+      "T0795",
+      "T0780",
+      "T0747",
+      "T0561",
+      "T0837",
+      "T0607"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0521",
+      "T0522",
+      "T0523",
+      "T0524",
+      "T0526",
+      "T0529",
+      "T0525",
+      "T0537"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0530",
+      "T0545",
+      "T0564",
+      "T0676",
+      "T0552",
+      "T0535",
+      "T0584",
+      "T0596"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0540",
+      "T0533",
+      "T0550",
+      "T0548",
+      "T0556",
+      "T0568",
+      "T0566",
+      "T0701"
+     ]
+    }
+   ],
+   "plan_id": 270,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000175",
+   "decision_id": "D-000567",
+   "user_id": "U-03796",
+   "trigger_event_id": "06c96bf4-8724-422a-9154-a6830be9163d",
+   "published_at": "2026-10-01T04:47:56.339Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0569",
+   "dialect": "d2",
+   "text": {
+    "title": "Lola Rodira",
+    "body": "Lola Rodira ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0569",
+   "plan_id": 270,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000566",
+   "decision_id": "D-001365",
+   "user_id": "U-03796",
+   "trigger_event_id": "33328c60-188d-48ed-b07d-f6f81587419b",
+   "published_at": "2026-10-01T11:09:57.373Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d2",
+   "hero_title_id": "T0569",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0614",
+      "T0874",
+      "T0795",
+      "T0780",
+      "T0747",
+      "T0561",
+      "T0837",
+      "T0607"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0521",
+      "T0522",
+      "T0523",
+      "T0524",
+      "T0526",
+      "T0529",
+      "T0525",
+      "T0537"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0530",
+      "T0545",
+      "T0564",
+      "T0676",
+      "T0552",
+      "T0535",
+      "T0584",
+      "T0596"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0540",
+      "T0533",
+      "T0550",
+      "T0548",
+      "T0556",
+      "T0568",
+      "T0566",
+      "T0701"
+     ]
+    }
+   ],
+   "plan_id": 270,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 270,
+   "viewer_id": "U-03796",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "lola-rodira-d2",
+    "title_id": "T0569",
+    "next_episode_index": 1,
+    "total_episodes": 9
+   },
+   "started_at": "2026-10-01T04:47:55.528Z",
+   "deadline": "2026-10-04T04:47:55.528Z",
+   "decision_id": "D-000567",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 276,
+   "plan_id": 270,
+   "viewer_id": "U-03796",
+   "at": "2026-10-01T04:47:55.528Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000567"
+   }
+  },
+  {
+   "id": 1779,
+   "plan_id": 270,
+   "viewer_id": "U-03796",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 270,
+   "viewer_id": "U-03796",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 2,
+    "pages_shown": 2,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000174",
+     "A-000175",
+     "A-000566"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 303,
+   "viewer_id": "U-03796",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 2, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:270"
+   ]
+  }
+ ]
+}

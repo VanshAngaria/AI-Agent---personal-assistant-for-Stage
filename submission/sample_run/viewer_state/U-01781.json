@@ -1,0 +1,27 @@
+{
+ "viewer_id": "U-01781",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-001619",
+  "facts": [],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001619",
+   "deliver_at": "2026-10-01T13:12:51.402Z",
+   "trigger": "app_open",
+   "status": "FAILED_SAFE",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "user data store failed (user_data_store:events.read failed after 2 attempt(s): user_data_store read exceeded timeout (2.7s > 2.0s)) and this agent holds no earlier snapshot of the viewer; acting without facts is unsafe",
+   "confidence": 0.6
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

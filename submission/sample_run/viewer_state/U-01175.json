@@ -1,0 +1,146 @@
+{
+ "viewer_id": "U-01175",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-001955",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01175@2026-09-29T07:51:30.190Z",
+    "observed_at": "2026-09-29T07:51:30.190Z",
+    "freshness_s": 198443.9
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "70a5aa6a-f2b7-485f-98d9-102c48979788",
+    "observed_at": "2026-10-01T14:58:54.073Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d2",
+    "source": "profile_snapshot",
+    "source_id": "U-01175@2026-09-29T07:51:30.190Z",
+    "observed_at": "2026-09-29T07:51:30.190Z",
+    "freshness_s": 198443.9
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-01175@2026-09-29T07:51:30.190Z",
+    "observed_at": "2026-09-29T07:51:30.190Z",
+    "freshness_s": 198443.9
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "0f74ed4b-7356-4ab1-8aa4-a018972a9748",
+    "observed_at": "2026-09-27T19:24:23.615Z",
+    "freshness_s": 329670.5
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2024-11-07T13:50:29.678Z",
+    "source": "profile_snapshot",
+    "source_id": "U-01175@2026-09-29T07:51:30.190Z",
+    "observed_at": "2026-09-29T07:51:30.190Z",
+    "freshness_s": 198443.9
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01175@2026-09-29T07:51:30.190Z",
+    "observed_at": "2026-09-29T07:51:30.190Z",
+    "freshness_s": 198443.9
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01175@2026-09-29T07:51:30.190Z",
+    "observed_at": "2026-09-29T07:51:30.190Z",
+    "freshness_s": 198443.9
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T14:58:54.073Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "44d13540-70fc-4f0e-a002-f33a239126db",
+    "observed_at": "2026-09-27T00:53:41.233Z",
+    "freshness_s": 396312.8
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "64080b90-8636-4796-a7b2-3256cb507ef6",
+    "observed_at": "2026-09-27T02:35:50.297Z",
+    "freshness_s": 390183.8
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-18",
+     "2026-09-27"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "39bb6b2e-69ef-4fe5-bc04-60f62ed3e031",
+    "observed_at": "2026-09-27T12:52:09.125Z",
+    "freshness_s": 353204.9
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "70a5aa6a-f2b7-485f-98d9-102c48979788",
+    "observed_at": "2026-10-01T14:58:54.073Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001955",
+   "deliver_at": "2026-10-01T14:58:54.073Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 446512s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

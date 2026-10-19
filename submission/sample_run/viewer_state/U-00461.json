@@ -1,0 +1,417 @@
+{
+ "viewer_id": "U-00461",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001183",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00461@2026-09-29T15:40:50.243Z",
+    "observed_at": "2026-09-29T15:40:50.243Z",
+    "freshness_s": 150690.1
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d5",
+    "source": "event",
+    "source_id": "c2c24cef-cf33-42f3-988a-3a3832d98dd3",
+    "observed_at": "2026-10-01T09:32:20.370Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d1",
+    "source": "profile_snapshot",
+    "source_id": "U-00461@2026-09-29T15:40:50.243Z",
+    "observed_at": "2026-09-29T15:40:50.243Z",
+    "freshness_s": 150690.1
+   },
+   {
+    "fact_key": "dialect.campaign_link",
+    "value": "d5",
+    "source": "event",
+    "source_id": "c2c24cef-cf33-42f3-988a-3a3832d98dd3",
+    "observed_at": "2026-10-01T09:32:20.370Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-00461@2026-09-29T15:40:50.243Z",
+    "observed_at": "2026-09-29T15:40:50.243Z",
+    "freshness_s": 150690.1
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "27bfdeb5-682b-49d1-b57e-85f9526d53ad",
+    "observed_at": "2026-09-27T05:54:16.358Z",
+    "freshness_s": 358684.0
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2024-10-31T13:04:28.598Z",
+    "source": "profile_snapshot",
+    "source_id": "U-00461@2026-09-29T15:40:50.243Z",
+    "observed_at": "2026-09-29T15:40:50.243Z",
+    "freshness_s": 150690.1
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00461@2026-09-29T15:40:50.243Z",
+    "observed_at": "2026-09-29T15:40:50.243Z",
+    "freshness_s": 150690.1
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00461@2026-09-29T15:40:50.243Z",
+    "observed_at": "2026-09-29T15:40:50.243Z",
+    "freshness_s": 150690.1
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T09:32:20.370Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 8,
+    "source": "event_stream",
+    "source_id": "a9bada7a-812c-417a-988a-130f53e46123",
+    "observed_at": "2026-09-24T11:18:09.488Z",
+    "freshness_s": 598450.9
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "12618dea-1b72-4494-8a63-7d2569af7938",
+    "observed_at": "2026-09-11T02:43:54.669Z",
+    "freshness_s": 1752505.7
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-20",
+     "2026-09-24"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 8,
+    "source": "event_stream",
+    "source_id": "7052b4b0-8722-44df-ae21-bf7cd5d2d4ba",
+    "observed_at": "2026-10-01T02:01:49.817Z",
+    "freshness_s": 27030.6
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "c2c24cef-cf33-42f3-988a-3a3832d98dd3",
+    "observed_at": "2026-10-01T09:32:20.370Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d5",
+      "ref": "event:c2c24cef-cf33-42f3-988a-3a3832d98dd3"
+     },
+     {
+      "source": "profile",
+      "value": "d1",
+      "ref": "profile:U-00461"
+     }
+    ],
+    "chosen": "app_setting:d5",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000140",
+   "deliver_at": "2026-10-01T02:01:49.817Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): jamo-hasa-d5: reached episode 3/33, last played 2026-09-24T11:18:09.488Z; 259 titles promotable in d5 at publish time",
+   "confidence": 0.83
+  },
+  {
+   "decision_id": "D-001183",
+   "deliver_at": "2026-10-01T09:32:20.370Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 114 (G07) started 2026-10-01T02:01:50.259Z; 259 titles promotable in d5 at publish time",
+   "confidence": 0.78
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000067",
+   "decision_id": "D-000140",
+   "user_id": "U-00461",
+   "trigger_event_id": "7052b4b0-8722-44df-ae21-bf7cd5d2d4ba",
+   "published_at": "2026-10-01T02:01:51.064Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d5",
+   "hero_title_id": "T1179",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T1303",
+      "T1230",
+      "T1335",
+      "T1216",
+      "T1255",
+      "T1331",
+      "T1348",
+      "T1316"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T1177",
+      "T1178",
+      "T1180",
+      "T1187",
+      "T1186",
+      "T1185",
+      "T1182",
+      "T1181"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T1189",
+      "T1183",
+      "T1192",
+      "T1213",
+      "T1219",
+      "T1250",
+      "T1264",
+      "T1381"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T1326",
+      "T1278",
+      "T1236",
+      "T1258",
+      "T1232",
+      "T1377"
+     ]
+    }
+   ],
+   "plan_id": 114,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000068",
+   "decision_id": "D-000140",
+   "user_id": "U-00461",
+   "trigger_event_id": "7052b4b0-8722-44df-ae21-bf7cd5d2d4ba",
+   "published_at": "2026-10-01T02:01:51.064Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T1179",
+   "dialect": "d5",
+   "text": {
+    "title": "Jamo Hasa",
+    "body": "Jamo Hasa ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T1179",
+   "plan_id": 114,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000478",
+   "decision_id": "D-001183",
+   "user_id": "U-00461",
+   "trigger_event_id": "c2c24cef-cf33-42f3-988a-3a3832d98dd3",
+   "published_at": "2026-10-01T09:32:20.816Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d5",
+   "hero_title_id": "T1179",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T1216",
+      "T1255",
+      "T1303",
+      "T1331",
+      "T1335",
+      "T1348",
+      "T1230",
+      "T1316"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T1177",
+      "T1178",
+      "T1180",
+      "T1187",
+      "T1186",
+      "T1185",
+      "T1182",
+      "T1181"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T1189",
+      "T1183",
+      "T1192",
+      "T1213",
+      "T1219",
+      "T1250",
+      "T1264",
+      "T1381"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T1326",
+      "T1278",
+      "T1236",
+      "T1258",
+      "T1232",
+      "T1377"
+     ]
+    }
+   ],
+   "plan_id": 114,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 114,
+   "viewer_id": "U-00461",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "jamo-hasa-d5",
+    "title_id": "T1179",
+    "next_episode_index": 3,
+    "total_episodes": 33
+   },
+   "started_at": "2026-10-01T02:01:50.259Z",
+   "deadline": "2026-10-04T02:01:50.259Z",
+   "decision_id": "D-000140",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 116,
+   "plan_id": 114,
+   "viewer_id": "U-00461",
+   "at": "2026-10-01T02:01:50.259Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000140"
+   }
+  },
+  {
+   "id": 1624,
+   "plan_id": 114,
+   "viewer_id": "U-00461",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 114,
+   "viewer_id": "U-00461",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 2,
+    "pages_shown": 2,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000067",
+     "A-000068",
+     "A-000478"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 134,
+   "viewer_id": "U-00461",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 2, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:114"
+   ]
+  }
+ ]
+}

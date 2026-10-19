@@ -1,0 +1,17 @@
+{
+  "pack_path": "..",
+  "db_path": "viewer_state/agent.sqlite",
+  "decision_deadline_s": 60,
+  "failure_after_s": 300,
+  "page_target_s": 3.0,
+  "max_model_calls": 8,
+  "max_tool_calls": 20,
+  "model_timeout_s": 1.5,
+  "store_timeout_s": 2.0,
+  "store_retries": 1,
+  "workers": 4,
+  "shed_model_after_queue_s": 5.0,
+  "llm_provider": "mock",
+  "llm_model": "claude-opus-5-5",
+  "llm_effort": "low"
+}

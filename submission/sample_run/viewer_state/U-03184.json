@@ -1,0 +1,350 @@
+{
+ "viewer_id": "U-03184",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-000178",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03184@2026-09-28T23:00:10.057Z",
+    "observed_at": "2026-09-28T23:00:10.057Z",
+    "freshness_s": 186112.7
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "5f78aa6a-503e-475a-8300-4fa18a0fd877",
+    "observed_at": "2026-10-01T02:42:02.741Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d2",
+    "source": "profile_snapshot",
+    "source_id": "U-03184@2026-09-28T23:00:10.057Z",
+    "observed_at": "2026-09-28T23:00:10.057Z",
+    "freshness_s": 186112.7
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-03184@2026-09-28T23:00:10.057Z",
+    "observed_at": "2026-09-28T23:00:10.057Z",
+    "freshness_s": 186112.7
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "23d2bdf7-313d-441b-99d2-51fd0dfe6d6c",
+    "observed_at": "2026-09-12T12:35:40.414Z",
+    "freshness_s": 1605982.3
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-02-13T02:51:43.214Z",
+    "source": "profile_snapshot",
+    "source_id": "U-03184@2026-09-28T23:00:10.057Z",
+    "observed_at": "2026-09-28T23:00:10.057Z",
+    "freshness_s": 186112.7
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03184@2026-09-28T23:00:10.057Z",
+    "observed_at": "2026-09-28T23:00:10.057Z",
+    "freshness_s": 186112.7
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03184@2026-09-28T23:00:10.057Z",
+    "observed_at": "2026-09-28T23:00:10.057Z",
+    "freshness_s": 186112.7
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T02:42:02.741Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 16,
+    "source": "event_stream",
+    "source_id": "7fec6ab9-b35e-4119-934b-67e2df934bd2",
+    "observed_at": "2026-09-29T04:07:59.998Z",
+    "freshness_s": 167642.7
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 9,
+    "source": "event_stream",
+    "source_id": "e21b1712-8fb0-4b15-be7e-03fa6930ae6d",
+    "observed_at": "2026-09-29T04:41:06.570Z",
+    "freshness_s": 165656.2
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-17",
+     "2026-09-21",
+     "2026-09-22",
+     "2026-09-25",
+     "2026-09-28",
+     "2026-09-29"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 15,
+    "source": "event_stream",
+    "source_id": "20ca4a73-3f31-4442-b00e-9702c09bc6e4",
+    "observed_at": "2026-09-29T06:19:37.340Z",
+    "freshness_s": 159745.4
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "5f78aa6a-503e-475a-8300-4fa18a0fd877",
+    "observed_at": "2026-10-01T02:42:02.741Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000178",
+   "deliver_at": "2026-10-01T02:42:02.741Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): guka-kosusa-d2: reached episode 2/41, last played 2026-09-21T11:03:38.364Z; 469 titles promotable in d2 at publish time",
+   "confidence": 0.88
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000088",
+   "decision_id": "D-000178",
+   "user_id": "U-03184",
+   "trigger_event_id": "5f78aa6a-503e-475a-8300-4fa18a0fd877",
+   "published_at": "2026-10-01T02:42:03.996Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d2",
+   "hero_title_id": "T0522",
+   "rows": [
+    {
+     "row_type": "next_episode",
+     "title_ids": [
+      "T0521",
+      "T1677",
+      "T0528",
+      "T0541"
+     ]
+    },
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0779",
+      "T0781",
+      "T0764",
+      "T0693",
+      "T0557",
+      "T0711",
+      "T0654",
+      "T0590"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0524",
+      "T0526",
+      "T0529",
+      "T0537",
+      "T0536",
+      "T0531"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0530",
+      "T0545",
+      "T0564",
+      "T0676",
+      "T0552",
+      "T0535",
+      "T0584",
+      "T0596"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0540",
+      "T0534",
+      "T0620",
+      "T0565",
+      "T0547",
+      "T0567",
+      "T0899",
+      "T0559"
+     ]
+    }
+   ],
+   "plan_id": 146,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000089",
+   "decision_id": "D-000178",
+   "user_id": "U-03184",
+   "trigger_event_id": "5f78aa6a-503e-475a-8300-4fa18a0fd877",
+   "published_at": "2026-10-01T02:42:03.996Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0522",
+   "dialect": "d2",
+   "text": {
+    "title": "Guka Kosusa",
+    "body": "The next episode of Guka Kosusa is ready. Pick up where you left off."
+   },
+   "deeplink": "ott://title/T0522",
+   "plan_id": 146,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 146,
+   "viewer_id": "U-03184",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "guka-kosusa-d2",
+    "title_id": "T0522",
+    "next_episode_index": 2,
+    "total_episodes": 41
+   },
+   "started_at": "2026-10-01T02:42:03.184Z",
+   "deadline": "2026-10-04T02:42:03.184Z",
+   "decision_id": "D-000178",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 148,
+   "plan_id": 146,
+   "viewer_id": "U-03184",
+   "at": "2026-10-01T02:42:03.184Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000178"
+   }
+  },
+  {
+   "id": 1656,
+   "plan_id": 146,
+   "viewer_id": "U-03184",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 146,
+   "viewer_id": "U-03184",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 0,
+    "messages_sent": 1,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [
+     "token_invalid"
+    ],
+    "action_ids": [
+     "A-000088",
+     "A-000089"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 166,
+   "viewer_id": "U-03184",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 0, messages delivered 0); cool down this goal before retrying",
+   "evidence": [
+    "plan:146"
+   ]
+  },
+  {
+   "id": 167,
+   "viewer_id": "U-03184",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "push_undeliverable",
+   "detail": "push token invalid; use another channel",
+   "evidence": [
+    "plan:146"
+   ]
+  },
+  {
+   "id": 168,
+   "viewer_id": "U-03184",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "page_not_seen",
+   "detail": "published page(s) were never shown (viewer did not reach home while live, or app dialect changed)",
+   "evidence": [
+    "plan:146"
+   ]
+  }
+ ]
+}

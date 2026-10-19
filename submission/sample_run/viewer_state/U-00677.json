@@ -1,0 +1,333 @@
+{
+ "viewer_id": "U-00677",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001731",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00677@2026-09-29T11:00:19.000Z",
+    "observed_at": "2026-09-29T11:00:19.000Z",
+    "freshness_s": 183146.7
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d1",
+    "source": "event",
+    "source_id": "23dd800e-d98a-4d73-855d-48948957bc9d",
+    "observed_at": "2026-10-01T13:52:45.661Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.campaign_link",
+    "value": "d2",
+    "source": "event",
+    "source_id": "23dd800e-d98a-4d73-855d-48948957bc9d",
+    "observed_at": "2026-10-01T13:52:45.661Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-00677@2026-09-29T11:00:19.000Z",
+    "observed_at": "2026-09-29T11:00:19.000Z",
+    "freshness_s": 183146.7
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-00677@2026-09-29T11:00:19.000Z",
+    "observed_at": "2026-09-29T11:00:19.000Z",
+    "freshness_s": 183146.7
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-09-06T08:56:22.184Z",
+    "source": "event",
+    "source_id": "187bf869-77b8-427a-b328-c1a45342d5b1",
+    "observed_at": "2026-09-06T08:56:22.184Z",
+    "freshness_s": 2177783.5
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00677@2026-09-29T11:00:19.000Z",
+    "observed_at": "2026-09-29T11:00:19.000Z",
+    "freshness_s": 183146.7
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00677@2026-09-29T11:00:19.000Z",
+    "observed_at": "2026-09-29T11:00:19.000Z",
+    "freshness_s": 183146.7
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T13:52:45.661Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "e979f8de-2d47-4df9-baa5-814585cae60f",
+    "observed_at": "2026-09-23T08:39:02.491Z",
+    "freshness_s": 710023.2
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "4df8cc39-61dd-4a62-be20-7ef15971ef00",
+    "observed_at": "2026-09-17T11:48:22.828Z",
+    "freshness_s": 1217062.8
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-23"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "856913bc-9fdd-4e4a-b2f4-e7824d393a62",
+    "observed_at": "2026-09-23T08:37:51.238Z",
+    "freshness_s": 710094.4
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "23dd800e-d98a-4d73-855d-48948957bc9d",
+    "observed_at": "2026-10-01T13:52:45.661Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d1",
+      "ref": "event:23dd800e-d98a-4d73-855d-48948957bc9d"
+     },
+     {
+      "source": "campaign_link",
+      "value": "d2",
+      "ref": "event:23dd800e-d98a-4d73-855d-48948957bc9d"
+     }
+    ],
+    "chosen": "app_setting:d1",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001731",
+   "deliver_at": "2026-10-01T13:52:45.661Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): hapibha-d1: reached episode 3/23, last played 2026-09-17T11:44:43.810Z; 322 titles promotable in d1 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.83
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000724",
+   "decision_id": "D-001731",
+   "user_id": "U-00677",
+   "trigger_event_id": "23dd800e-d98a-4d73-855d-48948957bc9d",
+   "published_at": "2026-10-01T13:52:46.907Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d1",
+   "hero_title_id": "T0004",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0237",
+      "T0487",
+      "T0232",
+      "T0125",
+      "T0490",
+      "T0235",
+      "T0504",
+      "T0181"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0003",
+      "T0009",
+      "T0006",
+      "T0008",
+      "T0010",
+      "T0014",
+      "T0007"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0047",
+      "T0063",
+      "T0382",
+      "T0435",
+      "T0195",
+      "T0036",
+      "T0137",
+      "T0511"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0058",
+      "T0252",
+      "T0229",
+      "T0142",
+      "T0100",
+      "T0505",
+      "T0085",
+      "T0277"
+     ]
+    }
+   ],
+   "plan_id": 977,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000725",
+   "decision_id": "D-001731",
+   "user_id": "U-00677",
+   "trigger_event_id": "23dd800e-d98a-4d73-855d-48948957bc9d",
+   "published_at": "2026-10-01T13:52:46.907Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0004",
+   "dialect": "d1",
+   "text": {
+    "title": "Hapibha",
+    "body": "Hapibha ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0004",
+   "plan_id": 977,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 977,
+   "viewer_id": "U-00677",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "hapibha-d1",
+    "title_id": "T0004",
+    "next_episode_index": 3,
+    "total_episodes": 23
+   },
+   "started_at": "2026-10-01T13:52:46.102Z",
+   "deadline": "2026-10-04T13:52:46.102Z",
+   "decision_id": "D-001731",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 999,
+   "plan_id": 977,
+   "viewer_id": "U-00677",
+   "at": "2026-10-01T13:52:46.102Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-001731"
+   }
+  },
+  {
+   "id": 2475,
+   "plan_id": 977,
+   "viewer_id": "U-00677",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 977,
+   "viewer_id": "U-00677",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000724",
+     "A-000725"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1074,
+   "viewer_id": "U-00677",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 1, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:977"
+   ]
+  }
+ ]
+}

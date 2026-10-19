@@ -1,0 +1,383 @@
+{
+ "viewer_id": "U-04158",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-002624",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04158@2026-09-29T08:35:53.890Z",
+    "observed_at": "2026-09-29T08:35:53.890Z",
+    "freshness_s": 205898.8
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d6",
+    "source": "event",
+    "source_id": "71448377-b3fc-45aa-a9b2-e1b6a90c2745",
+    "observed_at": "2026-10-01T17:47:32.676Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d6",
+    "source": "profile_snapshot",
+    "source_id": "U-04158@2026-09-29T08:35:53.890Z",
+    "observed_at": "2026-09-29T08:35:53.890Z",
+    "freshness_s": 205898.8
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-04158@2026-09-29T08:35:53.890Z",
+    "observed_at": "2026-09-29T08:35:53.890Z",
+    "freshness_s": 205898.8
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04158@2026-09-29T08:35:53.890Z",
+    "observed_at": "2026-09-29T08:35:53.890Z",
+    "freshness_s": 205898.8
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-03-22T00:38:23.463Z",
+    "source": "profile_snapshot",
+    "source_id": "U-04158@2026-09-29T08:35:53.890Z",
+    "observed_at": "2026-09-29T08:35:53.890Z",
+    "freshness_s": 205898.8
+   },
+   {
+    "fact_key": "consent.push",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04158@2026-09-29T08:35:53.890Z",
+    "observed_at": "2026-09-29T08:35:53.890Z",
+    "freshness_s": 205898.8
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04158@2026-09-29T08:35:53.890Z",
+    "observed_at": "2026-09-29T08:35:53.890Z",
+    "freshness_s": 205898.8
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T17:47:32.676Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "e7b8cb4e-2388-4f76-b129-e6da5e371280",
+    "observed_at": "2026-09-23T17:00:50.365Z",
+    "freshness_s": 694002.3
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "a82b48da-9560-4525-b6c1-08c127ec960e",
+    "observed_at": "2026-09-23T17:02:40.274Z",
+    "freshness_s": 693892.4
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-22",
+     "2026-09-23"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 7,
+    "source": "event_stream",
+    "source_id": "468a0f67-c2c0-44ff-9f0a-de7f08fdccc8",
+    "observed_at": "2026-10-01T05:59:53.304Z",
+    "freshness_s": 42459.4
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "71448377-b3fc-45aa-a9b2-e1b6a90c2745",
+    "observed_at": "2026-10-01T17:47:32.676Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000728",
+   "deliver_at": "2026-10-01T05:59:53.304Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): bhari-vagi-d6: reached episode 2/26, last played 2026-09-23T17:00:50.365Z; 68 titles promotable in d6 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.78
+  },
+  {
+   "decision_id": "D-002624",
+   "deliver_at": "2026-10-01T17:47:32.676Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 373 (G07) started 2026-10-01T05:59:53.746Z; 68 titles promotable in d6 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.78
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000249",
+   "decision_id": "D-000728",
+   "user_id": "U-04158",
+   "trigger_event_id": "468a0f67-c2c0-44ff-9f0a-de7f08fdccc8",
+   "published_at": "2026-10-01T05:59:54.148Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d6",
+   "hero_title_id": "T1393",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T1432",
+      "T1438",
+      "T1470",
+      "T1488",
+      "T1390",
+      "T1457",
+      "T1495",
+      "T1395"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T1389",
+      "T1394",
+      "T1407",
+      "T1500",
+      "T1397",
+      "T1409",
+      "T1428"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T1486",
+      "T1421",
+      "T1468",
+      "T1456"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T1437",
+      "T1499",
+      "T1473",
+      "T1412",
+      "T1475",
+      "T1474",
+      "T1498"
+     ]
+    }
+   ],
+   "plan_id": 373,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000250",
+   "decision_id": "D-000728",
+   "user_id": "U-04158",
+   "trigger_event_id": "468a0f67-c2c0-44ff-9f0a-de7f08fdccc8",
+   "published_at": "2026-10-01T05:59:54.148Z",
+   "goal_id": "G07",
+   "type": "whatsapp",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T1393",
+   "dialect": "d6",
+   "template_id": "wa_recommend_title_v1",
+   "variables": {
+    "title_name": "Bhari Vagi",
+    "dialect_name": "d6"
+   },
+   "plan_id": 373,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-001129",
+   "decision_id": "D-002624",
+   "user_id": "U-04158",
+   "trigger_event_id": "71448377-b3fc-45aa-a9b2-e1b6a90c2745",
+   "published_at": "2026-10-01T17:47:33.119Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d6",
+   "hero_title_id": "T1393",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T1432",
+      "T1438",
+      "T1470",
+      "T1488",
+      "T1390",
+      "T1457",
+      "T1495",
+      "T1395"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T1389",
+      "T1394",
+      "T1407",
+      "T1500",
+      "T1397",
+      "T1409",
+      "T1428"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T1486",
+      "T1421",
+      "T1468",
+      "T1456"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T1437",
+      "T1499",
+      "T1473",
+      "T1412",
+      "T1475",
+      "T1474",
+      "T1498"
+     ]
+    }
+   ],
+   "plan_id": 373,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 373,
+   "viewer_id": "U-04158",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "bhari-vagi-d6",
+    "title_id": "T1393",
+    "next_episode_index": 2,
+    "total_episodes": 26
+   },
+   "started_at": "2026-10-01T05:59:53.746Z",
+   "deadline": "2026-10-04T05:59:53.746Z",
+   "decision_id": "D-000728",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 384,
+   "plan_id": 373,
+   "viewer_id": "U-04158",
+   "at": "2026-10-01T05:59:53.746Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000728"
+   }
+  },
+  {
+   "id": 1879,
+   "plan_id": 373,
+   "viewer_id": "U-04158",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 373,
+   "viewer_id": "U-04158",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 2,
+    "pages_shown": 2,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000249",
+     "A-000250",
+     "A-001129"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 418,
+   "viewer_id": "U-04158",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 2, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:373"
+   ]
+  }
+ ]
+}

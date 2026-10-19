@@ -1,0 +1,319 @@
+{
+ "viewer_id": "U-00116",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-002503",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00116@2026-09-29T03:52:00.560Z",
+    "observed_at": "2026-09-29T03:52:00.560Z",
+    "freshness_s": 220073.2
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d6",
+    "source": "event",
+    "source_id": "2ec4f124-59e1-4694-970c-e7399a7cdd5f",
+    "observed_at": "2026-10-01T16:59:53.740Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d6",
+    "source": "profile_snapshot",
+    "source_id": "U-00116@2026-09-29T03:52:00.560Z",
+    "observed_at": "2026-09-29T03:52:00.560Z",
+    "freshness_s": 220073.2
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-00116@2026-09-29T03:52:00.560Z",
+    "observed_at": "2026-09-29T03:52:00.560Z",
+    "freshness_s": 220073.2
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "1e780729-e10a-4466-a4ff-90f87f97502a",
+    "observed_at": "2026-09-14T03:51:11.869Z",
+    "freshness_s": 1516121.9
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-10-21T22:50:54.484Z",
+    "source": "profile_snapshot",
+    "source_id": "U-00116@2026-09-29T03:52:00.560Z",
+    "observed_at": "2026-09-29T03:52:00.560Z",
+    "freshness_s": 220073.2
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00116@2026-09-29T03:52:00.560Z",
+    "observed_at": "2026-09-29T03:52:00.560Z",
+    "freshness_s": 220073.2
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-00116@2026-09-29T03:52:00.560Z",
+    "observed_at": "2026-09-29T03:52:00.560Z",
+    "freshness_s": 220073.2
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T16:59:53.740Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 13,
+    "source": "event_stream",
+    "source_id": "18121df7-ce22-4d47-895c-6b7e49a0b7e2",
+    "observed_at": "2026-09-29T14:05:03.156Z",
+    "freshness_s": 183290.6
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 6,
+    "source": "event_stream",
+    "source_id": "723fc8c2-82e8-49ee-912e-2a2e98f2e451",
+    "observed_at": "2026-09-29T14:06:54.100Z",
+    "freshness_s": 183179.6
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-19",
+     "2026-09-20",
+     "2026-09-23",
+     "2026-09-28",
+     "2026-09-29"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 14,
+    "source": "event_stream",
+    "source_id": "7809d3c5-9ee4-4835-a845-8c4d9d12f393",
+    "observed_at": "2026-09-29T14:03:36.681Z",
+    "freshness_s": 183377.1
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "2ec4f124-59e1-4694-970c-e7399a7cdd5f",
+    "observed_at": "2026-10-01T16:59:53.740Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-002503",
+   "deliver_at": "2026-10-01T16:59:53.740Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): rasuya-moni-d6: reached episode 6/9, last played 2026-09-28T15:46:13.226Z; 138 titles promotable in d6 at publish time",
+   "confidence": 0.88
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-001088",
+   "decision_id": "D-002503",
+   "user_id": "U-00116",
+   "trigger_event_id": "2ec4f124-59e1-4694-970c-e7399a7cdd5f",
+   "published_at": "2026-10-01T16:59:54.986Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d6",
+   "hero_title_id": "T1976",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T1402",
+      "T1997",
+      "T1416",
+      "T1417",
+      "T1452",
+      "T1979",
+      "T1398",
+      "T1445"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T1389",
+      "T1392",
+      "T1391",
+      "T1390",
+      "T1393",
+      "T1407",
+      "T1396"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T1486",
+      "T1421",
+      "T1461",
+      "T1468",
+      "T1491",
+      "T1484",
+      "T1472",
+      "T1456"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T1395",
+      "T1400",
+      "T1426",
+      "T1479",
+      "T1431",
+      "T1459",
+      "T1436",
+      "T1496"
+     ]
+    }
+   ],
+   "plan_id": 1394,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-001089",
+   "decision_id": "D-002503",
+   "user_id": "U-00116",
+   "trigger_event_id": "2ec4f124-59e1-4694-970c-e7399a7cdd5f",
+   "published_at": "2026-10-01T16:59:54.986Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T1976",
+   "dialect": "d6",
+   "text": {
+    "title": "Rasuya Moni (English)",
+    "body": "Rasuya Moni (English) ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T1976",
+   "plan_id": 1394,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 1394,
+   "viewer_id": "U-00116",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "rasuya-moni-d6",
+    "title_id": "T1976",
+    "next_episode_index": 6,
+    "total_episodes": 9
+   },
+   "started_at": "2026-10-01T16:59:54.182Z",
+   "deadline": "2026-10-04T16:59:54.182Z",
+   "decision_id": "D-002503",
+   "status": "succeeded",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: play_started received 2026-10-01T17:05:05.718Z inside the window",
+   "signal_event_id": "oua-000723"
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1426,
+   "plan_id": 1394,
+   "viewer_id": "U-00116",
+   "at": "2026-10-01T16:59:54.182Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-002503"
+   }
+  },
+  {
+   "id": 2889,
+   "plan_id": 1394,
+   "viewer_id": "U-00116",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "succeeded",
+   "detail": {
+    "reason": "final judgment: play_started received 2026-10-01T17:05:05.718Z inside the window",
+    "signal_event_id": "oua-000723"
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1394,
+   "viewer_id": "U-00116",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "succeeded",
+   "reason": "play_started received 2026-10-01T17:05:05.718Z inside the window",
+   "signal_event_id": "oua-000723",
+   "signal_at": "2026-10-01T17:05:05.718Z",
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-001088",
+     "A-001089"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1519,
+   "viewer_id": "U-00116",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_succeeded:G07",
+   "detail": "G07 reached; move to the next lifecycle goal",
+   "evidence": [
+    "plan:1394"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "viewer_id": "U-02749",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-000456",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02749@2026-09-28T18:35:01.269Z",
+    "observed_at": "2026-09-28T18:35:01.269Z",
+    "freshness_s": 209481.2
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d1",
+    "source": "event",
+    "source_id": "4830713d-a8de-4753-a6aa-258fb2a49b07",
+    "observed_at": "2026-10-01T04:46:22.435Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d2",
+    "source": "profile_snapshot",
+    "source_id": "U-02749@2026-09-28T18:35:01.269Z",
+    "observed_at": "2026-09-28T18:35:01.269Z",
+    "freshness_s": 209481.2
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "lapsed",
+    "source": "profile_snapshot",
+    "source_id": "U-02749@2026-09-28T18:35:01.269Z",
+    "observed_at": "2026-09-28T18:35:01.269Z",
+    "freshness_s": 209481.2
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02749@2026-09-28T18:35:01.269Z",
+    "observed_at": "2026-09-28T18:35:01.269Z",
+    "freshness_s": 209481.2
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-05-19T06:46:26.038Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02749@2026-09-28T18:35:01.269Z",
+    "observed_at": "2026-09-28T18:35:01.269Z",
+    "freshness_s": 209481.2
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02749@2026-09-28T18:35:01.269Z",
+    "observed_at": "2026-09-28T18:35:01.269Z",
+    "freshness_s": 209481.2
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02749@2026-09-28T18:35:01.269Z",
+    "observed_at": "2026-09-28T18:35:01.269Z",
+    "freshness_s": 209481.2
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T04:46:22.435Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "b445f891-1d87-43e9-9e56-6beb3a2e1590",
+    "observed_at": "2026-09-18T09:50:43.058Z",
+    "freshness_s": 1104939.4
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "4830713d-a8de-4753-a6aa-258fb2a49b07",
+    "observed_at": "2026-10-01T04:46:22.435Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d1",
+      "ref": "event:4830713d-a8de-4753-a6aa-258fb2a49b07"
+     },
+     {
+      "source": "profile",
+      "value": "d2",
+      "ref": "profile:U-02749"
+     }
+    ],
+    "chosen": "app_setting:d1",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000456",
+   "deliver_at": "2026-10-01T04:46:22.435Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 54566s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

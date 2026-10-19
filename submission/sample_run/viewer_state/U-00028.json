@@ -1,0 +1,330 @@
+{
+ "viewer_id": "U-00028",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001467",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00028@2026-09-29T02:46:45.504Z",
+    "observed_at": "2026-09-29T02:46:45.504Z",
+    "freshness_s": 205816.0
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d5",
+    "source": "event",
+    "source_id": "5de7835c-7576-45d3-bb84-4145cac5b534",
+    "observed_at": "2026-10-01T11:57:01.494Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d3",
+    "source": "profile_snapshot",
+    "source_id": "U-00028@2026-09-29T02:46:45.504Z",
+    "observed_at": "2026-09-29T02:46:45.504Z",
+    "freshness_s": 205816.0
+   },
+   {
+    "fact_key": "dialect.campaign_link",
+    "value": "d2",
+    "source": "event",
+    "source_id": "5de7835c-7576-45d3-bb84-4145cac5b534",
+    "observed_at": "2026-10-01T11:57:01.494Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-00028@2026-09-29T02:46:45.504Z",
+    "observed_at": "2026-09-29T02:46:45.504Z",
+    "freshness_s": 205816.0
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-00028@2026-09-29T02:46:45.504Z",
+    "observed_at": "2026-09-29T02:46:45.504Z",
+    "freshness_s": 205816.0
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-05-24T17:36:03.647Z",
+    "source": "profile_snapshot",
+    "source_id": "U-00028@2026-09-29T02:46:45.504Z",
+    "observed_at": "2026-09-29T02:46:45.504Z",
+    "freshness_s": 205816.0
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00028@2026-09-29T02:46:45.504Z",
+    "observed_at": "2026-09-29T02:46:45.504Z",
+    "freshness_s": 205816.0
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-00028@2026-09-29T02:46:45.504Z",
+    "observed_at": "2026-09-29T02:46:45.504Z",
+    "freshness_s": 205816.0
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T11:57:01.494Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "dd1d4898-9b9e-4cbc-a4bd-8d399fdd96b3",
+    "observed_at": "2026-09-10T16:45:22.913Z",
+    "freshness_s": 1797098.6
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "6a65d4a6-55e6-40b1-bb47-9ee909e673b2",
+    "observed_at": "2026-09-03T13:56:33.110Z",
+    "freshness_s": 2412028.4
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "fdc4e6ba-5d50-4e35-9911-ac27f4ddf738",
+    "observed_at": "2026-09-30T08:33:53.633Z",
+    "freshness_s": 98587.9
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "5de7835c-7576-45d3-bb84-4145cac5b534",
+    "observed_at": "2026-10-01T11:57:01.494Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d5",
+      "ref": "event:5de7835c-7576-45d3-bb84-4145cac5b534"
+     },
+     {
+      "source": "profile",
+      "value": "d3",
+      "ref": "profile:U-00028"
+     },
+     {
+      "source": "campaign_link",
+      "value": "d2",
+      "ref": "event:5de7835c-7576-45d3-bb84-4145cac5b534"
+     }
+    ],
+    "chosen": "app_setting:d5",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001467",
+   "deliver_at": "2026-10-01T11:57:01.494Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G05",
+   "reason": "committed G05 (first_paid_7d): status 'never'; no paid purchase or renewal observed; 258 titles promotable in d5 at publish time",
+   "confidence": 0.63
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000611",
+   "decision_id": "D-001467",
+   "user_id": "U-00028",
+   "trigger_event_id": "5de7835c-7576-45d3-bb84-4145cac5b534",
+   "published_at": "2026-10-01T11:57:01.938Z",
+   "goal_id": "G05",
+   "type": "home_page",
+   "dialect": "d5",
+   "hero_title_id": "T1220",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T1351",
+      "T1295",
+      "T1349",
+      "T1180",
+      "T1201",
+      "T1254",
+      "T1296",
+      "T1212"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T1177",
+      "T1179",
+      "T1178",
+      "T1187",
+      "T1186",
+      "T1185",
+      "T1182",
+      "T1181"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T1189",
+      "T1183",
+      "T1192",
+      "T1213",
+      "T1219",
+      "T1250",
+      "T1264",
+      "T1381"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T1191",
+      "T1188",
+      "T1226",
+      "T1206",
+      "T1241",
+      "T1261",
+      "T1310",
+      "T1215"
+     ]
+    }
+   ],
+   "plan_id": 834,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 834,
+   "viewer_id": "U-00028",
+   "arm": "agent",
+   "goal_id": "G05",
+   "rule_version": "G05@2026-09-30",
+   "success_event": "purchase_completed",
+   "success_condition": "is_trial = false",
+   "window_hours": 168,
+   "params": {},
+   "started_at": "2026-10-01T11:57:01.535Z",
+   "deadline": "2026-10-08T11:57:01.535Z",
+   "decision_id": "D-001467",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable purchase_completed (is_trial = false) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 855,
+   "plan_id": 834,
+   "viewer_id": "U-00028",
+   "at": "2026-10-01T11:57:01.535Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G05",
+    "decision_id": "D-001467"
+   }
+  },
+  {
+   "id": 2333,
+   "plan_id": 834,
+   "viewer_id": "U-00028",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable purchase_completed (is_trial = false) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 834,
+   "viewer_id": "U-00028",
+   "arm": "agent",
+   "goal_id": "G05",
+   "rule_version": "G05@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable purchase_completed (is_trial = false) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 0,
+    "messages_sent": 0,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000611"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 918,
+   "viewer_id": "U-00028",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G05",
+   "detail": "G05 not reached (pages shown 0, messages delivered 0); cool down this goal before retrying",
+   "evidence": [
+    "plan:834"
+   ]
+  },
+  {
+   "id": 919,
+   "viewer_id": "U-00028",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "page_not_seen",
+   "detail": "published page(s) were never shown (viewer did not reach home while live, or app dialect changed)",
+   "evidence": [
+    "plan:834"
+   ]
+  }
+ ]
+}

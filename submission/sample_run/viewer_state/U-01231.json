@@ -1,0 +1,344 @@
+{
+ "viewer_id": "U-01231",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-000870",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01231@2026-09-28T20:14:38.014Z",
+    "observed_at": "2026-09-28T20:14:38.014Z",
+    "freshness_s": 212297.6
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d1",
+    "source": "event",
+    "source_id": "1f8f3e4c-3527-459c-a5cd-ec10b116bd38",
+    "observed_at": "2026-10-01T07:12:55.644Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d5",
+    "source": "profile_snapshot",
+    "source_id": "U-01231@2026-09-28T20:14:38.014Z",
+    "observed_at": "2026-09-28T20:14:38.014Z",
+    "freshness_s": 212297.6
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-01231@2026-09-28T20:14:38.014Z",
+    "observed_at": "2026-09-28T20:14:38.014Z",
+    "freshness_s": 212297.6
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "3f5b92ee-dc3c-4263-96ba-e449b24761b0",
+    "observed_at": "2026-09-23T17:13:31.988Z",
+    "freshness_s": 655163.7
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-03-06T09:13:42.479Z",
+    "source": "profile_snapshot",
+    "source_id": "U-01231@2026-09-28T20:14:38.014Z",
+    "observed_at": "2026-09-28T20:14:38.014Z",
+    "freshness_s": 212297.6
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01231@2026-09-28T20:14:38.014Z",
+    "observed_at": "2026-09-28T20:14:38.014Z",
+    "freshness_s": 212297.6
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01231@2026-09-28T20:14:38.014Z",
+    "observed_at": "2026-09-28T20:14:38.014Z",
+    "freshness_s": 212297.6
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T07:12:55.644Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "fb70a06c-0511-420a-8156-6938750cf0ef",
+    "observed_at": "2026-09-23T05:53:58.412Z",
+    "freshness_s": 695937.2
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "4655a28f-4aec-491f-a0d9-2b4491a1d108",
+    "observed_at": "2026-09-23T05:57:40.003Z",
+    "freshness_s": 695715.6
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-22",
+     "2026-09-23"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 8,
+    "source": "event_stream",
+    "source_id": "f59f7e2d-faff-4ceb-8aa9-f74118d9ddb8",
+    "observed_at": "2026-09-30T23:42:04.986Z",
+    "freshness_s": 27050.7
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "1f8f3e4c-3527-459c-a5cd-ec10b116bd38",
+    "observed_at": "2026-10-01T07:12:55.644Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d1",
+      "ref": "event:1f8f3e4c-3527-459c-a5cd-ec10b116bd38"
+     },
+     {
+      "source": "profile",
+      "value": "d5",
+      "ref": "profile:U-01231"
+     }
+    ],
+    "chosen": "app_setting:d1",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000870",
+   "deliver_at": "2026-10-01T07:12:55.644Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): hate-d1: reached episode 1/34, last played 2026-09-23T05:53:58.412Z; 659 titles promotable in d1 at publish time",
+   "confidence": 0.78
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000333",
+   "decision_id": "D-000870",
+   "user_id": "U-01231",
+   "trigger_event_id": "1f8f3e4c-3527-459c-a5cd-ec10b116bd38",
+   "published_at": "2026-10-01T07:12:56.892Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d1",
+   "hero_title_id": "T0008",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0245",
+      "T1636",
+      "T0388",
+      "T1649",
+      "T1580",
+      "T1533",
+      "T0236",
+      "T1516"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0003",
+      "T0005",
+      "T0009",
+      "T0004",
+      "T0006",
+      "T0010",
+      "T0014"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0007",
+      "T0070",
+      "T0127",
+      "T0060",
+      "T0028",
+      "T0031",
+      "T0047",
+      "T0063"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0038",
+      "T0016",
+      "T0030",
+      "T0273",
+      "T0041",
+      "T0520",
+      "T0022",
+      "T0518"
+     ]
+    }
+   ],
+   "plan_id": 470,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000334",
+   "decision_id": "D-000870",
+   "user_id": "U-01231",
+   "trigger_event_id": "1f8f3e4c-3527-459c-a5cd-ec10b116bd38",
+   "published_at": "2026-10-01T07:12:56.892Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0008",
+   "dialect": "d1",
+   "text": {
+    "title": "Hate",
+    "body": "Hate ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0008",
+   "plan_id": 470,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 470,
+   "viewer_id": "U-01231",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "hate-d1",
+    "title_id": "T0008",
+    "next_episode_index": 1,
+    "total_episodes": 34
+   },
+   "started_at": "2026-10-01T07:12:56.085Z",
+   "deadline": "2026-10-04T07:12:56.085Z",
+   "decision_id": "D-000870",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 482,
+   "plan_id": 470,
+   "viewer_id": "U-01231",
+   "at": "2026-10-01T07:12:56.085Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000870"
+   }
+  },
+  {
+   "id": 1975,
+   "plan_id": 470,
+   "viewer_id": "U-01231",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 470,
+   "viewer_id": "U-01231",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 0,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000333",
+     "A-000334"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 522,
+   "viewer_id": "U-01231",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 0, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:470"
+   ]
+  },
+  {
+   "id": 523,
+   "viewer_id": "U-01231",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "page_not_seen",
+   "detail": "published page(s) were never shown (viewer did not reach home while live, or app dialect changed)",
+   "evidence": [
+    "plan:470"
+   ]
+  }
+ ]
+}

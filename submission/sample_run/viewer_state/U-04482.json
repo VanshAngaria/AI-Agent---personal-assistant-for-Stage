@@ -1,0 +1,246 @@
+{
+ "viewer_id": "U-04482",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-000298",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04482@2026-09-29T01:00:35.740Z",
+    "observed_at": "2026-09-29T01:00:35.740Z",
+    "freshness_s": 184433.7
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d5",
+    "source": "event",
+    "source_id": "80eb51b5-4e75-4c0f-99f1-3b4fbb6dc46e",
+    "observed_at": "2026-10-01T04:14:29.487Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d3",
+    "source": "profile_snapshot",
+    "source_id": "U-04482@2026-09-29T01:00:35.740Z",
+    "observed_at": "2026-09-29T01:00:35.740Z",
+    "freshness_s": 184433.7
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "lapsed",
+    "source": "profile_snapshot",
+    "source_id": "U-04482@2026-09-29T01:00:35.740Z",
+    "observed_at": "2026-09-29T01:00:35.740Z",
+    "freshness_s": 184433.7
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04482@2026-09-29T01:00:35.740Z",
+    "observed_at": "2026-09-29T01:00:35.740Z",
+    "freshness_s": 184433.7
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-06-16T19:56:03.092Z",
+    "source": "profile_snapshot",
+    "source_id": "U-04482@2026-09-29T01:00:35.740Z",
+    "observed_at": "2026-09-29T01:00:35.740Z",
+    "freshness_s": 184433.7
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04482@2026-09-29T01:00:35.740Z",
+    "observed_at": "2026-09-29T01:00:35.740Z",
+    "freshness_s": 184433.7
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04482@2026-09-29T01:00:35.740Z",
+    "observed_at": "2026-09-29T01:00:35.740Z",
+    "freshness_s": 184433.7
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T04:14:29.487Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 5,
+    "source": "event_stream",
+    "source_id": "80eba0d5-aaba-48b8-9617-f7a62acfbd04",
+    "observed_at": "2026-09-28T09:00:44.012Z",
+    "freshness_s": 242025.5
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "bd2991b4-c40e-4045-aeda-c35cfd1b6856",
+    "observed_at": "2026-09-28T11:01:14.904Z",
+    "freshness_s": 234794.6
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-21",
+     "2026-09-26",
+     "2026-09-28"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "dcb7bfb0-ad3f-40c1-95e1-60b0a0c4d51f",
+    "observed_at": "2026-09-28T08:59:10.874Z",
+    "freshness_s": 242118.6
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "80eb51b5-4e75-4c0f-99f1-3b4fbb6dc46e",
+    "observed_at": "2026-10-01T04:14:29.487Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d5",
+      "ref": "event:80eb51b5-4e75-4c0f-99f1-3b4fbb6dc46e"
+     },
+     {
+      "source": "profile",
+      "value": "d3",
+      "ref": "profile:U-04482"
+     }
+    ],
+    "chosen": "app_setting:d5",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000298",
+   "deliver_at": "2026-10-01T04:14:29.487Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": "G07",
+   "reason": "holdout arm: no action of any kind (messaging policy rule 5); the goal is recorded as a shadow goal so both arms are judged the same way",
+   "confidence": 0.99
+  }
+ ],
+ "actions": [],
+ "plans": [
+  {
+   "plan_id": 234,
+   "viewer_id": "U-04482",
+   "arm": "holdout",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "jamo-hasa-d5",
+    "title_id": "T1179",
+    "next_episode_index": 1,
+    "total_episodes": 33
+   },
+   "started_at": "2026-10-01T04:14:29.929Z",
+   "deadline": "2026-10-04T04:14:29.929Z",
+   "decision_id": "D-000298",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 239,
+   "plan_id": 234,
+   "viewer_id": "U-04482",
+   "at": "2026-10-01T04:14:29.929Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000298"
+   }
+  },
+  {
+   "id": 1743,
+   "plan_id": 234,
+   "viewer_id": "U-04482",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 234,
+   "viewer_id": "U-04482",
+   "arm": "holdout",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 0,
+    "pages_shown": 0,
+    "messages_sent": 0,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": []
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 266,
+   "viewer_id": "U-04482",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 0, messages delivered 0); cool down this goal before retrying",
+   "evidence": [
+    "plan:234"
+   ]
+  }
+ ]
+}

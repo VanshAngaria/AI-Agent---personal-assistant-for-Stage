@@ -1,0 +1,145 @@
+{
+ "viewer_id": "U-03640",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-000560",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03640@2026-09-29T05:56:41.973Z",
+    "observed_at": "2026-09-29T05:56:41.973Z",
+    "freshness_s": 168668.8
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d1",
+    "source": "event",
+    "source_id": "6b53a3ca-1843-4dd4-92be-6a84d221d07f",
+    "observed_at": "2026-10-01T04:47:50.821Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d1",
+    "source": "profile_snapshot",
+    "source_id": "U-03640@2026-09-29T05:56:41.973Z",
+    "observed_at": "2026-09-29T05:56:41.973Z",
+    "freshness_s": 168668.8
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-03640@2026-09-29T05:56:41.973Z",
+    "observed_at": "2026-09-29T05:56:41.973Z",
+    "freshness_s": 168668.8
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-03640@2026-09-29T05:56:41.973Z",
+    "observed_at": "2026-09-29T05:56:41.973Z",
+    "freshness_s": 168668.8
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-08-01T13:59:12.909Z",
+    "source": "profile_snapshot",
+    "source_id": "U-03640@2026-09-29T05:56:41.973Z",
+    "observed_at": "2026-09-29T05:56:41.973Z",
+    "freshness_s": 168668.8
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03640@2026-09-29T05:56:41.973Z",
+    "observed_at": "2026-09-29T05:56:41.973Z",
+    "freshness_s": 168668.8
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03640@2026-09-29T05:56:41.973Z",
+    "observed_at": "2026-09-29T05:56:41.973Z",
+    "freshness_s": 168668.8
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T04:47:50.821Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "6b495718-2e58-4e8e-8e04-d2a1bfb5c90a",
+    "observed_at": "2026-09-30T16:16:26.620Z",
+    "freshness_s": 45084.2
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "0a6a4c92-e7fe-42c1-b60c-6863fb3b8859",
+    "observed_at": "2026-09-07T00:43:04.372Z",
+    "freshness_s": 2088286.4
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-30"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 6,
+    "source": "event_stream",
+    "source_id": "efa085b2-a74c-48dc-b8d2-433d741f3582",
+    "observed_at": "2026-09-30T16:15:13.078Z",
+    "freshness_s": 45157.7
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "6b53a3ca-1843-4dd4-92be-6a84d221d07f",
+    "observed_at": "2026-10-01T04:47:50.821Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000560",
+   "deliver_at": "2026-10-01T04:47:50.821Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 27896s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

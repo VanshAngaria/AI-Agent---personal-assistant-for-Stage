@@ -1,8 +1,0 @@
-{
-  "pack_path": "C:/path/to/one_user_one_agent_pack",
-  "db_path": "viewer_state/agent.sqlite",
-  "decision_deadline_ms": 60000,
-  "max_model_calls": 8,
-  "max_tool_calls": 20,
-  "notes": "Set OUA_PACK_PATH to the local data pack. Do not upload pack files to hosted model providers."
-}

@@ -1,0 +1,153 @@
+{
+ "viewer_id": "U-02898",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001787",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02898@2026-09-28T23:51:35.202Z",
+    "observed_at": "2026-09-28T23:51:35.202Z",
+    "freshness_s": 224342.4
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d4",
+    "source": "event",
+    "source_id": "7d421f82-3b87-4b32-9a6b-a49fcd11a8d2",
+    "observed_at": "2026-10-01T14:10:37.578Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d4",
+    "source": "profile_snapshot",
+    "source_id": "U-02898@2026-09-28T23:51:35.202Z",
+    "observed_at": "2026-09-28T23:51:35.202Z",
+    "freshness_s": 224342.4
+   },
+   {
+    "fact_key": "dialect.campaign_link",
+    "value": "d4",
+    "source": "event",
+    "source_id": "7d421f82-3b87-4b32-9a6b-a49fcd11a8d2",
+    "observed_at": "2026-10-01T14:10:37.578Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "lapsed",
+    "source": "profile_snapshot",
+    "source_id": "U-02898@2026-09-28T23:51:35.202Z",
+    "observed_at": "2026-09-28T23:51:35.202Z",
+    "freshness_s": 224342.4
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02898@2026-09-28T23:51:35.202Z",
+    "observed_at": "2026-09-28T23:51:35.202Z",
+    "freshness_s": 224342.4
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-07-20T04:18:37.228Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02898@2026-09-28T23:51:35.202Z",
+    "observed_at": "2026-09-28T23:51:35.202Z",
+    "freshness_s": 224342.4
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02898@2026-09-28T23:51:35.202Z",
+    "observed_at": "2026-09-28T23:51:35.202Z",
+    "freshness_s": 224342.4
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02898@2026-09-28T23:51:35.202Z",
+    "observed_at": "2026-09-28T23:51:35.202Z",
+    "freshness_s": 224342.4
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T14:10:37.578Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "c84cbe06-ee20-4464-adbf-c0bc2706f931",
+    "observed_at": "2026-09-23T05:57:21.777Z",
+    "freshness_s": 720795.8
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-23"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "ef148be6-4d5d-4eb9-ab63-5446059d2738",
+    "observed_at": "2026-09-23T14:20:18.997Z",
+    "freshness_s": 690618.6
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "7d421f82-3b87-4b32-9a6b-a49fcd11a8d2",
+    "observed_at": "2026-10-01T14:10:37.578Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001787",
+   "deliver_at": "2026-10-01T14:10:37.578Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "no measurable goal the viewer is eligible for yet: G01 signed up 73.4d ago (limit 7d); G02 cannot prove 'never episode_completed': signup predates the event history (or is unknown); G03 signed up 73.4d ago (limit 2d); G04 status 'lapsed' not in ['trial_active']; G05 status 'lapsed' not in ['never']; G06 no subscription_lapsed in the last 30 days: recency unprovable; G07 no followed, unfinished series idle for 3+ days; G08 status 'lapsed' not in ['active']; G09 status 'lapsed' not in ['active']; G10 unmeasurable: success event is null / its condition is not an observable signal; never committed, no proxy invented; G11 unmeasurable: success event 'tv_app_open' never appears in the event stream or simulator output; never committed, no proxy invented; G12 app_open within the 14 days before this trigger",
+   "confidence": 0.6
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

@@ -1,0 +1,265 @@
+{
+ "viewer_id": "U-01672",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001484",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01672@2026-09-29T09:32:07.029Z",
+    "observed_at": "2026-09-29T09:32:07.029Z",
+    "freshness_s": 181934.0
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d3",
+    "source": "event",
+    "source_id": "a7a21ef3-a068-47d7-900a-34958426bb14",
+    "observed_at": "2026-10-01T12:04:21.025Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-01672@2026-09-29T09:32:07.029Z",
+    "observed_at": "2026-09-29T09:32:07.029Z",
+    "freshness_s": 181934.0
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01672@2026-09-29T09:32:07.029Z",
+    "observed_at": "2026-09-29T09:32:07.029Z",
+    "freshness_s": 181934.0
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-09-11T08:23:18.867Z",
+    "source": "event",
+    "source_id": "88e3e13d-cfcc-4938-96f4-3f8df01003e8",
+    "observed_at": "2026-09-11T08:23:18.867Z",
+    "freshness_s": 1741262.2
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01672@2026-09-29T09:32:07.029Z",
+    "observed_at": "2026-09-29T09:32:07.029Z",
+    "freshness_s": 181934.0
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01672@2026-09-29T09:32:07.029Z",
+    "observed_at": "2026-09-29T09:32:07.029Z",
+    "freshness_s": 181934.0
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T12:04:21.025Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "fce5a2da-e552-43c4-93dd-21871dcf8ca8",
+    "observed_at": "2026-09-12T16:22:59.675Z",
+    "freshness_s": 1626081.4
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "f81bc4e5-0fb3-46cc-94ed-a37a8188ea59",
+    "observed_at": "2026-09-12T16:26:41.698Z",
+    "freshness_s": 1625859.3
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 5,
+    "source": "event_stream",
+    "source_id": "695a8f20-f249-4b05-bfcc-25b55a4687cb",
+    "observed_at": "2026-09-29T13:07:10.083Z",
+    "freshness_s": 169030.9
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "a7a21ef3-a068-47d7-900a-34958426bb14",
+    "observed_at": "2026-10-01T12:04:21.025Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001484",
+   "deliver_at": "2026-10-01T12:04:21.025Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): yane-tegi-d3: reached episode 1/20, last played 2026-09-12T16:22:59.675Z; 7 titles promotable in d3 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.83
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000619",
+   "decision_id": "D-001484",
+   "user_id": "U-01672",
+   "trigger_event_id": "a7a21ef3-a068-47d7-900a-34958426bb14",
+   "published_at": "2026-10-01T12:04:22.267Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0903",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0901",
+      "T0907",
+      "T0908",
+      "T0914",
+      "T0913",
+      "T0910"
+     ]
+    }
+   ],
+   "plan_id": 845,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000620",
+   "decision_id": "D-001484",
+   "user_id": "U-01672",
+   "trigger_event_id": "a7a21ef3-a068-47d7-900a-34958426bb14",
+   "published_at": "2026-10-01T12:04:22.267Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0903",
+   "dialect": "d3",
+   "text": {
+    "title": "Yane Tegi",
+    "body": "Yane Tegi ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0903",
+   "plan_id": 845,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 845,
+   "viewer_id": "U-01672",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "yane-tegi-d3",
+    "title_id": "T0903",
+    "next_episode_index": 1,
+    "total_episodes": 20
+   },
+   "started_at": "2026-10-01T12:04:21.466Z",
+   "deadline": "2026-10-04T12:04:21.466Z",
+   "decision_id": "D-001484",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 866,
+   "plan_id": 845,
+   "viewer_id": "U-01672",
+   "at": "2026-10-01T12:04:21.466Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-001484"
+   }
+  },
+  {
+   "id": 2344,
+   "plan_id": 845,
+   "viewer_id": "U-01672",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 845,
+   "viewer_id": "U-01672",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000619",
+     "A-000620"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 931,
+   "viewer_id": "U-01672",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 1, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:845"
+   ]
+  }
+ ]
+}

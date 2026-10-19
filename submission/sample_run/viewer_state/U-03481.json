@@ -1,0 +1,37 @@
+{
+ "viewer_id": "U-03481",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001627",
+  "facts": [],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001625",
+   "deliver_at": "2026-10-01T13:14:10.376Z",
+   "trigger": "login_success",
+   "status": "FAILED_SAFE",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "user data store failed (user_data_store:profile.read failed after 2 attempt(s): user_data_store read exceeded timeout (2.6s > 2.0s)) and this agent holds no earlier snapshot of the viewer; acting without facts is unsafe",
+   "confidence": 0.6
+  },
+  {
+   "decision_id": "D-001627",
+   "deliver_at": "2026-10-01T13:14:13.629Z",
+   "trigger": "app_open",
+   "status": "FAILED_SAFE",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "user data store failed (user_data_store:events.read failed after 2 attempt(s): user_data_store read exceeded timeout (7.7s > 2.0s)) and this agent holds no earlier snapshot of the viewer; acting without facts is unsafe",
+   "confidence": 0.6
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

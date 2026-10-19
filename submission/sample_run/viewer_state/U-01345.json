@@ -1,0 +1,150 @@
+{
+ "viewer_id": "U-01345",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-000956",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01345@2026-09-29T13:10:21.948Z",
+    "observed_at": "2026-09-29T13:10:21.948Z",
+    "freshness_s": 153517.4
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d1",
+    "source": "event",
+    "source_id": "707eae2c-ebc3-475c-8d52-07353aa8cb43",
+    "observed_at": "2026-10-01T07:48:59.321Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d1",
+    "source": "profile_snapshot",
+    "source_id": "U-01345@2026-09-29T13:10:21.948Z",
+    "observed_at": "2026-09-29T13:10:21.948Z",
+    "freshness_s": 153517.4
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-01345@2026-09-29T13:10:21.948Z",
+    "observed_at": "2026-09-29T13:10:21.948Z",
+    "freshness_s": 153517.4
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "d6f42bc3-f427-4f3c-84e2-cdf25c266e04",
+    "observed_at": "2026-09-02T17:28:34.147Z",
+    "freshness_s": 2470825.2
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-04-27T07:38:16.999Z",
+    "source": "profile_snapshot",
+    "source_id": "U-01345@2026-09-29T13:10:21.948Z",
+    "observed_at": "2026-09-29T13:10:21.948Z",
+    "freshness_s": 153517.4
+   },
+   {
+    "fact_key": "consent.push",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01345@2026-09-29T13:10:21.948Z",
+    "observed_at": "2026-09-29T13:10:21.948Z",
+    "freshness_s": 153517.4
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01345@2026-09-29T13:10:21.948Z",
+    "observed_at": "2026-09-29T13:10:21.948Z",
+    "freshness_s": 153517.4
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T07:48:59.321Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 15,
+    "source": "event_stream",
+    "source_id": "32e3c0eb-1db3-4cdf-afd7-39c11d1d4427",
+    "observed_at": "2026-09-30T15:29:57.933Z",
+    "freshness_s": 58741.4
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "e1738145-fc39-4cc8-860a-a005027a6040",
+    "observed_at": "2026-09-28T10:49:05.171Z",
+    "freshness_s": 248394.1
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-24",
+     "2026-09-25",
+     "2026-09-26",
+     "2026-09-28",
+     "2026-09-29",
+     "2026-09-30"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 11,
+    "source": "event_stream",
+    "source_id": "18579a7c-d78a-4968-8d97-f0cd013481ce",
+    "observed_at": "2026-09-30T15:28:24.622Z",
+    "freshness_s": 58834.7
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "707eae2c-ebc3-475c-8d52-07353aa8cb43",
+    "observed_at": "2026-10-01T07:48:59.321Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000956",
+   "deliver_at": "2026-10-01T07:48:59.321Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 400956s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

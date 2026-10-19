@@ -1,0 +1,315 @@
+{
+ "viewer_id": "U-03415",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001906",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03415@2026-09-29T11:51:21.403Z",
+    "observed_at": "2026-09-29T11:51:21.403Z",
+    "freshness_s": 183092.4
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d3",
+    "source": "event",
+    "source_id": "594024bc-92a3-448c-bd99-4ca43d000f63",
+    "observed_at": "2026-10-01T14:42:53.821Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d5",
+    "source": "profile_snapshot",
+    "source_id": "U-03415@2026-09-29T11:51:21.403Z",
+    "observed_at": "2026-09-29T11:51:21.403Z",
+    "freshness_s": 183092.4
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-03415@2026-09-29T11:51:21.403Z",
+    "observed_at": "2026-09-29T11:51:21.403Z",
+    "freshness_s": 183092.4
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "27e2a28a-e160-4447-bdf5-bd0d414cd4ae",
+    "observed_at": "2026-09-13T18:07:59.103Z",
+    "freshness_s": 1542894.7
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-08-16T19:15:34.975Z",
+    "source": "profile_snapshot",
+    "source_id": "U-03415@2026-09-29T11:51:21.403Z",
+    "observed_at": "2026-09-29T11:51:21.403Z",
+    "freshness_s": 183092.4
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03415@2026-09-29T11:51:21.403Z",
+    "observed_at": "2026-09-29T11:51:21.403Z",
+    "freshness_s": 183092.4
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-03415@2026-09-29T11:51:21.403Z",
+    "observed_at": "2026-09-29T11:51:21.403Z",
+    "freshness_s": 183092.4
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T14:42:53.821Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 20,
+    "source": "event_stream",
+    "source_id": "57244dc1-374e-4ffc-9868-2223afbc7dc4",
+    "observed_at": "2026-09-23T01:12:11.518Z",
+    "freshness_s": 739842.3
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "c737fb84-1251-4988-88e7-6c7dc4c66455",
+    "observed_at": "2026-09-21T16:59:16.134Z",
+    "freshness_s": 855817.7
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-19",
+     "2026-09-21",
+     "2026-09-23"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "58f2a6ce-9fa1-4adc-b2ae-a313f80ef3c1",
+    "observed_at": "2026-09-27T05:37:52.227Z",
+    "freshness_s": 378301.6
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "594024bc-92a3-448c-bd99-4ca43d000f63",
+    "observed_at": "2026-10-01T14:42:53.821Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d3",
+      "ref": "event:594024bc-92a3-448c-bd99-4ca43d000f63"
+     },
+     {
+      "source": "profile",
+      "value": "d5",
+      "ref": "profile:U-03415"
+     }
+    ],
+    "chosen": "app_setting:d3",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001906",
+   "deliver_at": "2026-10-01T14:42:53.821Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): lomobha-moni-d3: reached episode 3/35, last played 2026-09-23T01:12:11.518Z; 15 titles promotable in d3 at publish time",
+   "confidence": 0.83
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000820",
+   "decision_id": "D-001906",
+   "user_id": "U-03415",
+   "trigger_event_id": "594024bc-92a3-448c-bd99-4ca43d000f63",
+   "published_at": "2026-10-01T14:42:55.066Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0908",
+   "rows": [
+    {
+     "row_type": "next_episode",
+     "title_ids": [
+      "T0901",
+      "T0903",
+      "T0907",
+      "T0913",
+      "T0910"
+     ]
+    },
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0906",
+      "T0914",
+      "T0911",
+      "T0905",
+      "T0904",
+      "T0909"
+     ]
+    }
+   ],
+   "plan_id": 1071,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000821",
+   "decision_id": "D-001906",
+   "user_id": "U-03415",
+   "trigger_event_id": "594024bc-92a3-448c-bd99-4ca43d000f63",
+   "published_at": "2026-10-01T14:42:55.066Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0908",
+   "dialect": "d3",
+   "text": {
+    "title": "Lomobha Moni",
+    "body": "Lomobha Moni ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0908",
+   "plan_id": 1071,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 1071,
+   "viewer_id": "U-03415",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "lomobha-moni-d3",
+    "title_id": "T0908",
+    "next_episode_index": 3,
+    "total_episodes": 35
+   },
+   "started_at": "2026-10-01T14:42:54.264Z",
+   "deadline": "2026-10-04T14:42:54.264Z",
+   "decision_id": "D-001906",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1096,
+   "plan_id": 1071,
+   "viewer_id": "U-03415",
+   "at": "2026-10-01T14:42:54.264Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-001906"
+   }
+  },
+  {
+   "id": 2569,
+   "plan_id": 1071,
+   "viewer_id": "U-03415",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1071,
+   "viewer_id": "U-03415",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 0,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000820",
+     "A-000821"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1173,
+   "viewer_id": "U-03415",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 0, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:1071"
+   ]
+  },
+  {
+   "id": 1174,
+   "viewer_id": "U-03415",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "page_not_seen",
+   "detail": "published page(s) were never shown (viewer did not reach home while live, or app dialect changed)",
+   "evidence": [
+    "plan:1071"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,318 @@
+{
+ "viewer_id": "U-02943",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-002408",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02943@2026-09-29T12:14:07.997Z",
+    "observed_at": "2026-09-29T12:14:07.997Z",
+    "freshness_s": 188251.8
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d4",
+    "source": "event",
+    "source_id": "6dfc09c8-ea5e-4b0f-a43c-227058473a79",
+    "observed_at": "2026-10-01T16:31:39.784Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d4",
+    "source": "profile_snapshot",
+    "source_id": "U-02943@2026-09-29T12:14:07.997Z",
+    "observed_at": "2026-09-29T12:14:07.997Z",
+    "freshness_s": 188251.8
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "lapsed",
+    "source": "profile_snapshot",
+    "source_id": "U-02943@2026-09-29T12:14:07.997Z",
+    "observed_at": "2026-09-29T12:14:07.997Z",
+    "freshness_s": 188251.8
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02943@2026-09-29T12:14:07.997Z",
+    "observed_at": "2026-09-29T12:14:07.997Z",
+    "freshness_s": 188251.8
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-05-26T00:11:48.077Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02943@2026-09-29T12:14:07.997Z",
+    "observed_at": "2026-09-29T12:14:07.997Z",
+    "freshness_s": 188251.8
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02943@2026-09-29T12:14:07.997Z",
+    "observed_at": "2026-09-29T12:14:07.997Z",
+    "freshness_s": 188251.8
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02943@2026-09-29T12:14:07.997Z",
+    "observed_at": "2026-09-29T12:14:07.997Z",
+    "freshness_s": 188251.8
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T16:31:39.784Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 16,
+    "source": "event_stream",
+    "source_id": "36d92e6d-28f9-4281-b619-87e977176c16",
+    "observed_at": "2026-09-29T12:35:05.823Z",
+    "freshness_s": 186994.0
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 6,
+    "source": "event_stream",
+    "source_id": "0ecb6bfc-95b2-4330-99f0-a7a070f88954",
+    "observed_at": "2026-09-28T12:42:07.180Z",
+    "freshness_s": 272972.6
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-21",
+     "2026-09-22",
+     "2026-09-25",
+     "2026-09-26",
+     "2026-09-28",
+     "2026-09-29"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 11,
+    "source": "event_stream",
+    "source_id": "294207d8-1124-4d35-8c80-62577b5bb475",
+    "observed_at": "2026-09-29T12:33:25.482Z",
+    "freshness_s": 187094.3
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "6dfc09c8-ea5e-4b0f-a43c-227058473a79",
+    "observed_at": "2026-10-01T16:31:39.784Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-002408",
+   "deliver_at": "2026-10-01T16:31:39.784Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): bagi-baya-d4: reached episode 2/40, last played 2026-09-22T15:13:42.115Z; 167 titles promotable in d4 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.88
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-001045",
+   "decision_id": "D-002408",
+   "user_id": "U-02943",
+   "trigger_event_id": "6dfc09c8-ea5e-4b0f-a43c-227058473a79",
+   "published_at": "2026-10-01T16:31:41.032Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d4",
+   "hero_title_id": "T1811",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T1034",
+      "T1825",
+      "T0917",
+      "T1156",
+      "T0967",
+      "T1008",
+      "T0923",
+      "T1829"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0918",
+      "T0925",
+      "T0932",
+      "T0926",
+      "T0927",
+      "T0922",
+      "T0920"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0937",
+      "T1155",
+      "T1162",
+      "T1048",
+      "T0988",
+      "T1105",
+      "T1051",
+      "T1092"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0938",
+      "T1009",
+      "T0953",
+      "T1017",
+      "T1095",
+      "T1108"
+     ]
+    }
+   ],
+   "plan_id": 1357,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-001046",
+   "decision_id": "D-002408",
+   "user_id": "U-02943",
+   "trigger_event_id": "6dfc09c8-ea5e-4b0f-a43c-227058473a79",
+   "published_at": "2026-10-01T16:31:41.032Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T1811",
+   "dialect": "d4",
+   "text": {
+    "title": "Bagi Baya (English)",
+    "body": "Bagi Baya (English) ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T1811",
+   "plan_id": 1357,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 1357,
+   "viewer_id": "U-02943",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "bagi-baya-d4",
+    "title_id": "T1811",
+    "next_episode_index": 2,
+    "total_episodes": 40
+   },
+   "started_at": "2026-10-01T16:31:40.226Z",
+   "deadline": "2026-10-04T16:31:40.226Z",
+   "decision_id": "D-002408",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1388,
+   "plan_id": 1357,
+   "viewer_id": "U-02943",
+   "at": "2026-10-01T16:31:40.226Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-002408"
+   }
+  },
+  {
+   "id": 2853,
+   "plan_id": 1357,
+   "viewer_id": "U-02943",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1357,
+   "viewer_id": "U-02943",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-001045",
+     "A-001046"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1477,
+   "viewer_id": "U-02943",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 1, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:1357"
+   ]
+  }
+ ]
+}

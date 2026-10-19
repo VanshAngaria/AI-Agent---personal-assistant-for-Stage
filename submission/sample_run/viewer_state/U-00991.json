@@ -1,0 +1,288 @@
+{
+ "viewer_id": "U-00991",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-002325",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00991@2026-09-29T04:38:51.800Z",
+    "observed_at": "2026-09-29T04:38:51.800Z",
+    "freshness_s": 214203.9
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d3",
+    "source": "event",
+    "source_id": "9df44a85-d6a1-49ec-81ec-9b82c952be9a",
+    "observed_at": "2026-10-01T16:08:55.683Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d3",
+    "source": "profile_snapshot",
+    "source_id": "U-00991@2026-09-29T04:38:51.800Z",
+    "observed_at": "2026-09-29T04:38:51.800Z",
+    "freshness_s": 214203.9
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-00991@2026-09-29T04:38:51.800Z",
+    "observed_at": "2026-09-29T04:38:51.800Z",
+    "freshness_s": 214203.9
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "810861ca-05b5-427d-b8f2-be664a109d7e",
+    "observed_at": "2026-09-20T21:20:31.647Z",
+    "freshness_s": 931704.0
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-07-07T20:04:03.569Z",
+    "source": "profile_snapshot",
+    "source_id": "U-00991@2026-09-29T04:38:51.800Z",
+    "observed_at": "2026-09-29T04:38:51.800Z",
+    "freshness_s": 214203.9
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00991@2026-09-29T04:38:51.800Z",
+    "observed_at": "2026-09-29T04:38:51.800Z",
+    "freshness_s": 214203.9
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00991@2026-09-29T04:38:51.800Z",
+    "observed_at": "2026-09-29T04:38:51.800Z",
+    "freshness_s": 214203.9
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T16:08:55.683Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 6,
+    "source": "event_stream",
+    "source_id": "60154182-9d9d-4e8c-8c49-0a4821b16f00",
+    "observed_at": "2026-09-28T14:12:41.171Z",
+    "freshness_s": 266174.5
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "81d5acf8-e8bf-4be0-9530-f31daa5e87cd",
+    "observed_at": "2026-09-28T14:14:31.200Z",
+    "freshness_s": 266064.5
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-23",
+     "2026-09-24",
+     "2026-09-28"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 8,
+    "source": "event_stream",
+    "source_id": "dba3bba1-9be0-4e47-a594-4a711b5187f9",
+    "observed_at": "2026-09-30T15:07:13.951Z",
+    "freshness_s": 90101.7
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "9df44a85-d6a1-49ec-81ec-9b82c952be9a",
+    "observed_at": "2026-10-01T16:08:55.683Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-002325",
+   "deliver_at": "2026-10-01T16:08:55.683Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): lomobha-moni-d3: reached episode 1/35, last played 2026-09-28T14:12:41.171Z; 15 titles promotable in d3 at publish time",
+   "confidence": 0.88
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-001013",
+   "decision_id": "D-002325",
+   "user_id": "U-00991",
+   "trigger_event_id": "9df44a85-d6a1-49ec-81ec-9b82c952be9a",
+   "published_at": "2026-10-01T16:08:56.926Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0908",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0913",
+      "T0909",
+      "T0904",
+      "T0905",
+      "T0903"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0901",
+      "T0902",
+      "T0907",
+      "T0914",
+      "T0910",
+      "T0906",
+      "T0911"
+     ]
+    }
+   ],
+   "plan_id": 1315,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-001014",
+   "decision_id": "D-002325",
+   "user_id": "U-00991",
+   "trigger_event_id": "9df44a85-d6a1-49ec-81ec-9b82c952be9a",
+   "published_at": "2026-10-01T16:08:56.926Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0908",
+   "dialect": "d3",
+   "text": {
+    "title": "Lomobha Moni",
+    "body": "The next episode of Lomobha Moni is ready. Pick up where you left off."
+   },
+   "deeplink": "ott://title/T0908",
+   "plan_id": 1315,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 1315,
+   "viewer_id": "U-00991",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "lomobha-moni-d3",
+    "title_id": "T0908",
+    "next_episode_index": 1,
+    "total_episodes": 35
+   },
+   "started_at": "2026-10-01T16:08:56.124Z",
+   "deadline": "2026-10-04T16:08:56.124Z",
+   "decision_id": "D-002325",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1345,
+   "plan_id": 1315,
+   "viewer_id": "U-00991",
+   "at": "2026-10-01T16:08:56.124Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-002325"
+   }
+  },
+  {
+   "id": 2811,
+   "plan_id": 1315,
+   "viewer_id": "U-00991",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1315,
+   "viewer_id": "U-00991",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-001013",
+     "A-001014"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1433,
+   "viewer_id": "U-00991",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 1, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:1315"
+   ]
+  }
+ ]
+}

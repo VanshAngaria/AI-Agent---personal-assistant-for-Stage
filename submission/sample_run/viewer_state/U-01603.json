@@ -1,0 +1,180 @@
+{
+ "viewer_id": "U-01603",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001086",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01603@2026-09-28T22:51:20.638Z",
+    "observed_at": "2026-09-28T22:51:20.638Z",
+    "freshness_s": 208671.8
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "720305ca-19af-4c74-9b35-36c8b2a3fc16",
+    "observed_at": "2026-10-01T08:49:12.470Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d4",
+    "source": "profile_snapshot",
+    "source_id": "U-01603@2026-09-28T22:51:20.638Z",
+    "observed_at": "2026-09-28T22:51:20.638Z",
+    "freshness_s": 208671.8
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-01603@2026-09-28T22:51:20.638Z",
+    "observed_at": "2026-09-28T22:51:20.638Z",
+    "freshness_s": 208671.8
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "61bdef59-6b13-4290-a465-1253ea4d651a",
+    "observed_at": "2026-09-01T15:44:29.948Z",
+    "freshness_s": 2567082.5
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-04-20T07:37:18.571Z",
+    "source": "profile_snapshot",
+    "source_id": "U-01603@2026-09-28T22:51:20.638Z",
+    "observed_at": "2026-09-28T22:51:20.638Z",
+    "freshness_s": 208671.8
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01603@2026-09-28T22:51:20.638Z",
+    "observed_at": "2026-09-28T22:51:20.638Z",
+    "freshness_s": 208671.8
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01603@2026-09-28T22:51:20.638Z",
+    "observed_at": "2026-09-28T22:51:20.638Z",
+    "freshness_s": 208671.8
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T08:49:12.470Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "e7e54bd0-b47f-4918-bc2c-c4f74cc57a1c",
+    "observed_at": "2026-09-02T03:24:31.823Z",
+    "freshness_s": 2525080.6
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "de1d7363-3d27-49e4-a7ba-a13e72900ca2",
+    "observed_at": "2026-09-02T04:04:59.470Z",
+    "freshness_s": 2522653.0
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "5a7d8c7c-b16a-451b-933f-adf85b770863",
+    "observed_at": "2026-09-30T08:49:18.277Z",
+    "freshness_s": 86394.2
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "720305ca-19af-4c74-9b35-36c8b2a3fc16",
+    "observed_at": "2026-10-01T08:49:12.470Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "profile_row",
+    "values": [
+     {
+      "source": "profile_snapshot",
+      "updated_at": "2026-08-25T07:36:04.179Z",
+      "subscription_status": "active",
+      "preferred_dialect": "d1"
+     },
+     {
+      "source": "profile_snapshot",
+      "updated_at": "2026-09-28T22:51:20.638Z",
+      "subscription_status": "active",
+      "preferred_dialect": "d4"
+     }
+    ],
+    "chosen": "profile_snapshot@2026-09-28T22:51:20.638Z",
+    "why": "warehouse holds 2 versions differing in preferred_dialect, updated_at; the later updated_at is the working row, the other stays visible"
+   },
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d2",
+      "ref": "event:720305ca-19af-4c74-9b35-36c8b2a3fc16"
+     },
+     {
+      "source": "profile",
+      "value": "d4",
+      "ref": "profile:U-01603"
+     }
+    ],
+    "chosen": "app_setting:d2",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001086",
+   "deliver_at": "2026-10-01T08:49:12.470Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 53181s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

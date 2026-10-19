@@ -1,0 +1,113 @@
+{
+  "decisions": 2687,
+  "actions": 1154,
+  "redeliveries": 90,
+  "live_events": {
+    "ingested": 600,
+    "duplicate": 7,
+    "plan_closed_succeeded": 13,
+    "plan_closed_inconclusive": 3
+  },
+  "controls": [
+    {
+      "at": "2026-10-01T07:00:00.000Z",
+      "type": "title_withdrawn",
+      "affected": {
+        "live_pages": [
+          "A-000189",
+          "A-000193",
+          "A-000241",
+          "A-000256",
+          "A-000269",
+          "A-000275",
+          "A-000276",
+          "A-000295"
+        ],
+        "replacements": [
+          {
+            "page": "A-000189",
+            "decision_id": "D-000835",
+            "status": "PUBLISHED",
+            "replacement": "A-000308"
+          },
+          {
+            "page": "A-000193",
+            "decision_id": "D-000836",
+            "status": "PUBLISHED",
+            "replacement": "A-000309"
+          },
+          {
+            "page": "A-000241",
+            "decision_id": "D-000837",
+            "status": "PUBLISHED",
+            "replacement": "A-000310"
+          },
+          {
+            "page": "A-000256",
+            "decision_id": "D-000838",
+            "status": "PUBLISHED",
+            "replacement": "A-000311"
+          },
+          {
+            "page": "A-000269",
+            "decision_id": "D-000839",
+            "status": "PUBLISHED",
+            "replacement": "A-000312"
+          },
+          {
+            "page": "A-000275",
+            "decision_id": "D-000840",
+            "status": "PUBLISHED",
+            "replacement": "A-000313"
+          },
+          {
+            "page": "A-000276",
+            "decision_id": "D-000841",
+            "status": "PUBLISHED",
+            "replacement": "A-000314"
+          },
+          {
+            "page": "A-000295",
+            "decision_id": "D-000842",
+            "status": "PUBLISHED",
+            "replacement": "A-000315"
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-10-01T08:30:00.000Z",
+      "type": "goal_rule_corrected",
+      "affected": {
+        "new_version": "G03@2026-09-30.r2",
+        "open_plans_updated": [],
+        "viewers": [],
+        "other_viewers_reprocessed": 0
+      }
+    },
+    {
+      "at": "2026-10-01T10:35:00.000Z",
+      "type": "dependency_unavailable",
+      "affected": {
+        "dependency": "model_provider",
+        "window": [
+          "2026-10-01T10:35:00.000Z",
+          "2026-10-01T10:42:00.000Z"
+        ],
+        "mode": "unavailable"
+      }
+    },
+    {
+      "at": "2026-10-01T13:10:00.000Z",
+      "type": "dependency_degraded",
+      "affected": {
+        "dependency": "user_data_store",
+        "window": [
+          "2026-10-01T13:10:00.000Z",
+          "2026-10-01T13:17:00.000Z"
+        ],
+        "mode": "degraded"
+      }
+    }
+  ]
+}

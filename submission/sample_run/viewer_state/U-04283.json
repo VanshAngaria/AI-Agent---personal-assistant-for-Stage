@@ -1,0 +1,244 @@
+{
+ "viewer_id": "U-04283",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-002274",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04283@2026-09-29T00:54:24.426Z",
+    "observed_at": "2026-09-29T00:54:24.426Z",
+    "freshness_s": 226627.9
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d7",
+    "source": "event",
+    "source_id": "dcf0cd40-a53e-4bf4-8c9c-1a2767426aa6",
+    "observed_at": "2026-10-01T15:51:32.363Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d6",
+    "source": "profile_snapshot",
+    "source_id": "U-04283@2026-09-29T00:54:24.426Z",
+    "observed_at": "2026-09-29T00:54:24.426Z",
+    "freshness_s": 226627.9
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-04283@2026-09-29T00:54:24.426Z",
+    "observed_at": "2026-09-29T00:54:24.426Z",
+    "freshness_s": 226627.9
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04283@2026-09-29T00:54:24.426Z",
+    "observed_at": "2026-09-29T00:54:24.426Z",
+    "freshness_s": 226627.9
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-07-26T01:52:03.215Z",
+    "source": "profile_snapshot",
+    "source_id": "U-04283@2026-09-29T00:54:24.426Z",
+    "observed_at": "2026-09-29T00:54:24.426Z",
+    "freshness_s": 226627.9
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04283@2026-09-29T00:54:24.426Z",
+    "observed_at": "2026-09-29T00:54:24.426Z",
+    "freshness_s": 226627.9
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04283@2026-09-29T00:54:24.426Z",
+    "observed_at": "2026-09-29T00:54:24.426Z",
+    "freshness_s": 226627.9
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T15:51:32.363Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "1e2570b2-ba06-495e-ba34-e56778d9c850",
+    "observed_at": "2026-09-18T13:19:49.905Z",
+    "freshness_s": 1132302.5
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "b0abe150-b4f6-49a4-8162-c962cf3193e7",
+    "observed_at": "2026-09-18T14:00:19.105Z",
+    "freshness_s": 1129873.3
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-18"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "9d6ce0c8-ff51-4798-a2b4-0ffbd70a33dc",
+    "observed_at": "2026-09-23T17:12:47.224Z",
+    "freshness_s": 686325.1
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "dcf0cd40-a53e-4bf4-8c9c-1a2767426aa6",
+    "observed_at": "2026-10-01T15:51:32.363Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d7",
+      "ref": "event:dcf0cd40-a53e-4bf4-8c9c-1a2767426aa6"
+     },
+     {
+      "source": "profile",
+      "value": "d6",
+      "ref": "profile:U-04283"
+     }
+    ],
+    "chosen": null,
+    "why": "app is set to 'd7', which has no catalogue content; profile/link dialects would not be shown, so no dialect can be used"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-002274",
+   "deliver_at": "2026-10-01T15:51:32.363Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": "G07",
+   "reason": "holdout arm: no action of any kind (messaging policy rule 5); the goal is recorded as a shadow goal so both arms are judged the same way",
+   "confidence": 0.99
+  }
+ ],
+ "actions": [],
+ "plans": [
+  {
+   "plan_id": 1287,
+   "viewer_id": "U-04283",
+   "arm": "holdout",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "molo-d2",
+    "title_id": "T0521",
+    "next_episode_index": 1,
+    "total_episodes": 7
+   },
+   "started_at": "2026-10-01T15:51:32.804Z",
+   "deadline": "2026-10-04T15:51:32.804Z",
+   "decision_id": "D-002274",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1317,
+   "plan_id": 1287,
+   "viewer_id": "U-04283",
+   "at": "2026-10-01T15:51:32.804Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-002274"
+   }
+  },
+  {
+   "id": 2783,
+   "plan_id": 1287,
+   "viewer_id": "U-04283",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1287,
+   "viewer_id": "U-04283",
+   "arm": "holdout",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 0,
+    "pages_shown": 0,
+    "messages_sent": 0,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": []
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1405,
+   "viewer_id": "U-04283",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 0, messages delivered 0); cool down this goal before retrying",
+   "evidence": [
+    "plan:1287"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,394 @@
+{
+ "viewer_id": "U-04720",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-002218",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04720@2026-09-28T19:00:00.437Z",
+    "observed_at": "2026-09-28T19:00:00.437Z",
+    "freshness_s": 246787.1
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d1",
+    "source": "event",
+    "source_id": "0778555b-5fd0-4115-a157-6d1766f2e813",
+    "observed_at": "2026-10-01T15:33:07.494Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d1",
+    "source": "profile_snapshot",
+    "source_id": "U-04720@2026-09-28T19:00:00.437Z",
+    "observed_at": "2026-09-28T19:00:00.437Z",
+    "freshness_s": 246787.1
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-04720@2026-09-28T19:00:00.437Z",
+    "observed_at": "2026-09-28T19:00:00.437Z",
+    "freshness_s": 246787.1
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04720@2026-09-28T19:00:00.437Z",
+    "observed_at": "2026-09-28T19:00:00.437Z",
+    "freshness_s": 246787.1
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-11-28T21:16:42.318Z",
+    "source": "profile_snapshot",
+    "source_id": "U-04720@2026-09-28T19:00:00.437Z",
+    "observed_at": "2026-09-28T19:00:00.437Z",
+    "freshness_s": 246787.1
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04720@2026-09-28T19:00:00.437Z",
+    "observed_at": "2026-09-28T19:00:00.437Z",
+    "freshness_s": 246787.1
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04720@2026-09-28T19:00:00.437Z",
+    "observed_at": "2026-09-28T19:00:00.437Z",
+    "freshness_s": 246787.1
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T15:33:07.494Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "2c34ffc9-5fef-48dd-958f-becd9359a6f4",
+    "observed_at": "2026-09-20T07:14:22.965Z",
+    "freshness_s": 980324.5
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "d179da3b-daa4-42ac-8ca9-d0621732c52d",
+    "observed_at": "2026-09-20T07:40:08.199Z",
+    "freshness_s": 978779.3
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-20"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "8693fa5c-8e0e-4968-adda-3ae5d6633a21",
+    "observed_at": "2026-09-30T19:03:24.232Z",
+    "freshness_s": 73783.3
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "0778555b-5fd0-4115-a157-6d1766f2e813",
+    "observed_at": "2026-10-01T15:33:07.494Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000015",
+   "deliver_at": "2026-09-30T19:03:24.232Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): tidha-dakachu-d1: reached episode 1/17, last played 2026-09-20T07:14:22.965Z; 323 titles promotable in d1 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.83
+  },
+  {
+   "decision_id": "D-002218",
+   "deliver_at": "2026-10-01T15:33:07.494Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 15 (G07) started 2026-09-30T19:03:24.673Z; 322 titles promotable in d1 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.78
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000012",
+   "decision_id": "D-000015",
+   "user_id": "U-04720",
+   "trigger_event_id": "8693fa5c-8e0e-4968-adda-3ae5d6633a21",
+   "published_at": "2026-09-30T19:03:25.476Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d1",
+   "hero_title_id": "T0294",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0141",
+      "T0484",
+      "T0299",
+      "T0408",
+      "T0448",
+      "T0148",
+      "T0385",
+      "T0041"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0003",
+      "T0009",
+      "T0004",
+      "T0006",
+      "T0008",
+      "T0010",
+      "T0014",
+      "T0007"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0047",
+      "T0063",
+      "T0382",
+      "T0435",
+      "T0195",
+      "T0036",
+      "T0137",
+      "T0511"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0012",
+      "T0025",
+      "T0049",
+      "T0252",
+      "T0229",
+      "T0142",
+      "T0182",
+      "T0098"
+     ]
+    }
+   ],
+   "plan_id": 15,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000013",
+   "decision_id": "D-000015",
+   "user_id": "U-04720",
+   "trigger_event_id": "8693fa5c-8e0e-4968-adda-3ae5d6633a21",
+   "published_at": "2026-09-30T19:03:25.476Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0005",
+   "dialect": "d1",
+   "text": {
+    "title": "Tidha Dakachu",
+    "body": "Tidha Dakachu ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0005",
+   "plan_id": 15,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000964",
+   "decision_id": "D-002218",
+   "user_id": "U-04720",
+   "trigger_event_id": "0778555b-5fd0-4115-a157-6d1766f2e813",
+   "published_at": "2026-10-01T15:33:07.939Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d1",
+   "hero_title_id": "T0294",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0141",
+      "T0484",
+      "T0299",
+      "T0408",
+      "T0448",
+      "T0148",
+      "T0385",
+      "T0041"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0003",
+      "T0009",
+      "T0004",
+      "T0006",
+      "T0008",
+      "T0010",
+      "T0014",
+      "T0007"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0047",
+      "T0063",
+      "T0382",
+      "T0435",
+      "T0195",
+      "T0036",
+      "T0137",
+      "T0511"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0012",
+      "T0049",
+      "T0252",
+      "T0229",
+      "T0142",
+      "T0182",
+      "T0098",
+      "T0124"
+     ]
+    }
+   ],
+   "plan_id": 15,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 15,
+   "viewer_id": "U-04720",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "tidha-dakachu-d1",
+    "title_id": "T0005",
+    "next_episode_index": 1,
+    "total_episodes": 17
+   },
+   "started_at": "2026-09-30T19:03:24.673Z",
+   "deadline": "2026-10-03T19:03:24.673Z",
+   "decision_id": "D-000015",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 17,
+   "plan_id": 15,
+   "viewer_id": "U-04720",
+   "at": "2026-09-30T19:03:24.673Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000015"
+   }
+  },
+  {
+   "id": 1526,
+   "plan_id": 15,
+   "viewer_id": "U-04720",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 15,
+   "viewer_id": "U-04720",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 2,
+    "pages_shown": 2,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000012",
+     "A-000013",
+     "A-000964"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 31,
+   "viewer_id": "U-04720",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 2, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:15"
+   ]
+  }
+ ]
+}

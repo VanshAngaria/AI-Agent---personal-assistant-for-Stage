@@ -1,0 +1,148 @@
+{
+ "viewer_id": "U-03613",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-000264",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03613@2026-09-29T10:39:38.037Z",
+    "observed_at": "2026-09-29T10:39:38.037Z",
+    "freshness_s": 148042.6
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "64c7d98f-0aa7-42d8-848f-2b90ecd6bb24",
+    "observed_at": "2026-10-01T03:47:00.673Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d2",
+    "source": "profile_snapshot",
+    "source_id": "U-03613@2026-09-29T10:39:38.037Z",
+    "observed_at": "2026-09-29T10:39:38.037Z",
+    "freshness_s": 148042.6
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-03613@2026-09-29T10:39:38.037Z",
+    "observed_at": "2026-09-29T10:39:38.037Z",
+    "freshness_s": 148042.6
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "ff6a24a6-baa4-4e4f-9151-26a63a1fc5af",
+    "observed_at": "2026-09-13T21:11:24.728Z",
+    "freshness_s": 1492535.9
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-03-25T10:05:49.400Z",
+    "source": "profile_snapshot",
+    "source_id": "U-03613@2026-09-29T10:39:38.037Z",
+    "observed_at": "2026-09-29T10:39:38.037Z",
+    "freshness_s": 148042.6
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-03613@2026-09-29T10:39:38.037Z",
+    "observed_at": "2026-09-29T10:39:38.037Z",
+    "freshness_s": 148042.6
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-03613@2026-09-29T10:39:38.037Z",
+    "observed_at": "2026-09-29T10:39:38.037Z",
+    "freshness_s": 148042.6
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T03:47:00.673Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 11,
+    "source": "event_stream",
+    "source_id": "282dd886-767d-4d68-a8d4-2b495456fc6f",
+    "observed_at": "2026-09-30T16:44:10.201Z",
+    "freshness_s": 39770.5
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 6,
+    "source": "event_stream",
+    "source_id": "854baef4-9a3a-487c-b279-8c607af81fc0",
+    "observed_at": "2026-09-30T16:46:57.428Z",
+    "freshness_s": 39603.2
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-21",
+     "2026-09-26",
+     "2026-09-28",
+     "2026-09-30"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "129d386e-b9af-460f-b6a7-c7898864e355",
+    "observed_at": "2026-09-30T16:43:32.230Z",
+    "freshness_s": 39808.4
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "64c7d98f-0aa7-42d8-848f-2b90ecd6bb24",
+    "observed_at": "2026-10-01T03:47:00.673Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000264",
+   "deliver_at": "2026-10-01T03:47:00.673Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 720106s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

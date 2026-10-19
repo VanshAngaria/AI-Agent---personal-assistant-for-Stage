@@ -1,0 +1,147 @@
+{
+ "viewer_id": "U-04044",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-000662",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04044@2026-09-29T15:44:34.548Z",
+    "observed_at": "2026-09-29T15:44:34.548Z",
+    "freshness_s": 135992.2
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d4",
+    "source": "event",
+    "source_id": "77e7b0cb-d356-4908-9ec0-f252a3f1a282",
+    "observed_at": "2026-10-01T05:31:06.781Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d4",
+    "source": "profile_snapshot",
+    "source_id": "U-04044@2026-09-29T15:44:34.548Z",
+    "observed_at": "2026-09-29T15:44:34.548Z",
+    "freshness_s": 135992.2
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-04044@2026-09-29T15:44:34.548Z",
+    "observed_at": "2026-09-29T15:44:34.548Z",
+    "freshness_s": 135992.2
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "53547993-d1cf-48f2-a554-7abeb61fd54e",
+    "observed_at": "2026-09-17T13:05:18.707Z",
+    "freshness_s": 1182348.1
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-01-12T17:36:02.672Z",
+    "source": "profile_snapshot",
+    "source_id": "U-04044@2026-09-29T15:44:34.548Z",
+    "observed_at": "2026-09-29T15:44:34.548Z",
+    "freshness_s": 135992.2
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04044@2026-09-29T15:44:34.548Z",
+    "observed_at": "2026-09-29T15:44:34.548Z",
+    "freshness_s": 135992.2
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04044@2026-09-29T15:44:34.548Z",
+    "observed_at": "2026-09-29T15:44:34.548Z",
+    "freshness_s": 135992.2
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T05:31:06.781Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 6,
+    "source": "event_stream",
+    "source_id": "1f6c0ea8-e3b4-48ae-9dec-c1dffaad10fb",
+    "observed_at": "2026-09-24T13:17:38.721Z",
+    "freshness_s": 576808.1
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "70f8e6a4-4fe9-40ff-9db0-dbb0b3263c91",
+    "observed_at": "2026-09-20T01:16:21.533Z",
+    "freshness_s": 965685.2
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-20",
+     "2026-09-23",
+     "2026-09-24"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 5,
+    "source": "event_stream",
+    "source_id": "4821249d-73b7-4a30-ad0b-c214982a870d",
+    "observed_at": "2026-09-30T14:50:21.417Z",
+    "freshness_s": 52845.4
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "77e7b0cb-d356-4908-9ec0-f252a3f1a282",
+    "observed_at": "2026-10-01T05:31:06.781Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000662",
+   "deliver_at": "2026-10-01T05:31:06.781Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 798s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

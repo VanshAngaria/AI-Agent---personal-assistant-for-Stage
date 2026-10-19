@@ -1,0 +1,199 @@
+{
+ "viewer_id": "U-01363",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-002511",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01363@2026-09-29T08:59:47.129Z",
+    "observed_at": "2026-09-29T08:59:47.129Z",
+    "freshness_s": 201786.6
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d7",
+    "source": "event",
+    "source_id": "669ace1c-be8b-4683-9708-67c5dc239087",
+    "observed_at": "2026-10-01T17:02:53.767Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d7",
+    "source": "profile_snapshot",
+    "source_id": "U-01363@2026-09-29T08:59:47.129Z",
+    "observed_at": "2026-09-29T08:59:47.129Z",
+    "freshness_s": 201786.6
+   },
+   {
+    "fact_key": "dialect.campaign_link",
+    "value": "d5",
+    "source": "event",
+    "source_id": "669ace1c-be8b-4683-9708-67c5dc239087",
+    "observed_at": "2026-10-01T17:02:53.767Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "lapsed",
+    "source": "profile_snapshot",
+    "source_id": "U-01363@2026-09-29T08:59:47.129Z",
+    "observed_at": "2026-09-29T08:59:47.129Z",
+    "freshness_s": 201786.6
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01363@2026-09-29T08:59:47.129Z",
+    "observed_at": "2026-09-29T08:59:47.129Z",
+    "freshness_s": 201786.6
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-05-07T11:31:17.063Z",
+    "source": "profile_snapshot",
+    "source_id": "U-01363@2026-09-29T08:59:47.129Z",
+    "observed_at": "2026-09-29T08:59:47.129Z",
+    "freshness_s": 201786.6
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01363@2026-09-29T08:59:47.129Z",
+    "observed_at": "2026-09-29T08:59:47.129Z",
+    "freshness_s": 201786.6
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01363@2026-09-29T08:59:47.129Z",
+    "observed_at": "2026-09-29T08:59:47.129Z",
+    "freshness_s": 201786.6
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T17:02:53.767Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "96d2ad7f-bc73-4f4d-9373-69020ea1db76",
+    "observed_at": "2026-09-08T06:37:19.597Z",
+    "freshness_s": 2024734.2
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "126ca077-ac9e-452b-b5ac-f950cac6674f",
+    "observed_at": "2026-10-01T15:30:25.958Z",
+    "freshness_s": 5547.8
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "669ace1c-be8b-4683-9708-67c5dc239087",
+    "observed_at": "2026-10-01T17:02:53.767Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d7",
+      "ref": "event:669ace1c-be8b-4683-9708-67c5dc239087"
+     },
+     {
+      "source": "campaign_link",
+      "value": "d5",
+      "ref": "event:669ace1c-be8b-4683-9708-67c5dc239087"
+     }
+    ],
+    "chosen": null,
+    "why": "app is set to 'd7', which has no catalogue content; profile/link dialects would not be shown, so no dialect can be used"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000823",
+   "deliver_at": "2026-10-01T06:54:19.548Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "no measurable goal the viewer is eligible for yet: G01 signed up 146.8d ago (limit 7d); G02 cannot prove 'never episode_completed': signup predates the event history (or is unknown); G03 signed up 146.8d ago (limit 2d); G04 status 'lapsed' not in ['trial_active']; G05 status 'lapsed' not in ['never']; G06 no subscription_lapsed in the last 30 days: recency unprovable; G07 no followed, unfinished series idle for 3+ days; G08 status 'lapsed' not in ['active']; G09 status 'lapsed' not in ['active']; G10 unmeasurable: success event is null / its condition is not an observable signal; never committed, no proxy invented; G11 unmeasurable: success event 'tv_app_open' never appears in the event stream or simulator output; never committed, no proxy invented; G12 app_open within the 14 days before this trigger",
+   "confidence": 0.6
+  },
+  {
+   "decision_id": "D-001485",
+   "deliver_at": "2026-10-01T12:04:27.339Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "no measurable goal the viewer is eligible for yet: G01 signed up 147.0d ago (limit 7d); G02 cannot prove 'never episode_completed': signup predates the event history (or is unknown); G03 signed up 147.0d ago (limit 2d); G04 status 'lapsed' not in ['trial_active']; G05 status 'lapsed' not in ['never']; G06 no subscription_lapsed in the last 30 days: recency unprovable; G07 no followed, unfinished series idle for 3+ days; G08 status 'lapsed' not in ['active']; G09 status 'lapsed' not in ['active']; G10 unmeasurable: success event is null / its condition is not an observable signal; never committed, no proxy invented; G11 unmeasurable: success event 'tv_app_open' never appears in the event stream or simulator output; never committed, no proxy invented; G12 app_open within the 14 days before this trigger",
+   "confidence": 0.6
+  },
+  {
+   "decision_id": "D-002207",
+   "deliver_at": "2026-10-01T15:30:25.958Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "no measurable goal the viewer is eligible for yet: G01 signed up 147.2d ago (limit 7d); G02 cannot prove 'never episode_completed': signup predates the event history (or is unknown); G03 signed up 147.2d ago (limit 2d); G04 status 'lapsed' not in ['trial_active']; G05 status 'lapsed' not in ['never']; G06 no subscription_lapsed in the last 30 days: recency unprovable; G07 no followed, unfinished series idle for 3+ days; G08 status 'lapsed' not in ['active']; G09 status 'lapsed' not in ['active']; G10 unmeasurable: success event is null / its condition is not an observable signal; never committed, no proxy invented; G11 unmeasurable: success event 'tv_app_open' never appears in the event stream or simulator output; never committed, no proxy invented; G12 app_open within the 14 days before this trigger",
+   "confidence": 0.6
+  },
+  {
+   "decision_id": "D-002511",
+   "deliver_at": "2026-10-01T17:02:53.767Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "no measurable goal the viewer is eligible for yet: G01 signed up 147.2d ago (limit 7d); G02 cannot prove 'never episode_completed': signup predates the event history (or is unknown); G03 signed up 147.2d ago (limit 2d); G04 status 'lapsed' not in ['trial_active']; G05 status 'lapsed' not in ['never']; G06 no subscription_lapsed in the last 30 days: recency unprovable; G07 no followed, unfinished series idle for 3+ days; G08 status 'lapsed' not in ['active']; G09 status 'lapsed' not in ['active']; G10 unmeasurable: success event is null / its condition is not an observable signal; never committed, no proxy invented; G11 unmeasurable: success event 'tv_app_open' never appears in the event stream or simulator output; never committed, no proxy invented; G12 app_open within the 14 days before this trigger",
+   "confidence": 0.55
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

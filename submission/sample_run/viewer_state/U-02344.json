@@ -1,0 +1,453 @@
+{
+ "viewer_id": "U-02344",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-002619",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02344@2026-09-29T10:55:14.640Z",
+    "observed_at": "2026-09-29T10:55:14.640Z",
+    "freshness_s": 197397.1
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d3",
+    "source": "event",
+    "source_id": "df7e6c25-339c-4e40-9a61-de037f1d15ac",
+    "observed_at": "2026-10-01T17:45:11.722Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d1",
+    "source": "profile_snapshot",
+    "source_id": "U-02344@2026-09-29T10:55:14.640Z",
+    "observed_at": "2026-09-29T10:55:14.640Z",
+    "freshness_s": 197397.1
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-02344@2026-09-29T10:55:14.640Z",
+    "observed_at": "2026-09-29T10:55:14.640Z",
+    "freshness_s": 197397.1
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02344@2026-09-29T10:55:14.640Z",
+    "observed_at": "2026-09-29T10:55:14.640Z",
+    "freshness_s": 197397.1
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-01-09T02:54:51.862Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02344@2026-09-29T10:55:14.640Z",
+    "observed_at": "2026-09-29T10:55:14.640Z",
+    "freshness_s": 197397.1
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02344@2026-09-29T10:55:14.640Z",
+    "observed_at": "2026-09-29T10:55:14.640Z",
+    "freshness_s": 197397.1
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02344@2026-09-29T10:55:14.640Z",
+    "observed_at": "2026-09-29T10:55:14.640Z",
+    "freshness_s": 197397.1
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T17:45:11.722Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "116db403-dbb7-4a9b-8750-49847a3256e5",
+    "observed_at": "2026-09-24T06:42:29.335Z",
+    "freshness_s": 644562.4
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "3d6df5f0-5bec-488a-bed1-e9a7dd58d6ea",
+    "observed_at": "2026-09-24T08:23:41.004Z",
+    "freshness_s": 638490.7
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-19",
+     "2026-09-23",
+     "2026-09-24"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 14,
+    "source": "event_stream",
+    "source_id": "77ff802d-30f5-4f8d-a694-f8132a6ab2f4",
+    "observed_at": "2026-10-01T15:12:31.104Z",
+    "freshness_s": 9160.6
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "df7e6c25-339c-4e40-9a61-de037f1d15ac",
+    "observed_at": "2026-10-01T17:45:11.722Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d3",
+      "ref": "event:df7e6c25-339c-4e40-9a61-de037f1d15ac"
+     },
+     {
+      "source": "profile",
+      "value": "d1",
+      "ref": "profile:U-02344"
+     }
+    ],
+    "chosen": "app_setting:d3",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000001",
+   "deliver_at": "2026-09-30T18:32:59.458Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): yatite-roloda-d3: reached episode 1/23, last played 2026-09-23T05:59:59.287Z; 7 titles promotable in d3 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.8
+  },
+  {
+   "decision_id": "D-000760",
+   "deliver_at": "2026-10-01T06:18:42.517Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 1 (G07) started 2026-09-30T18:32:59.900Z; 7 titles promotable in d3 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.75
+  },
+  {
+   "decision_id": "D-001398",
+   "deliver_at": "2026-10-01T11:31:37.818Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 1 (G07) started 2026-09-30T18:32:59.900Z; 7 titles promotable in d3 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.75
+  },
+  {
+   "decision_id": "D-001850",
+   "deliver_at": "2026-10-01T14:26:42.975Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 1 (G07) started 2026-09-30T18:32:59.900Z; 7 titles promotable in d3 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.75
+  },
+  {
+   "decision_id": "D-002136",
+   "deliver_at": "2026-10-01T15:12:31.104Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": "G07",
+   "reason": "page A-000792 for this goal and dialect is live until 2026-10-01T16:26:43.417Z; republishing it would be a duplicate action, and no follow-up message is warranted (no message: this plan already scheduled its one follow-up)",
+   "confidence": 0.85
+  },
+  {
+   "decision_id": "D-002619",
+   "deliver_at": "2026-10-01T17:45:11.722Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 1 (G07) started 2026-09-30T18:32:59.900Z; 7 titles promotable in d3 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.75
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000001",
+   "decision_id": "D-000001",
+   "user_id": "U-02344",
+   "trigger_event_id": "9ffd7200-d9e5-4fd0-8106-bb555fdf33cb",
+   "published_at": "2026-09-30T18:33:00.702Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0901",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0903",
+      "T0907",
+      "T0908",
+      "T0914",
+      "T0913",
+      "T0910"
+     ]
+    }
+   ],
+   "plan_id": 1,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000002",
+   "decision_id": "D-000001",
+   "user_id": "U-02344",
+   "trigger_event_id": "9ffd7200-d9e5-4fd0-8106-bb555fdf33cb",
+   "published_at": "2026-09-30T18:33:00.702Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0901",
+   "dialect": "d3",
+   "text": {
+    "title": "Yatite Roloda",
+    "body": "Yatite Roloda ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0901",
+   "plan_id": 1,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000274",
+   "decision_id": "D-000760",
+   "user_id": "U-02344",
+   "trigger_event_id": "af345733-f9f3-4243-b5bf-c2cf0d2a4860",
+   "published_at": "2026-10-01T06:18:42.959Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0901",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0903",
+      "T0907",
+      "T0908",
+      "T0914",
+      "T0913",
+      "T0910"
+     ]
+    }
+   ],
+   "plan_id": 1,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000582",
+   "decision_id": "D-001398",
+   "user_id": "U-02344",
+   "trigger_event_id": "3dbabf70-3e9b-4998-b397-9eb4b859decf",
+   "published_at": "2026-10-01T11:31:38.260Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0901",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0903",
+      "T0907",
+      "T0908",
+      "T0914",
+      "T0913",
+      "T0910"
+     ]
+    }
+   ],
+   "plan_id": 1,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000792",
+   "decision_id": "D-001850",
+   "user_id": "U-02344",
+   "trigger_event_id": "818de0a8-8e86-4bc3-b00a-2bb62d48bf17",
+   "published_at": "2026-10-01T14:26:43.417Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0901",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0903",
+      "T0907",
+      "T0908",
+      "T0914",
+      "T0913",
+      "T0910"
+     ]
+    }
+   ],
+   "plan_id": 1,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-001128",
+   "decision_id": "D-002619",
+   "user_id": "U-02344",
+   "trigger_event_id": "df7e6c25-339c-4e40-9a61-de037f1d15ac",
+   "published_at": "2026-10-01T17:45:12.165Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0901",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0903",
+      "T0907",
+      "T0908",
+      "T0914",
+      "T0913",
+      "T0910"
+     ]
+    }
+   ],
+   "plan_id": 1,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 1,
+   "viewer_id": "U-02344",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "yatite-roloda-d3",
+    "title_id": "T0901",
+    "next_episode_index": 1,
+    "total_episodes": 23
+   },
+   "started_at": "2026-09-30T18:32:59.900Z",
+   "deadline": "2026-10-03T18:32:59.900Z",
+   "decision_id": "D-000001",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1,
+   "plan_id": 1,
+   "viewer_id": "U-02344",
+   "at": "2026-09-30T18:32:59.900Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000001"
+   }
+  },
+  {
+   "id": 1512,
+   "plan_id": 1,
+   "viewer_id": "U-02344",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1,
+   "viewer_id": "U-02344",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 5,
+    "pages_shown": 6,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000001",
+     "A-000002",
+     "A-000274",
+     "A-000582",
+     "A-000792",
+     "A-001128"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 17,
+   "viewer_id": "U-02344",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 6, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:1"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,324 @@
+{
+ "viewer_id": "U-04578",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001847",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04578@2026-09-29T15:39:57.785Z",
+    "observed_at": "2026-09-29T15:39:57.785Z",
+    "freshness_s": 168347.2
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d4",
+    "source": "event",
+    "source_id": "b553f68a-f184-4211-98a6-9cc8058f7db5",
+    "observed_at": "2026-10-01T14:25:44.977Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d4",
+    "source": "profile_snapshot",
+    "source_id": "U-04578@2026-09-29T15:39:57.785Z",
+    "observed_at": "2026-09-29T15:39:57.785Z",
+    "freshness_s": 168347.2
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-04578@2026-09-29T15:39:57.785Z",
+    "observed_at": "2026-09-29T15:39:57.785Z",
+    "freshness_s": 168347.2
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04578@2026-09-29T15:39:57.785Z",
+    "observed_at": "2026-09-29T15:39:57.785Z",
+    "freshness_s": 168347.2
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-01-19T23:10:08.748Z",
+    "source": "profile_snapshot",
+    "source_id": "U-04578@2026-09-29T15:39:57.785Z",
+    "observed_at": "2026-09-29T15:39:57.785Z",
+    "freshness_s": 168347.2
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04578@2026-09-29T15:39:57.785Z",
+    "observed_at": "2026-09-29T15:39:57.785Z",
+    "freshness_s": 168347.2
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04578@2026-09-29T15:39:57.785Z",
+    "observed_at": "2026-09-29T15:39:57.785Z",
+    "freshness_s": 168347.2
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T14:25:44.977Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "de1b5640-a8b3-4b51-ad59-2d0daed59715",
+    "observed_at": "2026-10-01T08:39:08.662Z",
+    "freshness_s": 20796.3
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "b553f68a-f184-4211-98a6-9cc8058f7db5",
+    "observed_at": "2026-10-01T14:25:44.977Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001064",
+   "deliver_at": "2026-10-01T08:39:08.662Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G12",
+   "reason": "committed G12 (return_after_absence_7d): account is 254d old; no app_open in the 14 days before this trigger (current session excluded); 171 titles promotable in d4 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.6
+  },
+  {
+   "decision_id": "D-001847",
+   "deliver_at": "2026-10-01T14:25:44.977Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G12",
+   "reason": "kept active plan 588 (G12) started 2026-10-01T08:39:09.102Z; 167 titles promotable in d4 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.7
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000423",
+   "decision_id": "D-001064",
+   "user_id": "U-04578",
+   "trigger_event_id": "de1b5640-a8b3-4b51-ad59-2d0daed59715",
+   "published_at": "2026-10-01T08:39:09.504Z",
+   "goal_id": "G12",
+   "type": "home_page",
+   "dialect": "d4",
+   "hero_title_id": "T1819",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0916",
+      "T0918",
+      "T0925",
+      "T0932",
+      "T0917",
+      "T0926",
+      "T0927",
+      "T0922"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T1155",
+      "T1162",
+      "T1048",
+      "T0988",
+      "T1105",
+      "T1051",
+      "T1092"
+     ]
+    }
+   ],
+   "plan_id": 588,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000790",
+   "decision_id": "D-001847",
+   "user_id": "U-04578",
+   "trigger_event_id": "b553f68a-f184-4211-98a6-9cc8058f7db5",
+   "published_at": "2026-10-01T14:25:45.419Z",
+   "goal_id": "G12",
+   "type": "home_page",
+   "dialect": "d4",
+   "hero_title_id": "T0916",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0918",
+      "T0925",
+      "T0932",
+      "T0917",
+      "T0926",
+      "T0927",
+      "T0922",
+      "T0920"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0937",
+      "T1155",
+      "T1162",
+      "T1048",
+      "T0988",
+      "T1105",
+      "T1051",
+      "T1092"
+     ]
+    }
+   ],
+   "plan_id": 588,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 588,
+   "viewer_id": "U-04578",
+   "arm": "agent",
+   "goal_id": "G12",
+   "rule_version": "G12@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "any title",
+   "window_hours": 168,
+   "params": {},
+   "started_at": "2026-10-01T08:39:09.102Z",
+   "deadline": "2026-10-08T08:39:09.102Z",
+   "decision_id": "D-001064",
+   "status": "succeeded",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: play_started received 2026-10-01T08:40:24.662Z inside the window",
+   "signal_event_id": "oua-028878"
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 604,
+   "plan_id": 588,
+   "viewer_id": "U-04578",
+   "at": "2026-10-01T08:39:09.102Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G12",
+    "decision_id": "D-001064"
+   }
+  },
+  {
+   "id": 2088,
+   "plan_id": 588,
+   "viewer_id": "U-04578",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "succeeded",
+   "detail": {
+    "reason": "final judgment: play_started received 2026-10-01T08:40:24.662Z inside the window",
+    "signal_event_id": "oua-028878"
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 588,
+   "viewer_id": "U-04578",
+   "arm": "agent",
+   "goal_id": "G12",
+   "rule_version": "G12@2026-09-30",
+   "status": "succeeded",
+   "reason": "play_started received 2026-10-01T08:40:24.662Z inside the window",
+   "signal_event_id": "oua-028878",
+   "signal_at": "2026-10-01T08:40:24.662Z",
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 2,
+    "pages_shown": 0,
+    "messages_sent": 0,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000423",
+     "A-000790"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 652,
+   "viewer_id": "U-04578",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_succeeded:G12",
+   "detail": "G12 reached; move to the next lifecycle goal",
+   "evidence": [
+    "plan:588"
+   ]
+  },
+  {
+   "id": 653,
+   "viewer_id": "U-04578",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "page_not_seen",
+   "detail": "published page(s) were never shown (viewer did not reach home while live, or app dialect changed)",
+   "evidence": [
+    "plan:588"
+   ]
+  }
+ ]
+}

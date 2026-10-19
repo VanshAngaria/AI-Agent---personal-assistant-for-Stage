@@ -1,0 +1,199 @@
+{
+ "viewer_id": "U-03639",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-000837",
+  "facts": [],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000710",
+   "deliver_at": "2026-10-01T05:53:02.960Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G05",
+   "reason": "committed G05 (first_paid_7d): status 'never'; no paid purchase or renewal observed; 660 titles promotable in d1 at publish time",
+   "confidence": 0.55
+  },
+  {
+   "decision_id": "D-000837",
+   "deliver_at": "2026-10-01T07:00:00.000Z",
+   "trigger": "control:title_withdrawn",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G05",
+   "reason": "title T0001 withdrawn at 2026-10-01T07:00:00.000Z; live page A-000241 must not keep promoting it",
+   "confidence": 0.3
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000241",
+   "decision_id": "D-000710",
+   "user_id": "U-03639",
+   "trigger_event_id": "5f394e22-b4c6-45a0-ad70-0036c26fd9b2",
+   "published_at": "2026-10-01T05:53:03.403Z",
+   "goal_id": "G05",
+   "type": "home_page",
+   "dialect": "d1",
+   "hero_title_id": "T0001",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0003",
+      "T0005",
+      "T0009",
+      "T0004",
+      "T0006",
+      "T0008",
+      "T0010",
+      "T0014"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0007",
+      "T0070",
+      "T0127",
+      "T0060",
+      "T0028",
+      "T0031",
+      "T0047",
+      "T0063"
+     ]
+    }
+   ],
+   "plan_id": 359,
+   "superseded_by": "A-000310"
+  },
+  {
+   "action_id": "A-000310",
+   "decision_id": "D-000837",
+   "user_id": "U-03639",
+   "trigger_event_id": "control:2026-10-01T07:00:00.000Z:A-000241",
+   "published_at": "2026-10-01T07:00:00.000Z",
+   "goal_id": "G05",
+   "type": "home_page",
+   "dialect": "d1",
+   "hero_title_id": null,
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0003",
+      "T0005",
+      "T0009",
+      "T0004",
+      "T0006",
+      "T0008",
+      "T0010",
+      "T0014"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0007",
+      "T0070",
+      "T0127",
+      "T0060",
+      "T0028",
+      "T0031",
+      "T0047",
+      "T0063"
+     ]
+    }
+   ],
+   "plan_id": 359,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 359,
+   "viewer_id": "U-03639",
+   "arm": "agent",
+   "goal_id": "G05",
+   "rule_version": "G05@2026-09-30",
+   "success_event": "purchase_completed",
+   "success_condition": "is_trial = false",
+   "window_hours": 168,
+   "params": {},
+   "started_at": "2026-10-01T05:53:03.000Z",
+   "deadline": "2026-10-08T05:53:03.000Z",
+   "decision_id": "D-000710",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable purchase_completed (is_trial = false) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 370,
+   "plan_id": 359,
+   "viewer_id": "U-03639",
+   "at": "2026-10-01T05:53:03.000Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G05",
+    "decision_id": "D-000710"
+   }
+  },
+  {
+   "id": 1865,
+   "plan_id": 359,
+   "viewer_id": "U-03639",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable purchase_completed (is_trial = false) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 359,
+   "viewer_id": "U-03639",
+   "arm": "agent",
+   "goal_id": "G05",
+   "rule_version": "G05@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable purchase_completed (is_trial = false) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 2,
+    "pages_shown": 1,
+    "messages_sent": 0,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000241",
+     "A-000310"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 403,
+   "viewer_id": "U-03639",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G05",
+   "detail": "G05 not reached (pages shown 1, messages delivered 0); cool down this goal before retrying",
+   "evidence": [
+    "plan:359"
+   ]
+  }
+ ]
+}

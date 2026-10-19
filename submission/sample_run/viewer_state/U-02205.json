@@ -1,0 +1,145 @@
+{
+ "viewer_id": "U-02205",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-000515",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02205@2026-09-29T13:25:40.838Z",
+    "observed_at": "2026-09-29T13:25:40.838Z",
+    "freshness_s": 141697.4
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d3",
+    "source": "event",
+    "source_id": "632c9209-361d-4862-a944-584a89bf2017",
+    "observed_at": "2026-10-01T04:47:18.274Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d3",
+    "source": "profile_snapshot",
+    "source_id": "U-02205@2026-09-29T13:25:40.838Z",
+    "observed_at": "2026-09-29T13:25:40.838Z",
+    "freshness_s": 141697.4
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "lapsed",
+    "source": "profile_snapshot",
+    "source_id": "U-02205@2026-09-29T13:25:40.838Z",
+    "observed_at": "2026-09-29T13:25:40.838Z",
+    "freshness_s": 141697.4
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02205@2026-09-29T13:25:40.838Z",
+    "observed_at": "2026-09-29T13:25:40.838Z",
+    "freshness_s": 141697.4
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-07-27T20:27:10.727Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02205@2026-09-29T13:25:40.838Z",
+    "observed_at": "2026-09-29T13:25:40.838Z",
+    "freshness_s": 141697.4
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02205@2026-09-29T13:25:40.838Z",
+    "observed_at": "2026-09-29T13:25:40.838Z",
+    "freshness_s": 141697.4
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02205@2026-09-29T13:25:40.838Z",
+    "observed_at": "2026-09-29T13:25:40.838Z",
+    "freshness_s": 141697.4
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T04:47:18.274Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "ccc6afc3-ed50-461a-86d1-8aa8e017f9de",
+    "observed_at": "2026-09-21T13:40:44.937Z",
+    "freshness_s": 831993.3
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "3cce533a-fcb6-4ce4-a916-85b2dc2781e1",
+    "observed_at": "2026-09-21T13:44:25.665Z",
+    "freshness_s": 831772.6
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-21"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "5564caed-b49c-4b5a-90b7-b8e6f4277c22",
+    "observed_at": "2026-09-21T13:40:16.583Z",
+    "freshness_s": 832021.7
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": false,
+    "source": "event",
+    "source_id": "632c9209-361d-4862-a944-584a89bf2017",
+    "observed_at": "2026-10-01T04:47:18.274Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000515",
+   "deliver_at": "2026-10-01T04:47:18.274Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 55758s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

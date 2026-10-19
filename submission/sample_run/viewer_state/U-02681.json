@@ -1,0 +1,176 @@
+{
+ "viewer_id": "U-02681",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-000990",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02681@2026-09-29T02:52:58.578Z",
+    "observed_at": "2026-09-29T02:52:58.578Z",
+    "freshness_s": 191463.7
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d5",
+    "source": "event",
+    "source_id": "f9c43ae7-b4ad-4758-9b43-f59d08c09ed0",
+    "observed_at": "2026-10-01T08:04:02.251Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d2",
+    "source": "profile_snapshot",
+    "source_id": "U-02681@2026-09-29T02:52:58.578Z",
+    "observed_at": "2026-09-29T02:52:58.578Z",
+    "freshness_s": 191463.7
+   },
+   {
+    "fact_key": "dialect.campaign_link",
+    "value": "d3",
+    "source": "event",
+    "source_id": "f9c43ae7-b4ad-4758-9b43-f59d08c09ed0",
+    "observed_at": "2026-10-01T08:04:02.251Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "lapsed",
+    "source": "profile_snapshot",
+    "source_id": "U-02681@2026-09-29T02:52:58.578Z",
+    "observed_at": "2026-09-29T02:52:58.578Z",
+    "freshness_s": 191463.7
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02681@2026-09-29T02:52:58.578Z",
+    "observed_at": "2026-09-29T02:52:58.578Z",
+    "freshness_s": 191463.7
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-02-09T11:05:29.452Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02681@2026-09-29T02:52:58.578Z",
+    "observed_at": "2026-09-29T02:52:58.578Z",
+    "freshness_s": 191463.7
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02681@2026-09-29T02:52:58.578Z",
+    "observed_at": "2026-09-29T02:52:58.578Z",
+    "freshness_s": 191463.7
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02681@2026-09-29T02:52:58.578Z",
+    "observed_at": "2026-09-29T02:52:58.578Z",
+    "freshness_s": 191463.7
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T08:04:02.251Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "cbdf8180-d937-4de7-bb06-46a65e901b2d",
+    "observed_at": "2026-09-28T10:43:47.447Z",
+    "freshness_s": 249614.8
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-28"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "7715a3df-813b-48af-a10c-44452addcde0",
+    "observed_at": "2026-09-28T10:42:14.600Z",
+    "freshness_s": 249707.7
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "f9c43ae7-b4ad-4758-9b43-f59d08c09ed0",
+    "observed_at": "2026-10-01T08:04:02.251Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d5",
+      "ref": "event:f9c43ae7-b4ad-4758-9b43-f59d08c09ed0"
+     },
+     {
+      "source": "profile",
+      "value": "d2",
+      "ref": "profile:U-02681"
+     },
+     {
+      "source": "campaign_link",
+      "value": "d3",
+      "ref": "event:f9c43ae7-b4ad-4758-9b43-f59d08c09ed0"
+     }
+    ],
+    "chosen": "app_setting:d5",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000990",
+   "deliver_at": "2026-10-01T08:04:02.251Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "no measurable goal the viewer is eligible for yet: G01 signed up 598.9d ago (limit 7d); G02 cannot prove 'never episode_completed': signup predates the event history (or is unknown); G03 signed up 598.9d ago (limit 2d); G04 status 'lapsed' not in ['trial_active']; G05 status 'lapsed' not in ['never']; G06 no subscription_lapsed in the last 30 days: recency unprovable; G07 no followed, unfinished series idle for 3+ days; G08 status 'lapsed' not in ['active']; G09 status 'lapsed' not in ['active']; G10 unmeasurable: success event is null / its condition is not an observable signal; never committed, no proxy invented; G11 unmeasurable: success event 'tv_app_open' never appears in the event stream or simulator output; never committed, no proxy invented; G12 app_open within the 14 days before this trigger",
+   "confidence": 0.55
+  }
+ ],
+ "actions": [],
+ "plans": [],
+ "plan_history": [],
+ "outcomes": [],
+ "lessons": []
+}

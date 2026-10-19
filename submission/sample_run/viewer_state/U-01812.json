@@ -1,0 +1,238 @@
+{
+ "viewer_id": "U-01812",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-002456",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01812@2026-09-28T22:55:09.977Z",
+    "observed_at": "2026-09-28T22:55:09.977Z",
+    "freshness_s": 237115.4
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d6",
+    "source": "event",
+    "source_id": "22d4d59f-0ddb-44d6-add0-cb2cfeabd243",
+    "observed_at": "2026-10-01T16:47:05.400Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d6",
+    "source": "profile_snapshot",
+    "source_id": "U-01812@2026-09-28T22:55:09.977Z",
+    "observed_at": "2026-09-28T22:55:09.977Z",
+    "freshness_s": 237115.4
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-01812@2026-09-28T22:55:09.977Z",
+    "observed_at": "2026-09-28T22:55:09.977Z",
+    "freshness_s": 237115.4
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "d4b5f069-1290-4b09-b946-0ad9befd40d9",
+    "observed_at": "2026-09-28T13:54:49.395Z",
+    "freshness_s": 269536.0
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-09-30T22:54:14.993Z",
+    "source": "event",
+    "source_id": "f9a78493-c2a7-4658-8043-e4f6037d30d8",
+    "observed_at": "2026-09-30T22:54:14.993Z",
+    "freshness_s": 64370.4
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01812@2026-09-28T22:55:09.977Z",
+    "observed_at": "2026-09-28T22:55:09.977Z",
+    "freshness_s": 237115.4
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01812@2026-09-28T22:55:09.977Z",
+    "observed_at": "2026-09-28T22:55:09.977Z",
+    "freshness_s": 237115.4
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T16:47:05.400Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "4a52cc4d-6633-4851-b606-a41381d143ee",
+    "observed_at": "2026-09-30T22:56:03.885Z",
+    "freshness_s": 64261.5
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-28",
+     "2026-10-01"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "be4c6f79-7673-4910-8bb8-01b09a1135c5",
+    "observed_at": "2026-09-30T22:54:49.950Z",
+    "freshness_s": 64335.4
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "22d4d59f-0ddb-44d6-add0-cb2cfeabd243",
+    "observed_at": "2026-10-01T16:47:05.400Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "signup_at",
+    "values": [
+     {
+      "source": "event",
+      "value": "2026-09-30T22:54:14.993Z"
+     },
+     {
+      "source": "profile",
+      "value": "2026-09-26T19:24:16.141Z"
+     }
+    ],
+    "chosen": "event:f9a78493-c2a7-4658-8043-e4f6037d30d8",
+    "why": "the observed signup event is primary evidence; the profile column differs by more than a day"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-002456",
+   "deliver_at": "2026-10-01T16:47:05.400Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": "G03",
+   "reason": "holdout arm: no action of any kind (messaging policy rule 5); the goal is recorded as a shadow goal so both arms are judged the same way",
+   "confidence": 0.99
+  }
+ ],
+ "actions": [],
+ "plans": [
+  {
+   "plan_id": 1373,
+   "viewer_id": "U-01812",
+   "arm": "holdout",
+   "goal_id": "G03",
+   "rule_version": "G03@2026-09-30.r2",
+   "success_event": "play_started",
+   "success_condition": "on a later IST calendar day within the window",
+   "window_hours": 48,
+   "params": {},
+   "started_at": "2026-10-01T16:47:05.841Z",
+   "deadline": "2026-10-03T16:47:05.841Z",
+   "decision_id": "D-002456",
+   "status": "succeeded",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: play_started received 2026-10-02T15:49:16.000Z inside the window",
+   "signal_event_id": "oua-012277"
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1404,
+   "plan_id": 1373,
+   "viewer_id": "U-01812",
+   "at": "2026-10-01T16:47:05.841Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G03",
+    "decision_id": "D-002456"
+   }
+  },
+  {
+   "id": 2869,
+   "plan_id": 1373,
+   "viewer_id": "U-01812",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "succeeded",
+   "detail": {
+    "reason": "final judgment: play_started received 2026-10-02T15:49:16.000Z inside the window",
+    "signal_event_id": "oua-012277"
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1373,
+   "viewer_id": "U-01812",
+   "arm": "holdout",
+   "goal_id": "G03",
+   "rule_version": "G03@2026-09-30.r2",
+   "status": "succeeded",
+   "reason": "play_started received 2026-10-02T15:49:16.000Z inside the window",
+   "signal_event_id": "oua-012277",
+   "signal_at": "2026-10-02T15:49:16.000Z",
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 0,
+    "pages_shown": 0,
+    "messages_sent": 0,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": []
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1497,
+   "viewer_id": "U-01812",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_succeeded:G03",
+   "detail": "G03 reached; move to the next lifecycle goal",
+   "evidence": [
+    "plan:1373"
+   ]
+  }
+ ]
+}

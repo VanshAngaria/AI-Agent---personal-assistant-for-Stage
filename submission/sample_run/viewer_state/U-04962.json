@@ -1,0 +1,329 @@
+{
+ "viewer_id": "U-04962",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001813",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04962@2026-09-28T20:47:01.643Z",
+    "observed_at": "2026-09-28T20:47:01.643Z",
+    "freshness_s": 235871.6
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d3",
+    "source": "event",
+    "source_id": "35907e8b-15d2-4722-b3df-63b6be0a7a31",
+    "observed_at": "2026-10-01T14:18:13.201Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d1",
+    "source": "profile_snapshot",
+    "source_id": "U-04962@2026-09-28T20:47:01.643Z",
+    "observed_at": "2026-09-28T20:47:01.643Z",
+    "freshness_s": 235871.6
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-04962@2026-09-28T20:47:01.643Z",
+    "observed_at": "2026-09-28T20:47:01.643Z",
+    "freshness_s": 235871.6
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "6b1ec9f1-ab1a-44f6-90d7-61fa0f4e8b5f",
+    "observed_at": "2026-09-17T20:20:23.953Z",
+    "freshness_s": 1187869.2
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-08-06T08:32:18.883Z",
+    "source": "profile_snapshot",
+    "source_id": "U-04962@2026-09-28T20:47:01.643Z",
+    "observed_at": "2026-09-28T20:47:01.643Z",
+    "freshness_s": 235871.6
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04962@2026-09-28T20:47:01.643Z",
+    "observed_at": "2026-09-28T20:47:01.643Z",
+    "freshness_s": 235871.6
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04962@2026-09-28T20:47:01.643Z",
+    "observed_at": "2026-09-28T20:47:01.643Z",
+    "freshness_s": 235871.6
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T14:18:13.201Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 8,
+    "source": "event_stream",
+    "source_id": "286696b1-66e6-4400-90c5-4b801e5d9ae5",
+    "observed_at": "2026-09-28T10:59:55.647Z",
+    "freshness_s": 271097.6
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "0184fccb-b8e0-4f1e-bb0e-6e6f85d7f453",
+    "observed_at": "2026-09-28T11:02:43.522Z",
+    "freshness_s": 270929.7
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-17",
+     "2026-09-21",
+     "2026-09-24",
+     "2026-09-28"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "450e9b19-f8a4-4ed5-a091-06edab63b35d",
+    "observed_at": "2026-10-01T04:45:26.579Z",
+    "freshness_s": 34366.6
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "35907e8b-15d2-4722-b3df-63b6be0a7a31",
+    "observed_at": "2026-10-01T14:18:13.201Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d3",
+      "ref": "event:35907e8b-15d2-4722-b3df-63b6be0a7a31"
+     },
+     {
+      "source": "profile",
+      "value": "d1",
+      "ref": "profile:U-04962"
+     }
+    ],
+    "chosen": "app_setting:d3",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000388",
+   "deliver_at": "2026-10-01T04:45:26.579Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 752891s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  },
+  {
+   "decision_id": "D-001813",
+   "deliver_at": "2026-10-01T14:18:13.201Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): yane-tegi-d3: reached episode 2/20, last played 2026-09-28T10:59:55.647Z; 15 titles promotable in d3 at publish time",
+   "confidence": 0.83
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000776",
+   "decision_id": "D-001813",
+   "user_id": "U-04962",
+   "trigger_event_id": "35907e8b-15d2-4722-b3df-63b6be0a7a31",
+   "published_at": "2026-10-01T14:18:14.444Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0903",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0906",
+      "T0914",
+      "T0905",
+      "T0908",
+      "T0904",
+      "T0911"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0901",
+      "T0902",
+      "T0907",
+      "T0913",
+      "T0910",
+      "T0909"
+     ]
+    }
+   ],
+   "plan_id": 1021,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000777",
+   "decision_id": "D-001813",
+   "user_id": "U-04962",
+   "trigger_event_id": "35907e8b-15d2-4722-b3df-63b6be0a7a31",
+   "published_at": "2026-10-01T14:18:14.444Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0903",
+   "dialect": "d3",
+   "text": {
+    "title": "Yane Tegi",
+    "body": "Yane Tegi ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0903",
+   "plan_id": 1021,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 1021,
+   "viewer_id": "U-04962",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "yane-tegi-d3",
+    "title_id": "T0903",
+    "next_episode_index": 2,
+    "total_episodes": 20
+   },
+   "started_at": "2026-10-01T14:18:13.642Z",
+   "deadline": "2026-10-04T14:18:13.642Z",
+   "decision_id": "D-001813",
+   "status": "succeeded",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: play_started received 2026-10-01T14:22:43.820Z inside the window",
+   "signal_event_id": "oua-031614"
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1046,
+   "plan_id": 1021,
+   "viewer_id": "U-04962",
+   "at": "2026-10-01T14:18:13.642Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-001813"
+   }
+  },
+  {
+   "id": 2519,
+   "plan_id": 1021,
+   "viewer_id": "U-04962",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "succeeded",
+   "detail": {
+    "reason": "final judgment: play_started received 2026-10-01T14:22:43.820Z inside the window",
+    "signal_event_id": "oua-031614"
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1021,
+   "viewer_id": "U-04962",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "succeeded",
+   "reason": "play_started received 2026-10-01T14:22:43.820Z inside the window",
+   "signal_event_id": "oua-031614",
+   "signal_at": "2026-10-01T14:22:43.820Z",
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [
+     "token_invalid"
+    ],
+    "action_ids": [
+     "A-000776",
+     "A-000777"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1119,
+   "viewer_id": "U-04962",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_succeeded:G07",
+   "detail": "G07 reached; move to the next lifecycle goal",
+   "evidence": [
+    "plan:1021"
+   ]
+  },
+  {
+   "id": 1120,
+   "viewer_id": "U-04962",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "push_undeliverable",
+   "detail": "push token invalid; use another channel",
+   "evidence": [
+    "plan:1021"
+   ]
+  }
+ ]
+}

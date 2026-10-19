@@ -1,0 +1,322 @@
+{
+ "viewer_id": "U-04941",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-002195",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04941@2026-09-29T14:46:47.936Z",
+    "observed_at": "2026-09-29T14:46:47.936Z",
+    "freshness_s": 175286.5
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "a20c5000-e4ac-45fc-b4ee-a2633bef00e7",
+    "observed_at": "2026-10-01T15:28:14.462Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-04941@2026-09-29T14:46:47.936Z",
+    "observed_at": "2026-09-29T14:46:47.936Z",
+    "freshness_s": 175286.5
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "212a7125-5df5-433a-a12c-80cf47579436",
+    "observed_at": "2026-09-12T15:17:11.140Z",
+    "freshness_s": 1642263.3
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-09-10T05:33:19.879Z",
+    "source": "event",
+    "source_id": "64ed101d-c637-4982-b2c3-acba163e80d8",
+    "observed_at": "2026-09-10T05:33:19.879Z",
+    "freshness_s": 1850094.6
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-04941@2026-09-29T14:46:47.936Z",
+    "observed_at": "2026-09-29T14:46:47.936Z",
+    "freshness_s": 175286.5
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-04941@2026-09-29T14:46:47.936Z",
+    "observed_at": "2026-09-29T14:46:47.936Z",
+    "freshness_s": 175286.5
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T15:28:14.462Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "eb7fc1a5-6985-404c-8553-29366d703be6",
+    "observed_at": "2026-09-30T10:57:08.986Z",
+    "freshness_s": 102665.5
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 9,
+    "source": "event_stream",
+    "source_id": "920e814b-07b1-48d7-b663-471f039c36e2",
+    "observed_at": "2026-09-30T11:00:48.048Z",
+    "freshness_s": 102446.4
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-18",
+     "2026-09-23",
+     "2026-09-25",
+     "2026-09-28",
+     "2026-09-30"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 7,
+    "source": "event_stream",
+    "source_id": "678793c9-0225-4a41-ba58-9787db703857",
+    "observed_at": "2026-10-01T04:21:04.326Z",
+    "freshness_s": 40030.1
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "a20c5000-e4ac-45fc-b4ee-a2633bef00e7",
+    "observed_at": "2026-10-01T15:28:14.462Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000308",
+   "deliver_at": "2026-10-01T04:21:04.326Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": null,
+   "reason": "late trigger: buffered offline for 164770s on the device (sent_at - occurred_at) before upload; the viewer is not in the app now. Ingested as history only; no page (it would never be seen this visit) and no change to the plan",
+   "confidence": 0.9
+  },
+  {
+   "decision_id": "D-002195",
+   "deliver_at": "2026-10-01T15:28:14.462Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): molo-d2: reached episode 2/7, last played 2026-09-23T12:40:12.057Z; 466 titles promotable in d2 at publish time",
+   "confidence": 0.88
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000953",
+   "decision_id": "D-002195",
+   "user_id": "U-04941",
+   "trigger_event_id": "a20c5000-e4ac-45fc-b4ee-a2633bef00e7",
+   "published_at": "2026-10-01T15:28:15.721Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d2",
+   "hero_title_id": "T0521",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0874",
+      "T0561",
+      "T0607",
+      "T0795",
+      "T0747",
+      "T0597",
+      "T0614",
+      "T0780"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0522",
+      "T0523",
+      "T0524",
+      "T0526",
+      "T0525",
+      "T0537",
+      "T0536",
+      "T0531"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0545",
+      "T0564",
+      "T0676",
+      "T0552",
+      "T0535",
+      "T0584",
+      "T0596",
+      "T0616"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0538",
+      "T0533",
+      "T0534",
+      "T0546",
+      "T0581",
+      "T0553",
+      "T0578",
+      "T0900"
+     ]
+    }
+   ],
+   "plan_id": 1247,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000954",
+   "decision_id": "D-002195",
+   "user_id": "U-04941",
+   "trigger_event_id": "a20c5000-e4ac-45fc-b4ee-a2633bef00e7",
+   "published_at": "2026-10-01T15:28:15.721Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0521",
+   "dialect": "d2",
+   "text": {
+    "title": "Molo",
+    "body": "Molo ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0521",
+   "plan_id": 1247,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 1247,
+   "viewer_id": "U-04941",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "molo-d2",
+    "title_id": "T0521",
+    "next_episode_index": 2,
+    "total_episodes": 7
+   },
+   "started_at": "2026-10-01T15:28:14.904Z",
+   "deadline": "2026-10-04T15:28:14.904Z",
+   "decision_id": "D-002195",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1275,
+   "plan_id": 1247,
+   "viewer_id": "U-04941",
+   "at": "2026-10-01T15:28:14.904Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-002195"
+   }
+  },
+  {
+   "id": 2744,
+   "plan_id": 1247,
+   "viewer_id": "U-04941",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1247,
+   "viewer_id": "U-04941",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000953",
+     "A-000954"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1361,
+   "viewer_id": "U-04941",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 1, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:1247"
+   ]
+  }
+ ]
+}

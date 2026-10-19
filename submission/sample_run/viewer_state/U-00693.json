@@ -1,0 +1,323 @@
+{
+ "viewer_id": "U-00693",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-002226",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00693@2026-09-29T13:23:25.050Z",
+    "observed_at": "2026-09-29T13:23:25.050Z",
+    "freshness_s": 180743.5
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d1",
+    "source": "event",
+    "source_id": "aa41eaac-40a5-43b9-a4c8-b80453acbf2d",
+    "observed_at": "2026-10-01T15:35:48.553Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d1",
+    "source": "profile_snapshot",
+    "source_id": "U-00693@2026-09-29T13:23:25.050Z",
+    "observed_at": "2026-09-29T13:23:25.050Z",
+    "freshness_s": 180743.5
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-00693@2026-09-29T13:23:25.050Z",
+    "observed_at": "2026-09-29T13:23:25.050Z",
+    "freshness_s": 180743.5
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "ccfde2ef-6184-4629-bdd0-f688b758bb05",
+    "observed_at": "2026-09-23T17:31:43.046Z",
+    "freshness_s": 684245.5
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-03-08T17:46:43.202Z",
+    "source": "profile_snapshot",
+    "source_id": "U-00693@2026-09-29T13:23:25.050Z",
+    "observed_at": "2026-09-29T13:23:25.050Z",
+    "freshness_s": 180743.5
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00693@2026-09-29T13:23:25.050Z",
+    "observed_at": "2026-09-29T13:23:25.050Z",
+    "freshness_s": 180743.5
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-00693@2026-09-29T13:23:25.050Z",
+    "observed_at": "2026-09-29T13:23:25.050Z",
+    "freshness_s": 180743.5
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T15:35:48.553Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 9,
+    "source": "event_stream",
+    "source_id": "dd9a9056-4d75-46f3-83e5-50c4a38e6aa5",
+    "observed_at": "2026-09-27T11:36:01.523Z",
+    "freshness_s": 359987.0
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 4,
+    "source": "event_stream",
+    "source_id": "8406582f-0fd1-4be6-b33c-fb03c78e79b3",
+    "observed_at": "2026-09-15T17:12:24.103Z",
+    "freshness_s": 1376604.4
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-20",
+     "2026-09-22",
+     "2026-09-27"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 8,
+    "source": "event_stream",
+    "source_id": "cc8f20ef-aaab-44b1-8840-e3d6c647fe1a",
+    "observed_at": "2026-09-27T13:25:24.929Z",
+    "freshness_s": 353423.6
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "aa41eaac-40a5-43b9-a4c8-b80453acbf2d",
+    "observed_at": "2026-10-01T15:35:48.553Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-002226",
+   "deliver_at": "2026-10-01T15:35:48.553Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): gima-bhadaba-d1: reached episode 3/44, last played 2026-09-20T16:12:57.960Z; 649 titles promotable in d1 at publish time",
+   "confidence": 0.88
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000968",
+   "decision_id": "D-002226",
+   "user_id": "U-00693",
+   "trigger_event_id": "aa41eaac-40a5-43b9-a4c8-b80453acbf2d",
+   "published_at": "2026-10-01T15:35:49.804Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d1",
+   "hero_title_id": "T1502",
+   "rows": [
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0245",
+      "T0255",
+      "T1503",
+      "T0342",
+      "T1528",
+      "T1630",
+      "T1512",
+      "T0131"
+     ]
+    },
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0005",
+      "T0009",
+      "T0004",
+      "T0010",
+      "T0014",
+      "T0015",
+      "T0011"
+     ]
+    },
+    {
+     "row_type": "new_releases",
+     "title_ids": [
+      "T0007",
+      "T0070",
+      "T0127",
+      "T0060",
+      "T0028",
+      "T0031",
+      "T0047",
+      "T0063"
+     ]
+    },
+    {
+     "row_type": "genre",
+     "title_ids": [
+      "T0084",
+      "T0065",
+      "T0045",
+      "T0517"
+     ]
+    }
+   ],
+   "plan_id": 1262,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000969",
+   "decision_id": "D-002226",
+   "user_id": "U-00693",
+   "trigger_event_id": "aa41eaac-40a5-43b9-a4c8-b80453acbf2d",
+   "published_at": "2026-10-01T15:35:49.804Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T1502",
+   "dialect": "d1",
+   "text": {
+    "title": "Gima Bhadaba (English)",
+    "body": "Gima Bhadaba (English) ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T1502",
+   "plan_id": 1262,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 1262,
+   "viewer_id": "U-00693",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "gima-bhadaba-d1",
+    "title_id": "T1502",
+    "next_episode_index": 3,
+    "total_episodes": 44
+   },
+   "started_at": "2026-10-01T15:35:48.995Z",
+   "deadline": "2026-10-04T15:35:48.995Z",
+   "decision_id": "D-002226",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1290,
+   "plan_id": 1262,
+   "viewer_id": "U-00693",
+   "at": "2026-10-01T15:35:48.995Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-002226"
+   }
+  },
+  {
+   "id": 2759,
+   "plan_id": 1262,
+   "viewer_id": "U-00693",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1262,
+   "viewer_id": "U-00693",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 0,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000968",
+     "A-000969"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1378,
+   "viewer_id": "U-00693",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 0, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:1262"
+   ]
+  },
+  {
+   "id": 1379,
+   "viewer_id": "U-00693",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "page_not_seen",
+   "detail": "published page(s) were never shown (viewer did not reach home while live, or app dialect changed)",
+   "evidence": [
+    "plan:1262"
+   ]
+  }
+ ]
+}

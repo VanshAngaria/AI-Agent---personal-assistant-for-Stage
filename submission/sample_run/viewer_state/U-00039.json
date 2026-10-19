@@ -1,0 +1,288 @@
+{
+ "viewer_id": "U-00039",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001773",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00039@2026-09-29T08:44:34.450Z",
+    "observed_at": "2026-09-29T08:44:34.450Z",
+    "freshness_s": 191992.7
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d3",
+    "source": "event",
+    "source_id": "4d99aaaf-fd41-43b2-926b-ba137f2baf59",
+    "observed_at": "2026-10-01T14:04:27.139Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d3",
+    "source": "profile_snapshot",
+    "source_id": "U-00039@2026-09-29T08:44:34.450Z",
+    "observed_at": "2026-09-29T08:44:34.450Z",
+    "freshness_s": 191992.7
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "active",
+    "source": "profile_snapshot",
+    "source_id": "U-00039@2026-09-29T08:44:34.450Z",
+    "observed_at": "2026-09-29T08:44:34.450Z",
+    "freshness_s": 191992.7
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": true,
+    "source": "event",
+    "source_id": "581ca00c-1455-408e-a13a-0a8ab071e10d",
+    "observed_at": "2026-09-13T04:32:58.458Z",
+    "freshness_s": 1589488.7
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-05-25T20:26:21.764Z",
+    "source": "profile_snapshot",
+    "source_id": "U-00039@2026-09-29T08:44:34.450Z",
+    "observed_at": "2026-09-29T08:44:34.450Z",
+    "freshness_s": 191992.7
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00039@2026-09-29T08:44:34.450Z",
+    "observed_at": "2026-09-29T08:44:34.450Z",
+    "freshness_s": 191992.7
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-00039@2026-09-29T08:44:34.450Z",
+    "observed_at": "2026-09-29T08:44:34.450Z",
+    "freshness_s": 191992.7
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T14:04:27.139Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 15,
+    "source": "event_stream",
+    "source_id": "c4374b6a-66f0-45be-a58e-77263943038f",
+    "observed_at": "2026-09-28T15:28:25.647Z",
+    "freshness_s": 254161.5
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 11,
+    "source": "event_stream",
+    "source_id": "52a81c1c-b5cd-4553-8124-08f35395ab65",
+    "observed_at": "2026-09-28T15:31:11.113Z",
+    "freshness_s": 253996.0
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-21",
+     "2026-09-23",
+     "2026-09-25",
+     "2026-09-26",
+     "2026-09-28"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 10,
+    "source": "event_stream",
+    "source_id": "6e73365b-f430-4c3c-bf9f-d61e31c4e227",
+    "observed_at": "2026-09-28T15:27:48.198Z",
+    "freshness_s": 254198.9
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "4d99aaaf-fd41-43b2-926b-ba137f2baf59",
+    "observed_at": "2026-10-01T14:04:27.139Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001773",
+   "deliver_at": "2026-10-01T14:04:27.139Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): yane-tegi-d3: reached episode 6/20, last played 2026-09-25T23:43:14.579Z; 15 titles promotable in d3 at publish time",
+   "confidence": 0.88
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000748",
+   "decision_id": "D-001773",
+   "user_id": "U-00039",
+   "trigger_event_id": "4d99aaaf-fd41-43b2-926b-ba137f2baf59",
+   "published_at": "2026-10-01T14:04:28.383Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0903",
+   "rows": [
+    {
+     "row_type": "next_episode",
+     "title_ids": [
+      "T0907",
+      "T0914",
+      "T0913"
+     ]
+    },
+    {
+     "row_type": "because_you_watched",
+     "title_ids": [
+      "T0906",
+      "T0904",
+      "T0905",
+      "T0908",
+      "T0911",
+      "T0901",
+      "T0909"
+     ]
+    }
+   ],
+   "plan_id": 996,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000749",
+   "decision_id": "D-001773",
+   "user_id": "U-00039",
+   "trigger_event_id": "4d99aaaf-fd41-43b2-926b-ba137f2baf59",
+   "published_at": "2026-10-01T14:04:28.383Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0903",
+   "dialect": "d3",
+   "text": {
+    "title": "Yane Tegi",
+    "body": "The next episode of Yane Tegi is ready. Pick up where you left off."
+   },
+   "deeplink": "ott://title/T0903",
+   "plan_id": 996,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 996,
+   "viewer_id": "U-00039",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "yane-tegi-d3",
+    "title_id": "T0903",
+    "next_episode_index": 6,
+    "total_episodes": 20
+   },
+   "started_at": "2026-10-01T14:04:27.582Z",
+   "deadline": "2026-10-04T14:04:27.582Z",
+   "decision_id": "D-001773",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1018,
+   "plan_id": 996,
+   "viewer_id": "U-00039",
+   "at": "2026-10-01T14:04:27.582Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-001773"
+   }
+  },
+  {
+   "id": 2494,
+   "plan_id": 996,
+   "viewer_id": "U-00039",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 996,
+   "viewer_id": "U-00039",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 1,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000748",
+     "A-000749"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1094,
+   "viewer_id": "U-00039",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 1, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:996"
+   ]
+  }
+ ]
+}

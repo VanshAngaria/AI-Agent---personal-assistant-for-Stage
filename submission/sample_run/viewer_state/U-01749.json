@@ -1,0 +1,224 @@
+{
+ "viewer_id": "U-01749",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-002403",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-01749@2026-09-28T21:01:20.218Z",
+    "observed_at": "2026-09-28T21:01:20.218Z",
+    "freshness_s": 242963.5
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "df6839cc-d1a3-49fb-93d7-27399f30be4b",
+    "observed_at": "2026-10-01T16:30:43.704Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d2",
+    "source": "profile_snapshot",
+    "source_id": "U-01749@2026-09-28T21:01:20.218Z",
+    "observed_at": "2026-09-28T21:01:20.218Z",
+    "freshness_s": 242963.5
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-01749@2026-09-28T21:01:20.218Z",
+    "observed_at": "2026-09-28T21:01:20.218Z",
+    "freshness_s": 242963.5
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01749@2026-09-28T21:01:20.218Z",
+    "observed_at": "2026-09-28T21:01:20.218Z",
+    "freshness_s": 242963.5
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-11-15T00:11:45.247Z",
+    "source": "profile_snapshot",
+    "source_id": "U-01749@2026-09-28T21:01:20.218Z",
+    "observed_at": "2026-09-28T21:01:20.218Z",
+    "freshness_s": 242963.5
+   },
+   {
+    "fact_key": "consent.push",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01749@2026-09-28T21:01:20.218Z",
+    "observed_at": "2026-09-28T21:01:20.218Z",
+    "freshness_s": 242963.5
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-01749@2026-09-28T21:01:20.218Z",
+    "observed_at": "2026-09-28T21:01:20.218Z",
+    "freshness_s": 242963.5
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T16:30:43.704Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "e066e3e2-6b20-47c6-ba35-c67959deeb7e",
+    "observed_at": "2026-09-09T05:37:05.334Z",
+    "freshness_s": 1940018.4
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 1,
+    "source": "event_stream",
+    "source_id": "884f21dc-5886-4bb8-aa9f-e4f868f2971d",
+    "observed_at": "2026-09-09T06:17:34.234Z",
+    "freshness_s": 1937589.5
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "df6839cc-d1a3-49fb-93d7-27399f30be4b",
+    "observed_at": "2026-10-01T16:30:43.704Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-002403",
+   "deliver_at": "2026-10-01T16:30:43.704Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": "G07",
+   "reason": "holdout arm: no action of any kind (messaging policy rule 5); the goal is recorded as a shadow goal so both arms are judged the same way",
+   "confidence": 0.99
+  }
+ ],
+ "actions": [],
+ "plans": [
+  {
+   "plan_id": 1355,
+   "viewer_id": "U-01749",
+   "arm": "holdout",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "molo-d2",
+    "title_id": "T0521",
+    "next_episode_index": 1,
+    "total_episodes": 7
+   },
+   "started_at": "2026-10-01T16:30:44.144Z",
+   "deadline": "2026-10-04T16:30:44.144Z",
+   "decision_id": "D-002403",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 1386,
+   "plan_id": 1355,
+   "viewer_id": "U-01749",
+   "at": "2026-10-01T16:30:44.144Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-002403"
+   }
+  },
+  {
+   "id": 2851,
+   "plan_id": 1355,
+   "viewer_id": "U-01749",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 1355,
+   "viewer_id": "U-01749",
+   "arm": "holdout",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 0,
+    "pages_shown": 0,
+    "messages_sent": 0,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": []
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 1475,
+   "viewer_id": "U-01749",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 0, messages delivered 0); cool down this goal before retrying",
+   "evidence": [
+    "plan:1355"
+   ]
+  }
+ ]
+}

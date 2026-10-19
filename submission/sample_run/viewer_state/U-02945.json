@@ -1,0 +1,237 @@
+{
+ "viewer_id": "U-02945",
+ "as_of": "end of run",
+ "arm": "holdout",
+ "facts_at_last_decision": {
+  "decision_id": "D-001142",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02945@2026-09-29T17:11:53.967Z",
+    "observed_at": "2026-09-29T17:11:53.967Z",
+    "freshness_s": 144156.0
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d2",
+    "source": "event",
+    "source_id": "d60ec860-9d0a-4392-9d07-c5ba41e20219",
+    "observed_at": "2026-10-01T09:14:29.985Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d3",
+    "source": "profile_snapshot",
+    "source_id": "U-02945@2026-09-29T17:11:53.967Z",
+    "observed_at": "2026-09-29T17:11:53.967Z",
+    "freshness_s": 144156.0
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-02945@2026-09-29T17:11:53.967Z",
+    "observed_at": "2026-09-29T17:11:53.967Z",
+    "freshness_s": 144156.0
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02945@2026-09-29T17:11:53.967Z",
+    "observed_at": "2026-09-29T17:11:53.967Z",
+    "freshness_s": 144156.0
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2025-01-29T07:25:13.034Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02945@2026-09-29T17:11:53.967Z",
+    "observed_at": "2026-09-29T17:11:53.967Z",
+    "freshness_s": 144156.0
+   },
+   {
+    "fact_key": "consent.push",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02945@2026-09-29T17:11:53.967Z",
+    "observed_at": "2026-09-29T17:11:53.967Z",
+    "freshness_s": 144156.0
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02945@2026-09-29T17:11:53.967Z",
+    "observed_at": "2026-09-29T17:11:53.967Z",
+    "freshness_s": 144156.0
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T09:14:29.985Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 0,
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "d60ec860-9d0a-4392-9d07-c5ba41e20219",
+    "observed_at": "2026-10-01T09:14:29.985Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": [
+   {
+    "fact": "dialect",
+    "values": [
+     {
+      "source": "app_setting",
+      "value": "d2",
+      "ref": "event:d60ec860-9d0a-4392-9d07-c5ba41e20219"
+     },
+     {
+      "source": "profile",
+      "value": "d3",
+      "ref": "profile:U-02945"
+     }
+    ],
+    "chosen": "app_setting:d2",
+    "why": "the app requests the home page for the dialect it is currently set to, so content must be in the app-setting dialect; profile and campaign link describe preference/acquisition, not what is shown"
+   }
+  ]
+ },
+ "decisions": [
+  {
+   "decision_id": "D-001142",
+   "deliver_at": "2026-10-01T09:14:29.985Z",
+   "trigger": "app_open",
+   "status": "NO_ACTION",
+   "action": "NO_ACTION",
+   "goal": "G12",
+   "reason": "holdout arm: no action of any kind (messaging policy rule 5); the goal is recorded as a shadow goal so both arms are judged the same way",
+   "confidence": 0.99
+  }
+ ],
+ "actions": [],
+ "plans": [
+  {
+   "plan_id": 637,
+   "viewer_id": "U-02945",
+   "arm": "holdout",
+   "goal_id": "G12",
+   "rule_version": "G12@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "any title",
+   "window_hours": 168,
+   "params": {},
+   "started_at": "2026-10-01T09:14:30.425Z",
+   "deadline": "2026-10-08T09:14:30.425Z",
+   "decision_id": "D-001142",
+   "status": "succeeded",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: play_started received 2026-10-03T04:17:18.000Z inside the window",
+   "signal_event_id": "oua-018628"
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 654,
+   "plan_id": 637,
+   "viewer_id": "U-02945",
+   "at": "2026-10-01T09:14:30.425Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G12",
+    "decision_id": "D-001142"
+   }
+  },
+  {
+   "id": 2137,
+   "plan_id": 637,
+   "viewer_id": "U-02945",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "succeeded",
+   "detail": {
+    "reason": "final judgment: play_started received 2026-10-03T04:17:18.000Z inside the window",
+    "signal_event_id": "oua-018628"
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 637,
+   "viewer_id": "U-02945",
+   "arm": "holdout",
+   "goal_id": "G12",
+   "rule_version": "G12@2026-09-30",
+   "status": "succeeded",
+   "reason": "play_started received 2026-10-03T04:17:18.000Z inside the window",
+   "signal_event_id": "oua-018628",
+   "signal_at": "2026-10-03T04:17:18.000Z",
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 0,
+    "pages_shown": 0,
+    "messages_sent": 0,
+    "delivered": 0,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": []
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 708,
+   "viewer_id": "U-02945",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_succeeded:G12",
+   "detail": "G12 reached; move to the next lifecycle goal",
+   "evidence": [
+    "plan:637"
+   ]
+  }
+ ]
+}

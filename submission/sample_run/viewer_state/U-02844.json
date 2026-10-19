@@ -1,0 +1,312 @@
+{
+ "viewer_id": "U-02844",
+ "as_of": "end of run",
+ "arm": "agent",
+ "facts_at_last_decision": {
+  "decision_id": "D-001431",
+  "facts": [
+   {
+    "fact_key": "profile.present",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02844@2026-09-29T03:33:31.711Z",
+    "observed_at": "2026-09-29T03:33:31.711Z",
+    "freshness_s": 202395.3
+   },
+   {
+    "fact_key": "dialect.app_setting",
+    "value": "d3",
+    "source": "event",
+    "source_id": "8df6dd81-2068-4a99-9a04-1a2e7f0f2635",
+    "observed_at": "2026-10-01T11:46:47.011Z",
+    "freshness_s": 0.0
+   },
+   {
+    "fact_key": "dialect.profile_preferred",
+    "value": "d3",
+    "source": "profile_snapshot",
+    "source_id": "U-02844@2026-09-29T03:33:31.711Z",
+    "observed_at": "2026-09-29T03:33:31.711Z",
+    "freshness_s": 202395.3
+   },
+   {
+    "fact_key": "subscription_status",
+    "value": "never",
+    "source": "profile_snapshot",
+    "source_id": "U-02844@2026-09-29T03:33:31.711Z",
+    "observed_at": "2026-09-29T03:33:31.711Z",
+    "freshness_s": 202395.3
+   },
+   {
+    "fact_key": "ever_paid",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02844@2026-09-29T03:33:31.711Z",
+    "observed_at": "2026-09-29T03:33:31.711Z",
+    "freshness_s": 202395.3
+   },
+   {
+    "fact_key": "signup_at",
+    "value": "2026-04-12T20:45:26.626Z",
+    "source": "profile_snapshot",
+    "source_id": "U-02844@2026-09-29T03:33:31.711Z",
+    "observed_at": "2026-09-29T03:33:31.711Z",
+    "freshness_s": 202395.3
+   },
+   {
+    "fact_key": "consent.push",
+    "value": true,
+    "source": "profile_snapshot",
+    "source_id": "U-02844@2026-09-29T03:33:31.711Z",
+    "observed_at": "2026-09-29T03:33:31.711Z",
+    "freshness_s": 202395.3
+   },
+   {
+    "fact_key": "consent.whatsapp",
+    "value": false,
+    "source": "profile_snapshot",
+    "source_id": "U-02844@2026-09-29T03:33:31.711Z",
+    "observed_at": "2026-09-29T03:33:31.711Z",
+    "freshness_s": 202395.3
+   },
+   {
+    "fact_key": "history.window",
+    "value": {
+     "from": "2026-08-31T18:31:55.380Z",
+     "to": "2026-10-01T11:46:47.011Z"
+    },
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": "2026-08-31T18:31:55.380Z",
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.play_started_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "2f193d83-abfa-4ddb-b68b-288c7c1f0a8d",
+    "observed_at": "2026-09-29T09:05:40.823Z",
+    "freshness_s": 182466.2
+   },
+   {
+    "fact_key": "history.episode_completed_count",
+    "value": 2,
+    "source": "event_stream",
+    "source_id": "72671bd3-917e-4c48-93f6-37ab8ebed175",
+    "observed_at": "2026-09-29T09:09:21.691Z",
+    "freshness_s": 182245.3
+   },
+   {
+    "fact_key": "history.play_days_14d",
+    "value": [
+     "2026-09-29"
+    ],
+    "source": "event_stream",
+    "source_id": null,
+    "observed_at": null,
+    "freshness_s": null
+   },
+   {
+    "fact_key": "history.app_opens_14d_before_trigger",
+    "value": 3,
+    "source": "event_stream",
+    "source_id": "095db91f-2762-4295-ba72-5de61a428d95",
+    "observed_at": "2026-10-01T06:32:15.337Z",
+    "freshness_s": 18871.7
+   },
+   {
+    "fact_key": "trigger.live_visit",
+    "value": true,
+    "source": "event",
+    "source_id": "8df6dd81-2068-4a99-9a04-1a2e7f0f2635",
+    "observed_at": "2026-10-01T11:46:47.011Z",
+    "freshness_s": 0.0
+   }
+  ],
+  "conflicts": []
+ },
+ "decisions": [
+  {
+   "decision_id": "D-000788",
+   "deliver_at": "2026-10-01T06:32:15.337Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "committed G07 (resume_series_3d): lomobha-moni-d3: reached episode 1/35, last played 2026-09-10T08:39:12.272Z; 7 titles promotable in d3 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.83
+  },
+  {
+   "decision_id": "D-001431",
+   "deliver_at": "2026-10-01T11:46:47.011Z",
+   "trigger": "app_open",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "goal": "G07",
+   "reason": "kept active plan 420 (G07) started 2026-10-01T06:32:15.778Z; 7 titles promotable in d3 at publish time; premium excluded (viewer is not paying and the goal is about viewing)",
+   "confidence": 0.78
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-000286",
+   "decision_id": "D-000788",
+   "user_id": "U-02844",
+   "trigger_event_id": "095db91f-2762-4295-ba72-5de61a428d95",
+   "published_at": "2026-10-01T06:32:16.579Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0908",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0901",
+      "T0903",
+      "T0907",
+      "T0914",
+      "T0913",
+      "T0910"
+     ]
+    }
+   ],
+   "plan_id": 420,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000287",
+   "decision_id": "D-000788",
+   "user_id": "U-02844",
+   "trigger_event_id": "095db91f-2762-4295-ba72-5de61a428d95",
+   "published_at": "2026-10-01T06:32:16.579Z",
+   "goal_id": "G07",
+   "type": "push",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "title_id": "T0908",
+   "dialect": "d3",
+   "text": {
+    "title": "Lomobha Moni",
+    "body": "Lomobha Moni ka agla episode taiyaar hai. Wahin se dekhiye jahan chhoda tha."
+   },
+   "deeplink": "ott://title/T0908",
+   "plan_id": 420,
+   "superseded_by": null
+  },
+  {
+   "action_id": "A-000596",
+   "decision_id": "D-001431",
+   "user_id": "U-02844",
+   "trigger_event_id": "8df6dd81-2068-4a99-9a04-1a2e7f0f2635",
+   "published_at": "2026-10-01T11:46:47.453Z",
+   "goal_id": "G07",
+   "type": "home_page",
+   "dialect": "d3",
+   "hero_title_id": "T0908",
+   "rows": [
+    {
+     "row_type": "popular_in_dialect",
+     "title_ids": [
+      "T0901",
+      "T0903",
+      "T0907",
+      "T0914",
+      "T0913",
+      "T0910"
+     ]
+    }
+   ],
+   "plan_id": 420,
+   "superseded_by": null
+  }
+ ],
+ "plans": [
+  {
+   "plan_id": 420,
+   "viewer_id": "U-02844",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "success_event": "play_started",
+   "success_condition": "same content_slug as the unfinished series",
+   "window_hours": 72,
+   "params": {
+    "content_slug": "lomobha-moni-d3",
+    "title_id": "T0908",
+    "next_episode_index": 1,
+    "total_episodes": 35
+   },
+   "started_at": "2026-10-01T06:32:15.778Z",
+   "deadline": "2026-10-04T06:32:15.778Z",
+   "decision_id": "D-000788",
+   "status": "failed",
+   "closed_at": "2026-10-19T21:21:42.155Z",
+   "close_reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null
+  }
+ ],
+ "plan_history": [
+  {
+   "id": 431,
+   "plan_id": 420,
+   "viewer_id": "U-02844",
+   "at": "2026-10-01T06:32:15.778Z",
+   "change": "opened",
+   "detail": {
+    "goal_id": "G07",
+    "decision_id": "D-000788"
+   }
+  },
+  {
+   "id": 1925,
+   "plan_id": 420,
+   "viewer_id": "U-02844",
+   "at": "2026-10-19T21:21:42.155Z",
+   "change": "failed",
+   "detail": {
+    "reason": "final judgment: no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+    "signal_event_id": null
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "plan_id": 420,
+   "viewer_id": "U-02844",
+   "arm": "agent",
+   "goal_id": "G07",
+   "rule_version": "G07@2026-09-30",
+   "status": "failed",
+   "reason": "no attributable play_started (same content_slug as the unfinished series) between start and deadline",
+   "signal_event_id": null,
+   "signal_at": null,
+   "judged_at": "2026-10-19T21:21:42.155Z",
+   "judged_by": "final_judge(simulator+live events)",
+   "exposure": {
+    "pages_published": 2,
+    "pages_shown": 1,
+    "messages_sent": 1,
+    "delivered": 1,
+    "clicked": 0,
+    "failed": [],
+    "action_ids": [
+     "A-000286",
+     "A-000287",
+     "A-000596"
+    ]
+   }
+  }
+ ],
+ "lessons": [
+  {
+   "id": 468,
+   "viewer_id": "U-02844",
+   "at": "2026-10-19T21:21:42.155Z",
+   "kind": "goal_failed:G07",
+   "detail": "G07 not reached (pages shown 1, messages delivered 1); cool down this goal before retrying",
+   "evidence": [
+    "plan:420"
+   ]
+  }
+ ]
+}
