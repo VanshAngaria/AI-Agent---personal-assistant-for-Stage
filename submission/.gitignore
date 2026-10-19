@@ -1,0 +1,9 @@
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.pyc
+*.sqlite
+*.egg-info/
+dist/
+build/
+viewer_state/*.sqlite

@@ -1,0 +1,21 @@
+# Data pack datasets
+data/
+replay/
+pilot/
+*.pdf
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Databases and runtime state
+*.sqlite
+*.sqlite3
+*.db
+submission/viewer_state/*.sqlite
